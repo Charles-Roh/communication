@@ -1,0 +1,3228 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="한전 KDN 등 공공기관 채용시험 통신이론 과목을 혼자서 완주할 수 있도록 설계된 독학용 수험 교재로, 비전공자도 기초부터 핵심 변조 이론까지 체계적으로 학습할 수 있다.">
+      
+      
+        <meta name="author" content="노용철TV (EduFlow)">
+      
+      
+      
+        <link rel="prev" href="../chapter12/">
+      
+      
+        <link rel="next" href="../chapter14/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심 - 통신이론 핵심정리 — 공공기관 채용시험 완전 대비</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#13-psk-qam" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-header__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter01/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter05/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter10/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter16/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-nav__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1차시: 통신이란 무엇인가 — 정보가 이동하는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2차시: 신호의 언어 — 주파수, 진폭, 위상 이해하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3차시: 대역폭과 스펙트럼 — 정보가 차지하는 공간
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4차시: 실습 체험 — 신호 읽기와 기초 개념 확인 문제 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5차시: 변조란 무엇인가 — 반송파에 정보를 싣는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6차시: AM 변조 — 진폭으로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7차시: AM 변형 방식 — DSB, SSB, VSB 비교 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8차시: FM 변조 — 주파수로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9차시: AM vs FM 실전 비교 — 기출 문제 집중 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10차시: 디지털 통신의 시작 — 표본화와 양자화 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12차시: 디지털 변조 입문 — ASK와 FSK의 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 핵심 주제 카드
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 핵심 주제 카드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 PSK — 위상으로 비트를 표현하다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 QAM — 위상 + 진폭의 이중 전략
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔬 성상도 읽기 실습
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 트레이드오프 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-psk-qam-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계: 도입 — 왜 PSK와 QAM을 배우는가 (5분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-psk-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계: 핵심 개념 ① — PSK의 원리와 종류 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-qam-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계: 핵심 개념 ② — QAM의 원리와 종류 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4단계: 실습 — 성상도 해석과 트레이드오프 분석 (8분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5단계: 평가 및 성찰 (7분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 왜 이것을 배우는가?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-pskphase-shift-keying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ① — PSK(Phase Shift Keying, 위상 편이 변조)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ① — PSK(Phase Shift Keying, 위상 편이 변조)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 비유로 이해하기: 시계 바늘의 방향
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psk-bpsk-qpsk-8psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 PSK의 종류: BPSK → QPSK → 8PSK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 PSK의 종류: BPSK → QPSK → 8PSK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 심볼당 비트 수 계산 공식
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bpsk-binary-psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 BPSK (Binary PSK) — 가장 기본적인 형태
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qpsk-quadrature-psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 QPSK (Quadrature PSK) — 실무의 기본
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 8PSK — 더 높은 효율을 향해
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constellation-diagram-psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 성상도(Constellation Diagram)로 PSK 이해하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psk_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ PSK에서 자주 하는 실수
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-qamquadrature-amplitude-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ② — QAM(Quadrature Amplitude Modulation, 직교 진폭 변조)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ② — QAM(Quadrature Amplitude Modulation, 직교 진폭 변조)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 비유로 이해하기: 두 가지를 동시에 조절하는 리모컨
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qam-4-qam-16-qam-64-qam-256-qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 QAM의 종류: 4-QAM → 16-QAM → 64-QAM → 256-QAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 16-QAM 상세 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-qam-256-qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 64-QAM과 256-QAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 전송 효율과 잡음 내성의 트레이드오프
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 적응적 변조(Adaptive Modulation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psk-vs-qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 PSK vs QAM 핵심 비교 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔬 실습 — 성상도 해석과 비트 수 계산
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔬 실습 — 성상도 해석과 비트 수 계산">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        따라하기 실습: 변조 방식 파라미터 계산
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 시험에서 자주 출제되는 포인트 정리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 시험에서 자주 출제되는 포인트 정리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        출제 빈도 높은 유형
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 수식 요약
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 형성 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14차시: 디지털 변조 비교 실습 — 성상도와 오답 함정 집중 공략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15차시: Part 2·3 통합 복습 — 아날로그·디지털 변조 완전 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16차시: 다중화란 무엇인가 — 하나의 채널로 여러 신호 보내기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17차시: CDM과 OFDM — 현대 통신이 선택한 다중화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18차시: 이동통신의 진화 — 1G부터 5G까지의 핵심 개념
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19차시: 통신 시스템 실생활 연결 — 와이파이, 블루투스, 위성통신
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20차시: 전체 통합 모의고사 — 실전 시험 완전 대비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 핵심 주제 카드
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 핵심 주제 카드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 PSK — 위상으로 비트를 표현하다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 QAM — 위상 + 진폭의 이중 전략
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔬 성상도 읽기 실습
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 트레이드오프 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-psk-qam-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계: 도입 — 왜 PSK와 QAM을 배우는가 (5분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-psk-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계: 핵심 개념 ① — PSK의 원리와 종류 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-qam-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계: 핵심 개념 ② — QAM의 원리와 종류 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4단계: 실습 — 성상도 해석과 트레이드오프 분석 (8분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5단계: 평가 및 성찰 (7분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 왜 이것을 배우는가?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-pskphase-shift-keying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ① — PSK(Phase Shift Keying, 위상 편이 변조)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ① — PSK(Phase Shift Keying, 위상 편이 변조)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 비유로 이해하기: 시계 바늘의 방향
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psk-bpsk-qpsk-8psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 PSK의 종류: BPSK → QPSK → 8PSK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 PSK의 종류: BPSK → QPSK → 8PSK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 심볼당 비트 수 계산 공식
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bpsk-binary-psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 BPSK (Binary PSK) — 가장 기본적인 형태
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qpsk-quadrature-psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 QPSK (Quadrature PSK) — 실무의 기본
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 8PSK — 더 높은 효율을 향해
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constellation-diagram-psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 성상도(Constellation Diagram)로 PSK 이해하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psk_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ PSK에서 자주 하는 실수
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-qamquadrature-amplitude-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ② — QAM(Quadrature Amplitude Modulation, 직교 진폭 변조)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ② — QAM(Quadrature Amplitude Modulation, 직교 진폭 변조)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 비유로 이해하기: 두 가지를 동시에 조절하는 리모컨
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qam-4-qam-16-qam-64-qam-256-qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 QAM의 종류: 4-QAM → 16-QAM → 64-QAM → 256-QAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 16-QAM 상세 분석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-qam-256-qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 64-QAM과 256-QAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 전송 효율과 잡음 내성의 트레이드오프
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 적응적 변조(Adaptive Modulation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psk-vs-qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 PSK vs QAM 핵심 비교 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔬 실습 — 성상도 해석과 비트 수 계산
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔬 실습 — 성상도 해석과 비트 수 계산">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        따라하기 실습: 변조 방식 파라미터 계산
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 시험에서 자주 출제되는 포인트 정리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 시험에서 자주 출제되는 포인트 정리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        출제 빈도 높은 유형
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 수식 요약
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 형성 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../chapter10/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="13-psk-qam">13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심<a class="headerlink" href="#13-psk-qam" title="Permanent link">&para;</a></h1>
+<div class="lesson-banner">
+<p><strong>⏰ 50분</strong> · PSK(위상 편이 변조) · QAM(직교 진폭 변조) · 성상도 · 전송 효율 트레이드오프 · <strong>난이도</strong> ●●●○○</p>
+<p><strong>학습목표</strong>:
+- [ ] PSK의 원리를 설명하고, BPSK·QPSK·8PSK의 심볼당 비트 수를 계산할 수 있다
+- [ ] QAM이 위상과 진폭을 동시에 활용하여 전송 효율을 높이는 원리를 설명할 수 있다
+- [ ] 16-QAM, 64-QAM의 전송 효율과 잡음 요구 조건의 트레이드오프를 설명할 수 있다</p>
+<blockquote>
+<p><strong>오늘의 질문</strong>: "같은 도로 위에서 트럭 한 대가 한 번에 더 많은 짐을 실으려면 무엇이 필요할까요?"</p>
+</blockquote>
+</div>
+<hr />
+<h2 id="_1">🎯 핵심 주제 카드<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="cards-grid">
+<div class="card card-orange">
+<h3 id="psk">🧠 PSK — 위상으로 비트를 표현하다<a class="headerlink" href="#psk" title="Permanent link">&para;</a></h3>
+<p>시계 바늘의 방향(위상)을 바꿔 디지털 데이터를 전송하는 원리를 학습합니다</p>
+</div>
+<div class="card card-orange">
+<h3 id="qam">🧠 QAM — 위상 + 진폭의 이중 전략<a class="headerlink" href="#qam" title="Permanent link">&para;</a></h3>
+<p>위상과 진폭을 동시에 변화시켜 한 심볼에 더 많은 비트를 담는 고효율 변조 방식을 이해합니다</p>
+</div>
+<div class="card card-blue">
+<h3 id="_2">🔬 성상도 읽기 실습<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>성상도(Constellation Diagram) 위의 점 배치를 보고 변조 방식과 비트 수를 판별합니다</p>
+</div>
+<div class="card card-red">
+<h3 id="_3">📝 트레이드오프 분석<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>전송 효율이 올라갈수록 잡음 민감도가 높아지는 관계를 정량적으로 파악합니다</p>
+</div>
+</div>
+<hr />
+<h2 id="_4">⏱️ 수업 흐름<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="steps">
+<div class="step">
+<h4 id="1-psk-qam-5">1단계: 도입 — 왜 PSK와 QAM을 배우는가 (5분)<a class="headerlink" href="#1-psk-qam-5" title="Permanent link">&para;</a></h4>
+<p>12차시에서 학습한 ASK·FSK의 한계를 복습하고, 더 효율적인 변조가 필요한 이유를 확인합니다.</p>
+</div>
+<div class="step">
+<h4 id="2-1-psk-15">2단계: 핵심 개념 ① — PSK의 원리와 종류 (15분)<a class="headerlink" href="#2-1-psk-15" title="Permanent link">&para;</a></h4>
+<p>BPSK → QPSK → 8PSK로 확장하며, 위상 변화가 비트를 표현하는 원리와 심볼당 비트 수 계산을 학습합니다.</p>
+</div>
+<div class="step">
+<h4 id="3-2-qam-15">3단계: 핵심 개념 ② — QAM의 원리와 종류 (15분)<a class="headerlink" href="#3-2-qam-15" title="Permanent link">&para;</a></h4>
+<p>위상과 진폭을 동시에 활용하는 QAM의 구조를 이해하고, 16-QAM과 64-QAM의 성상도를 분석합니다.</p>
+</div>
+<div class="step">
+<h4 id="4-8">4단계: 실습 — 성상도 해석과 트레이드오프 분석 (8분)<a class="headerlink" href="#4-8" title="Permanent link">&para;</a></h4>
+<p>주어진 성상도를 보고 변조 방식을 판별하고, 효율과 잡음 내성의 관계를 정리합니다.</p>
+</div>
+<div class="step">
+<h4 id="5-7">5단계: 평가 및 성찰 (7분)<a class="headerlink" href="#5-7" title="Permanent link">&para;</a></h4>
+<p>형성 평가 문제를 풀고, 학습 목표 달성 여부를 자가 점검합니다.</p>
+</div>
+</div>
+<hr />
+<h2 id="_5">📚 왜 이것을 배우는가?<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>12차시에서 ASK(진폭 편이 변조)와 FSK(주파수 편이 변조)를 학습했습니다. ASK는 진폭을 바꾸고, FSK는 주파수를 바꿔서 디지털 데이터를 전송하는 방식이었습니다. 두 방식 모두 한 번에 보내는 심볼 하나에 1비트를 담는 것이 기본이었습니다.</p>
+<p>그런데 현실의 통신 환경에서는 <strong>제한된 대역폭</strong> 안에서 <strong>최대한 많은 데이터</strong>를 보내야 합니다. 유튜브 4K 영상을 스트리밍하거나, 수백 명이 동시에 접속하는 WiFi 환경을 생각하면 됩니다. 한 번에 1비트만 보내서는 이러한 수요를 감당할 수 없습니다.</p>
+<p>PSK와 QAM은 바로 이 문제를 해결하는 핵심 기술입니다. PSK는 <strong>위상</strong>이라는 새로운 차원을 활용하고, QAM은 <strong>위상과 진폭을 동시에</strong> 활용하여 한 심볼당 전송할 수 있는 비트 수를 비약적으로 늘립니다. LTE, 5G, WiFi, 디지털TV 등 현대의 거의 모든 디지털 통신은 QAM 기반으로 동작합니다.</p>
+<p>공공기관 통신이론 시험에서도 PSK와 QAM은 단골 출제 영역입니다. 심볼당 비트 수 계산, 성상도 해석, 잡음 내성의 트레이드오프는 반복적으로 출제되는 핵심 주제입니다.</p>
+<hr />
+<h2 id="1-pskphase-shift-keying">📚 핵심 개념 ① — PSK(Phase Shift Keying, 위상 편이 변조)<a class="headerlink" href="#1-pskphase-shift-keying" title="Permanent link">&para;</a></h2>
+<h3 id="_6">🔑 비유로 이해하기: 시계 바늘의 방향<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>시계 바늘이 12시를 가리키고 있다고 가정하겠습니다. 이제 누군가에게 "예" 또는 "아니오"를 전달해야 하는 상황입니다. 가장 간단한 방법은 이렇습니다.</p>
+<ul>
+<li>시계 바늘이 <strong>12시 방향</strong> → "0"</li>
+<li>시계 바늘이 <strong>6시 방향</strong>(180° 회전) → "1"</li>
+</ul>
+<p>바늘이 가리키는 <strong>방향(위상)</strong>만 보면 어떤 정보를 보냈는지 알 수 있습니다. 이것이 PSK의 핵심 원리입니다.</p>
+<h3 id="_7">📐 정확한 정의<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><strong>PSK(Phase Shift Keying, 위상 편이 변조)</strong>는 반송파(carrier)의 <strong>위상(phase)</strong>을 디지털 데이터에 따라 변화시키는 변조 방식입니다. 반송파의 진폭과 주파수는 일정하게 유지하면서, 오직 위상만 변경하여 정보를 전달합니다.</p>
+<p>수식으로 표현하면 다음과 같습니다.</p>
+<blockquote>
+<p><strong>s(t) = A · cos(2πf_c · t + φ_i)</strong></p>
+<ul>
+<li>A: 진폭 (일정)</li>
+<li>f_c: 반송파 주파수 (일정)</li>
+<li>φ_i: 디지털 데이터에 따라 결정되는 위상 값</li>
+</ul>
+</blockquote>
+<p>ASK는 A를 변화시키고, FSK는 f_c를 변화시켰다면, PSK는 <strong>φ_i를 변화</strong>시키는 것입니다.</p>
+<h3 id="psk-bpsk-qpsk-8psk">📊 PSK의 종류: BPSK → QPSK → 8PSK<a class="headerlink" href="#psk-bpsk-qpsk-8psk" title="Permanent link">&para;</a></h3>
+<p>PSK는 사용하는 위상의 개수에 따라 여러 종류로 나뉩니다. 핵심은 <strong>위상 개수가 많아질수록 한 심볼에 더 많은 비트를 담을 수 있다</strong>는 것입니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">방식</th>
+<th style="text-align: center;">위상 수(M)</th>
+<th style="text-align: center;">심볼당 비트 수</th>
+<th style="text-align: center;">위상 간격</th>
+<th style="text-align: left;">특징</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>BPSK</strong></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1비트</td>
+<td style="text-align: center;">180°</td>
+<td style="text-align: left;">가장 단순, 잡음에 강함</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>QPSK</strong></td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2비트</td>
+<td style="text-align: center;">90°</td>
+<td style="text-align: left;">BPSK 대비 2배 효율</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>8PSK</strong></td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">3비트</td>
+<td style="text-align: center;">45°</td>
+<td style="text-align: left;">높은 효율, 잡음에 취약</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">💡 심볼당 비트 수 계산 공식<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>이 공식은 시험에서 매우 자주 출제됩니다.</p>
+<blockquote>
+<p><strong>n = log₂(M)</strong></p>
+<ul>
+<li>n: 심볼당 비트 수</li>
+<li>M: 위상(또는 심볼) 수</li>
+</ul>
+</blockquote>
+<p>예를 들어, QPSK의 경우 M = 4이므로 n = log₂(4) = <strong>2비트</strong>입니다. 8PSK의 경우 M = 8이므로 n = log₂(8) = <strong>3비트</strong>입니다.</p>
+<p>이 공식의 의미를 직관적으로 이해하면 다음과 같습니다. 2비트로 표현할 수 있는 조합은 00, 01, 10, 11의 4가지입니다. 그래서 QPSK는 4개의 서로 다른 위상을 사용하여, 각 심볼이 2비트의 정보를 담습니다.</p>
+<hr />
+<h3 id="bpsk-binary-psk">🔍 BPSK (Binary PSK) — 가장 기본적인 형태<a class="headerlink" href="#bpsk-binary-psk" title="Permanent link">&para;</a></h3>
+<p>BPSK는 위상 2개(0°, 180°)만 사용합니다. 심볼당 1비트를 전송합니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">디지털 데이터</th>
+<th style="text-align: center;">위상</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0°</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">180°</td>
+</tr>
+</tbody>
+</table>
+<p>BPSK의 장점은 두 위상 사이의 거리(180°)가 최대이므로, <strong>잡음에 가장 강하다</strong>는 것입니다. 반면 심볼당 1비트만 전송하므로 대역폭 효율은 낮습니다. GPS 위성 통신처럼 잡음이 심한 환경에서 주로 사용됩니다.</p>
+<h3 id="qpsk-quadrature-psk">🔍 QPSK (Quadrature PSK) — 실무의 기본<a class="headerlink" href="#qpsk-quadrature-psk" title="Permanent link">&para;</a></h3>
+<p>QPSK는 위상 4개(45°, 135°, 225°, 315°)를 사용합니다. 심볼당 2비트를 전송합니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">디지털 데이터</th>
+<th style="text-align: center;">위상</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">00</td>
+<td style="text-align: center;">45°</td>
+</tr>
+<tr>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">135°</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">225°</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">315°</td>
+</tr>
+</tbody>
+</table>
+<p>QPSK는 BPSK와 <strong>동일한 대역폭</strong>을 사용하면서 <strong>2배의 데이터</strong>를 전송할 수 있습니다. 이것이 QPSK가 위성통신, 이동통신 등에서 널리 사용되는 이유입니다.</p>
+<p>중요한 사실 하나를 짚겠습니다. QPSK는 수학적으로 보면, <strong>서로 직교하는 두 개의 BPSK 신호를 합성한 것</strong>과 동일합니다. I(In-phase) 채널과 Q(Quadrature) 채널 각각에 BPSK를 적용한 것입니다. 이 I/Q 개념은 QAM을 이해하는 데에도 핵심적으로 사용됩니다.</p>
+<h3 id="8psk">🔍 8PSK — 더 높은 효율을 향해<a class="headerlink" href="#8psk" title="Permanent link">&para;</a></h3>
+<p>8PSK는 위상 8개를 사용하며, 심볼당 3비트를 전송합니다. 위상 간격이 45°로 좁아지므로, 인접한 심볼 간의 구분이 어려워집니다. 이는 곧 <strong>잡음에 더 취약해진다</strong>는 의미입니다.</p>
+<p><em>PSK 방식의 확장과 트레이드오프를 아래 다이어그램으로 정리하겠습니다.</em></p>
+<div class="mermaid">flowchart LR
+    A["BPSK&lt;br/&gt;M=2, 1비트&lt;br/&gt;위상 간격 180°"] --&gt; B["QPSK&lt;br/&gt;M=4, 2비트&lt;br/&gt;위상 간격 90°"]
+    B --&gt; C["8PSK&lt;br/&gt;M=8, 3비트&lt;br/&gt;위상 간격 45°"]
+
+    D["전송 효율 증가 →"] -.-&gt; A
+    D -.-&gt; B
+    D -.-&gt; C
+
+    E["잡음 내성 감소 →"] -.-&gt; A
+    E -.-&gt; B
+    E -.-&gt; C</div>
+<hr />
+<h3 id="constellation-diagram-psk">🔍 성상도(Constellation Diagram)로 PSK 이해하기<a class="headerlink" href="#constellation-diagram-psk" title="Permanent link">&para;</a></h3>
+<p><strong>성상도</strong>는 변조된 신호의 심볼들을 2차원 평면(I-Q 평면) 위에 점으로 표시한 도표입니다. 가로축은 <strong>I(In-phase) 성분</strong>, 세로축은 <strong>Q(Quadrature) 성분</strong>을 나타냅니다.</p>
+<p>성상도에서 각 점의 의미는 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">요소</th>
+<th style="text-align: left;">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>점의 위치(각도)</strong></td>
+<td style="text-align: left;">위상(phase)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>원점에서 점까지의 거리</strong></td>
+<td style="text-align: left;">진폭(amplitude)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>점의 개수</strong></td>
+<td style="text-align: left;">심볼 수(M)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>점 사이의 간격</strong></td>
+<td style="text-align: left;">잡음 내성 — 간격이 넓을수록 강함</td>
+</tr>
+</tbody>
+</table>
+<p>PSK의 성상도에서는 모든 점이 <strong>원점에서 같은 거리</strong>에 위치합니다. 진폭은 일정하고 위상만 다르기 때문입니다. 즉, PSK의 심볼들은 원(circle) 위에 균등하게 배치됩니다.</p>
+<p><em>BPSK, QPSK, 8PSK의 성상도를 개념적으로 비교하겠습니다.</em></p>
+<div class="svg-diagram">
+<p><svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="12">
+<br />
+<!-- BPSK --></p>
+<p><text x="110" y="20" text-anchor="middle" font-weight="bold" font-size="14" fill="#333">BPSK (M=2)</text>
+  <line x1="40" y1="120" x2="180" y2="120" stroke="#ccc" stroke-width="1"/>
+  <line x1="110" y1="50" x2="110" y2="190" stroke="#ccc" stroke-width="1"/>
+  <text x="185" y="118" fill="#888" font-size="10">I</text>
+  <text x="113" y="48" fill="#888" font-size="10">Q</text>
+  <circle cx="160" cy="120" r="8" fill="#e74c3c"/>
+  <text x="160" y="105" text-anchor="middle" fill="#e74c3c" font-size="10" font-weight="bold">0</text>
+  <circle cx="60" cy="120" r="8" fill="#3498db"/>
+  <text x="60" y="105" text-anchor="middle" fill="#3498db" font-size="10" font-weight="bold">1</text>
+  <circle cx="110" cy="120" r="50" fill="none" stroke="#ddd" stroke-dasharray="4"/></p>
+<!-- QPSK -->
+<p><text x="350" y="20" text-anchor="middle" font-weight="bold" font-size="14" fill="#333">QPSK (M=4)</text>
+  <line x1="280" y1="120" x2="420" y2="120" stroke="#ccc" stroke-width="1"/>
+  <line x1="350" y1="50" x2="350" y2="190" stroke="#ccc" stroke-width="1"/>
+  <text x="425" y="118" fill="#888" font-size="10">I</text>
+  <text x="353" y="48" fill="#888" font-size="10">Q</text>
+  <circle cx="350" cy="120" r="50" fill="none" stroke="#ddd" stroke-dasharray="4"/>
+  <circle cx="385" cy="85" r="7" fill="#e74c3c"/>
+  <text x="396" y="80" fill="#e74c3c" font-size="10">00</text>
+  <circle cx="315" cy="85" r="7" fill="#3498db"/>
+  <text x="298" y="80" fill="#3498db" font-size="10">01</text>
+  <circle cx="315" cy="155" r="7" fill="#27ae60"/>
+  <text x="298" y="170" fill="#27ae60" font-size="10">11</text>
+  <circle cx="385" cy="155" r="7" fill="#f39c12"/>
+  <text x="396" y="170" fill="#f39c12" font-size="10">10</text></p>
+<!-- 8PSK -->
+<p><text x="590" y="20" text-anchor="middle" font-weight="bold" font-size="14" fill="#333">8PSK (M=8)</text>
+  <line x1="520" y1="120" x2="660" y2="120" stroke="#ccc" stroke-width="1"/>
+  <line x1="590" y1="50" x2="590" y2="190" stroke="#ccc" stroke-width="1"/>
+  <text x="665" y="118" fill="#888" font-size="10">I</text>
+  <text x="593" y="48" fill="#888" font-size="10">Q</text>
+  <circle cx="590" cy="120" r="50" fill="none" stroke="#ddd" stroke-dasharray="4"/>
+  <circle cx="640" cy="120" r="6" fill="#e74c3c"/>
+  <circle cx="625" cy="85" r="6" fill="#3498db"/>
+  <circle cx="590" cy="70" r="6" fill="#27ae60"/>
+  <circle cx="555" cy="85" r="6" fill="#f39c12"/>
+  <circle cx="540" cy="120" r="6" fill="#9b59b6"/>
+  <circle cx="555" cy="155" r="6" fill="#1abc9c"/>
+  <circle cx="590" cy="170" r="6" fill="#e67e22"/>
+  <circle cx="625" cy="155" r="6" fill="#2980b9"/>
+  <text x="590" y="200" text-anchor="middle" fill="#666" font-size="10">점 8개 — 심볼당 3비트</text>
+</svg></p>
+</div>
+<p>위 성상도에서 확인할 수 있는 핵심 포인트는 다음과 같습니다.</p>
+<ol>
+<li><strong>모든 점이 같은 원 위에 있습니다</strong> — PSK는 진폭이 일정하기 때문입니다</li>
+<li><strong>점의 개수가 많아질수록 점 사이의 간격이 좁아집니다</strong> — 잡음에 의해 점이 조금만 밀려도 이웃 심볼로 오인될 수 있습니다</li>
+<li><strong>점 사이의 최소 거리(d_min)</strong>가 잡음 내성의 핵심 지표입니다</li>
+</ol>
+<hr />
+<h3 id="psk_1">⚠️ PSK에서 자주 하는 실수<a class="headerlink" href="#psk_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">실수 유형</th>
+<th style="text-align: left;">올바른 이해</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">"QPSK는 BPSK보다 대역폭을 2배 사용한다"</td>
+<td style="text-align: left;">QPSK는 BPSK와 <strong>동일한 대역폭</strong>에서 2배 데이터를 전송합니다</td>
+</tr>
+<tr>
+<td style="text-align: left;">"위상 수를 늘리면 무조건 좋다"</td>
+<td style="text-align: left;">위상 수 증가 → 점 간 거리 감소 → <strong>잡음 내성 저하</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">"PSK에서 진폭도 변한다"</td>
+<td style="text-align: left;">PSK는 <strong>진폭을 일정하게</strong> 유지합니다 (성상도에서 원 위)</td>
+</tr>
+<tr>
+<td style="text-align: left;">"심볼 수 = 비트 수"</td>
+<td style="text-align: left;">심볼 수(M) ≠ 비트 수(n). <strong>n = log₂(M)</strong> 관계입니다</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-qamquadrature-amplitude-modulation">📚 핵심 개념 ② — QAM(Quadrature Amplitude Modulation, 직교 진폭 변조)<a class="headerlink" href="#2-qamquadrature-amplitude-modulation" title="Permanent link">&para;</a></h2>
+<h3 id="_9">🔑 비유로 이해하기: 두 가지를 동시에 조절하는 리모컨<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>TV 리모컨으로 음량(진폭)과 채널(위상)을 동시에 조절하는 상황을 상상하겠습니다. 음량만 바꿀 수 있다면 전달할 수 있는 정보가 제한적입니다. 채널만 바꿔도 마찬가지입니다. 그런데 <strong>음량과 채널을 동시에 바꿀 수 있다면</strong>, 전달할 수 있는 조합의 수가 비약적으로 늘어납니다.</p>
+<p>QAM이 바로 이 원리입니다. PSK가 위상만 바꾸는 "한 손" 전략이었다면, QAM은 <strong>위상과 진폭을 동시에 바꾸는 "양 손" 전략</strong>입니다.</p>
+<h3 id="_10">📐 정확한 정의<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p><strong>QAM(Quadrature Amplitude Modulation, 직교 진폭 변조)</strong>은 반송파의 <strong>위상(phase)</strong>과 <strong>진폭(amplitude)</strong>을 동시에 변화시켜 디지털 데이터를 전송하는 변조 방식입니다.</p>
+<p>수식으로 표현하면 다음과 같습니다.</p>
+<blockquote>
+<p><strong>s(t) = A_I · cos(2πf_c · t) + A_Q · sin(2πf_c · t)</strong></p>
+<ul>
+<li>A_I: I(In-phase) 채널의 진폭</li>
+<li>A_Q: Q(Quadrature) 채널의 진폭</li>
+<li>f_c: 반송파 주파수</li>
+</ul>
+</blockquote>
+<p>이 수식의 핵심은 <strong>서로 직교(90° 차이)하는 두 반송파(cos과 sin)</strong>에 각각 다른 진폭 값을 실어 보내는 것입니다. cos과 sin은 서로 간섭하지 않기 때문에, 수신기에서 두 성분을 완벽하게 분리할 수 있습니다.</p>
+<p>A_I와 A_Q의 조합에 따라 성상도 위의 점 위치(위상과 진폭)가 결정됩니다.</p>
+<p><em>PSK와 QAM의 구조적 차이를 아래 다이어그램으로 비교하겠습니다.</em></p>
+<div class="mermaid">flowchart TB
+    subgraph PSK["PSK 방식"]
+        P1["디지털 데이터"] --&gt; P2["위상만 변경"]
+        P2 --&gt; P3["진폭 일정&lt;br/&gt;원 위의 점들"]
+    end
+
+    subgraph QAM["QAM 방식"]
+        Q1["디지털 데이터"] --&gt; Q2["위상 + 진폭&lt;br/&gt;동시 변경"]
+        Q2 --&gt; Q3["다양한 진폭&lt;br/&gt;격자 형태의 점들"]
+    end</div>
+<h3 id="qam-4-qam-16-qam-64-qam-256-qam">📊 QAM의 종류: 4-QAM → 16-QAM → 64-QAM → 256-QAM<a class="headerlink" href="#qam-4-qam-16-qam-64-qam-256-qam" title="Permanent link">&para;</a></h3>
+<p>QAM도 PSK와 마찬가지로, 심볼 수(M)에 따라 종류가 나뉩니다. 심볼당 비트 수 계산 공식은 동일하게 <strong>n = log₂(M)</strong>을 적용합니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">방식</th>
+<th style="text-align: center;">심볼 수(M)</th>
+<th style="text-align: center;">심볼당 비트 수</th>
+<th style="text-align: left;">성상도 배치</th>
+<th style="text-align: left;">주요 사용처</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>4-QAM</strong></td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2비트</td>
+<td style="text-align: left;">2×2 격자</td>
+<td style="text-align: left;">QPSK와 동일</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>16-QAM</strong></td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">4비트</td>
+<td style="text-align: left;">4×4 격자</td>
+<td style="text-align: left;">LTE, WiFi</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>64-QAM</strong></td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">6비트</td>
+<td style="text-align: left;">8×8 격자</td>
+<td style="text-align: left;">LTE-A, WiFi 5</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>256-QAM</strong></td>
+<td style="text-align: center;">256</td>
+<td style="text-align: center;">8비트</td>
+<td style="text-align: left;">16×16 격자</td>
+<td style="text-align: left;">WiFi 6, 케이블TV</td>
+</tr>
+</tbody>
+</table>
+<p>여기서 주목할 점이 있습니다. <strong>4-QAM은 QPSK와 수학적으로 동일</strong>합니다. 4개의 심볼이 성상도 위에서 같은 위치에 놓이기 때문입니다. 이것은 QPSK가 QAM의 특수한 경우라는 의미입니다.</p>
+<h3 id="16-qam">🔍 16-QAM 상세 분석<a class="headerlink" href="#16-qam" title="Permanent link">&para;</a></h3>
+<p>16-QAM은 시험에서 가장 많이 출제되는 QAM 방식입니다. 성상도 위에 <strong>4×4 = 16개의 점</strong>이 격자(grid) 형태로 배치됩니다.</p>
+<p>각 심볼은 4비트(예: 0000, 0001, ..., 1111)에 대응합니다. I축 방향으로 4단계, Q축 방향으로 4단계의 진폭 레벨이 있으므로, 총 4 × 4 = 16가지 조합이 만들어집니다.</p>
+<p><em>16-QAM의 성상도 구조를 시각화하겠습니다.</em></p>
+<div class="svg-diagram">
+<p><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="11">
+  <text x="200" y="25" text-anchor="middle" font-weight="bold" font-size="16" fill="#333">16-QAM 성상도</text></p>
+<!-- 축 -->
+<p><line x1="50" y1="210" x2="350" y2="210" stroke="#aaa" stroke-width="1"/>
+  <line x1="200" y1="60" x2="200" y2="360" stroke="#aaa" stroke-width="1"/>
+  <text x="360" y="214" fill="#666" font-size="12" font-weight="bold">I</text>
+  <text x="204" y="55" fill="#666" font-size="12" font-weight="bold">Q</text></p>
+<!-- 격자 점들 4x4 -->
+<!-- Row 1 (Q=+3) -->
+<p><circle cx="125" cy="110" r="8" fill="#3498db"/><text x="125" y="95" text-anchor="middle" fill="#3498db" font-size="9">0000</text>
+  <circle cx="175" cy="110" r="8" fill="#3498db"/><text x="175" y="95" text-anchor="middle" fill="#3498db" font-size="9">0001</text>
+  <circle cx="225" cy="110" r="8" fill="#e74c3c"/><text x="225" y="95" text-anchor="middle" fill="#e74c3c" font-size="9">0011</text>
+  <circle cx="275" cy="110" r="8" fill="#e74c3c"/><text x="275" y="95" text-anchor="middle" fill="#e74c3c" font-size="9">0010</text></p>
+<!-- Row 2 (Q=+1) -->
+<p><circle cx="125" cy="160" r="8" fill="#3498db"/><text x="125" y="180" text-anchor="middle" fill="#3498db" font-size="9">0100</text>
+  <circle cx="175" cy="160" r="8" fill="#27ae60"/><text x="175" y="180" text-anchor="middle" fill="#27ae60" font-size="9">0101</text>
+  <circle cx="225" cy="160" r="8" fill="#27ae60"/><text x="225" y="180" text-anchor="middle" fill="#27ae60" font-size="9">0111</text>
+  <circle cx="275" cy="160" r="8" fill="#e74c3c"/><text x="275" y="180" text-anchor="middle" fill="#e74c3c" font-size="9">0110</text></p>
+<!-- Row 3 (Q=-1) -->
+<p><circle cx="125" cy="260" r="8" fill="#9b59b6"/><text x="125" y="280" text-anchor="middle" fill="#9b59b6" font-size="9">1100</text>
+  <circle cx="175" cy="260" r="8" fill="#27ae60"/><text x="175" y="280" text-anchor="middle" fill="#27ae60" font-size="9">1101</text>
+  <circle cx="225" cy="260" r="8" fill="#27ae60"/><text x="225" y="280" text-anchor="middle" fill="#27ae60" font-size="9">1111</text>
+  <circle cx="275" cy="260" r="8" fill="#f39c12"/><text x="275" y="280" text-anchor="middle" fill="#f39c12" font-size="9">1110</text></p>
+<!-- Row 4 (Q=-3) -->
+<p><circle cx="125" cy="310" r="8" fill="#9b59b6"/><text x="125" y="330" text-anchor="middle" fill="#9b59b6" font-size="9">1000</text>
+  <circle cx="175" cy="310" r="8" fill="#9b59b6"/><text x="175" y="330" text-anchor="middle" fill="#9b59b6" font-size="9">1001</text>
+  <circle cx="225" cy="310" r="8" fill="#f39c12"/><text x="225" y="330" text-anchor="middle" fill="#f39c12" font-size="9">1011</text>
+  <circle cx="275" cy="310" r="8" fill="#f39c12"/><text x="275" y="330" text-anchor="middle" fill="#f39c12" font-size="9">1010</text></p>
+<!-- d_min 표시 -->
+<p><line x1="175" y1="116" x2="225" y2="116" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4"/>
+  <text x="200" y="135" text-anchor="middle" fill="#e74c3c" font-size="10" font-weight="bold">d_min</text></p>
+<!-- 범례 -->
+<p><text x="200" y="375" text-anchor="middle" fill="#888" font-size="10">격자 간격 d_min이 잡음 내성을 결정합니다</text>
+</svg></p>
+</div>
+<p>위 성상도에서 중요한 특징을 정리하겠습니다.</p>
+<ol>
+<li><strong>격자(Grid) 형태</strong>: PSK의 원형 배치와 달리, QAM은 직사각형 격자 형태로 점이 배치됩니다</li>
+<li><strong>진폭이 다른 점</strong>: 원점에서 가까운 점(가운데 4개)과 먼 점(모서리 4개)의 진폭이 다릅니다</li>
+<li><strong>그레이 코드(Gray Code) 배치</strong>: 인접한 심볼 간 비트가 1개만 다르도록 배열하여, 오류 발생 시 1비트만 틀리게 합니다</li>
+</ol>
+<h3 id="64-qam-256-qam">🔍 64-QAM과 256-QAM<a class="headerlink" href="#64-qam-256-qam" title="Permanent link">&para;</a></h3>
+<p>64-QAM은 8×8 격자에 64개의 점을 배치하며 심볼당 6비트를 전송합니다. 256-QAM은 16×16 격자에 256개의 점을 배치하며 심볼당 8비트를 전송합니다.</p>
+<p>점의 수가 늘어날수록 성상도가 촘촘해지므로, <strong>인접 심볼 간 최소 거리(d_min)가 줄어듭니다</strong>. 이것은 같은 전력 조건에서 잡음에 의한 오류 확률이 높아진다는 의미입니다.</p>
+<hr />
+<h3 id="_11">🔍 전송 효율과 잡음 내성의 트레이드오프<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>이 부분은 시험 출제 빈도가 매우 높은 핵심 개념입니다.</p>
+<p><strong>핵심 원리</strong>: 심볼당 비트 수가 증가할수록 대역폭 효율(bps/Hz)은 높아지지만, 동일한 오류율(BER)을 달성하기 위해 필요한 SNR(신호 대 잡음비)도 함께 증가합니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">변조 방식</th>
+<th style="text-align: center;">심볼당 비트 수</th>
+<th style="text-align: center;">대역폭 효율(bps/Hz)</th>
+<th style="text-align: center;">BER=10⁻⁶에 필요한 SNR(근사)</th>
+<th style="text-align: left;">적용 환경</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">BPSK</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">~10.5 dB</td>
+<td style="text-align: left;">잡음 심한 환경</td>
+</tr>
+<tr>
+<td style="text-align: center;">QPSK</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">~10.5 dB</td>
+<td style="text-align: left;">위성, 이동통신</td>
+</tr>
+<tr>
+<td style="text-align: center;">8PSK</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">~14 dB</td>
+<td style="text-align: left;">중간 거리 통신</td>
+</tr>
+<tr>
+<td style="text-align: center;">16-QAM</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">~14.5 dB</td>
+<td style="text-align: left;">LTE, WiFi</td>
+</tr>
+<tr>
+<td style="text-align: center;">64-QAM</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">~18.5 dB</td>
+<td style="text-align: left;">고속 WiFi</td>
+</tr>
+<tr>
+<td style="text-align: center;">256-QAM</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">~24 dB</td>
+<td style="text-align: left;">케이블, WiFi 6</td>
+</tr>
+</tbody>
+</table>
+<p>여기서 주목할 점이 있습니다. <strong>BPSK와 QPSK의 필요 SNR이 거의 동일</strong>하다는 것입니다. 이것은 QPSK가 동일한 SNR 조건에서 BPSK의 2배 효율을 달성한다는 의미이며, QPSK가 실무에서 널리 사용되는 이유이기도 합니다.</p>
+<p><em>트레이드오프 관계를 다이어그램으로 정리하겠습니다.</em></p>
+<div class="mermaid">flowchart LR
+    A["변조 차수 M 증가"] --&gt; B["심볼당 비트 수 증가&lt;br/&gt;n = log₂M"]
+    B --&gt; C["대역폭 효율 향상&lt;br/&gt;bps/Hz ↑"]
+    A --&gt; D["성상도 점 간격 감소&lt;br/&gt;d_min ↓"]
+    D --&gt; E["잡음 민감도 증가&lt;br/&gt;필요 SNR ↑"]
+    C --&gt; F{"트레이드오프"}
+    E --&gt; F</div>
+<h3 id="adaptive-modulation">🔍 적응적 변조(Adaptive Modulation)<a class="headerlink" href="#adaptive-modulation" title="Permanent link">&para;</a></h3>
+<p>현대 통신 시스템은 이 트레이드오프를 영리하게 활용합니다. <strong>채널 상태에 따라 변조 방식을 실시간으로 전환</strong>하는 것입니다.</p>
+<ul>
+<li><strong>신호가 좋을 때(높은 SNR)</strong>: 256-QAM으로 고속 전송</li>
+<li><strong>신호가 나쁠 때(낮은 SNR)</strong>: QPSK로 안정적 전송</li>
+</ul>
+<p>LTE와 WiFi에서 사용하는 <strong>AMC(Adaptive Modulation and Coding)</strong>가 바로 이 기술입니다. 여러분이 WiFi 환경에서 공유기에 가까이 가면 속도가 빨라지고, 멀어지면 느려지는 현상이 이 적응적 변조 때문입니다.</p>
+<hr />
+<h3 id="psk-vs-qam">📊 PSK vs QAM 핵심 비교 정리<a class="headerlink" href="#psk-vs-qam" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">비교 항목</th>
+<th style="text-align: left;">PSK</th>
+<th style="text-align: left;">QAM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>변화시키는 요소</strong></td>
+<td style="text-align: left;">위상만</td>
+<td style="text-align: left;">위상 + 진폭</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>성상도 형태</strong></td>
+<td style="text-align: left;">원(circle) 위의 점</td>
+<td style="text-align: left;">격자(grid) 형태의 점</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>진폭 일정 여부</strong></td>
+<td style="text-align: left;">일정 (진폭 불변)</td>
+<td style="text-align: left;">불일정 (다양한 진폭)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>같은 M에서 효율</strong></td>
+<td style="text-align: left;">동일</td>
+<td style="text-align: left;">동일 (n = log₂M)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>같은 M에서 잡음 내성</strong></td>
+<td style="text-align: left;">원형 배치로 인해 일부 제한</td>
+<td style="text-align: left;">격자 배치가 d_min 측면에서 유리</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>고차 변조 적합성</strong></td>
+<td style="text-align: left;">M=8 이상에서 비효율적</td>
+<td style="text-align: left;">M=16 이상에서 주로 사용</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>대표 사례</strong></td>
+<td style="text-align: left;">BPSK(GPS), QPSK(위성)</td>
+<td style="text-align: left;">16/64/256-QAM(LTE, WiFi)</td>
+</tr>
+</tbody>
+</table>
+<p>핵심 정리: <strong>M이 작을 때(2, 4)는 PSK가 효율적</strong>이고, <strong>M이 클 때(16 이상)는 QAM이 효율적</strong>입니다. 그래서 실제 통신 시스템에서는 QPSK(=4-QAM)부터 시작하여 16-QAM, 64-QAM, 256-QAM으로 확장하는 것이 일반적입니다.</p>
+<hr />
+<h2 id="_12">🔬 실습 — 성상도 해석과 비트 수 계산<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>아래 표의 빈칸을 채우면서, 각 변조 방식의 핵심 파라미터를 직접 계산하겠습니다.</p>
+<h3 id="_13">따라하기 실습: 변조 방식 파라미터 계산<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p><strong>단계 1</strong>: 심볼 수(M)가 주어졌을 때, 심볼당 비트 수(n)를 계산합니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">변조 방식</th>
+<th style="text-align: center;">심볼 수(M)</th>
+<th style="text-align: center;">심볼당 비트 수 n = log₂(M)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">BPSK</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr>
+<td style="text-align: center;">QPSK</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr>
+<td style="text-align: center;">8PSK</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr>
+<td style="text-align: center;">16-QAM</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr>
+<td style="text-align: center;">64-QAM</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr>
+<td style="text-align: center;">256-QAM</td>
+<td style="text-align: center;">256</td>
+<td style="text-align: center;">?</td>
+</tr>
+</tbody>
+</table>
+<details><summary>정답 확인</summary>
+
+| 변조 방식 | 심볼 수(M) | 심볼당 비트 수 n = log₂(M) |
+|:---:|:---:|:---:|
+| BPSK | 2 | **1** |
+| QPSK | 4 | **2** |
+| 8PSK | 8 | **3** |
+| 16-QAM | 16 | **4** |
+| 64-QAM | 64 | **6** |
+| 256-QAM | 256 | **8** |
+
+</details>
+
+<p><strong>단계 2</strong>: 심볼 전송 속도(Symbol Rate)가 1,000 symbols/s일 때, 각 변조 방식의 비트 전송 속도(Bit Rate)를 계산합니다.</p>
+<blockquote>
+<p><strong>비트 전송 속도 = 심볼 전송 속도 × 심볼당 비트 수</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">변조 방식</th>
+<th style="text-align: center;">심볼 속도</th>
+<th style="text-align: center;">심볼당 비트 수</th>
+<th style="text-align: center;">비트 전송 속도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">BPSK</td>
+<td style="text-align: center;">1,000 sym/s</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">? bps</td>
+</tr>
+<tr>
+<td style="text-align: center;">QPSK</td>
+<td style="text-align: center;">1,000 sym/s</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">? bps</td>
+</tr>
+<tr>
+<td style="text-align: center;">16-QAM</td>
+<td style="text-align: center;">1,000 sym/s</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">? bps</td>
+</tr>
+<tr>
+<td style="text-align: center;">64-QAM</td>
+<td style="text-align: center;">1,000 sym/s</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">? bps</td>
+</tr>
+</tbody>
+</table>
+<details><summary>정답 확인</summary>
+
+| 변조 방식 | 심볼 속도 | 심볼당 비트 수 | 비트 전송 속도 |
+|:---:|:---:|:---:|:---:|
+| BPSK | 1,000 sym/s | 1 | **1,000 bps** |
+| QPSK | 1,000 sym/s | 2 | **2,000 bps** |
+| 16-QAM | 1,000 sym/s | 4 | **4,000 bps** |
+| 64-QAM | 1,000 sym/s | 6 | **6,000 bps** |
+
+동일한 심볼 속도(= 동일한 대역폭)에서 변조 차수가 높아질수록 비트 전송 속도가 증가하는 것을 확인할 수 있습니다. 이것이 고차 변조를 사용하는 이유입니다.
+
+</details>
+
+<p><strong>단계 3</strong>: 다음 성상도를 보고 변조 방식을 판별합니다.</p>
+<blockquote>
+<ul>
+<li>성상도 A: 점이 2개, 모두 I축 위에 위치, 원점에서 같은 거리</li>
+<li>성상도 B: 점이 16개, 4×4 격자 형태, 원점에서의 거리가 각각 다름</li>
+<li>성상도 C: 점이 8개, 모두 원 위에 균등 배치, 원점에서 같은 거리</li>
+</ul>
+</blockquote>
+<details><summary>정답 확인</summary>
+
+- **성상도 A**: **BPSK** — 2개의 점이 원 위에 위치하며, 180° 간격입니다
+- **성상도 B**: **16-QAM** — 4×4 격자 배치이며, 진폭이 다양합니다
+- **성상도 C**: **8PSK** — 8개의 점이 원 위에 균등 배치되며, 진폭이 일정합니다
+
+핵심 판별법: **모든 점이 원 위 → PSK**, **격자 형태 → QAM**
+
+</details>
+
+<hr />
+<h2 id="_14">⚠️ 시험에서 자주 출제되는 포인트 정리<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="_15">출제 빈도 높은 유형<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">출제 유형</th>
+<th style="text-align: left;">핵심 포인트</th>
+<th style="text-align: left;">예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">심볼당 비트 수 계산</td>
+<td style="text-align: left;">n = log₂(M)</td>
+<td style="text-align: left;">32-QAM → log₂(32) = 5비트</td>
+</tr>
+<tr>
+<td style="text-align: left;">비트 전송 속도 계산</td>
+<td style="text-align: left;">R_b = R_s × n</td>
+<td style="text-align: left;">심볼 속도 2,000에서 QPSK → 4,000 bps</td>
+</tr>
+<tr>
+<td style="text-align: left;">PSK vs QAM 차이</td>
+<td style="text-align: left;">PSK: 위상만, QAM: 위상+진폭</td>
+<td style="text-align: left;">성상도 형태로 구분</td>
+</tr>
+<tr>
+<td style="text-align: left;">트레이드오프 서술</td>
+<td style="text-align: left;">효율↑ ↔ 잡음 내성↓</td>
+<td style="text-align: left;">64-QAM은 16-QAM보다 효율 높지만 SNR 요구 높음</td>
+</tr>
+<tr>
+<td style="text-align: left;">QPSK = 4-QAM</td>
+<td style="text-align: left;">수학적으로 동일</td>
+<td style="text-align: left;">심볼 4개, 2비트/심볼</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_16">핵심 수식 요약<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">수식</th>
+<th style="text-align: left;">의미</th>
+<th style="text-align: left;">단위</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>n = log₂(M)</strong></td>
+<td style="text-align: left;">심볼당 비트 수</td>
+<td style="text-align: left;">비트/심볼</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>R_b = R_s × n</strong></td>
+<td style="text-align: left;">비트 전송 속도 = 심볼 속도 × 비트 수</td>
+<td style="text-align: left;">bps</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>R_s = R_b / n</strong></td>
+<td style="text-align: left;">심볼 전송 속도 = 비트 속도 / 비트 수</td>
+<td style="text-align: left;">symbols/s (= baud)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>대역폭 효율 = R_b / BW</strong></td>
+<td style="text-align: left;">단위 대역폭당 비트 전송 속도</td>
+<td style="text-align: left;">bps/Hz</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_17">📝 형성 평가<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<div class="assessment">
+<h3 id="_18">📝 형성 평가<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p><strong>객관식 1.</strong> QPSK에서 하나의 심볼이 전달하는 비트 수는 얼마입니까?</p>
+<p>① 1비트 &nbsp;&nbsp; ② 2비트 &nbsp;&nbsp; ③ 3비트 &nbsp;&nbsp; ④ 4비트</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ②**
+
+QPSK는 4개의 위상을 사용하므로 M = 4입니다. n = log₂(4) = 2이므로, 심볼당 **2비트**를 전달합니다.
+
+</details>
+<hr />
+<p><strong>객관식 2.</strong> 다음 중 QAM 변조 방식의 성상도에 대한 설명으로 옳은 것은 무엇입니까?</p>
+<p>① 모든 심볼 점이 원점에서 같은 거리에 위치한다<br />
+② 심볼 점이 격자(grid) 형태로 배치되며, 원점에서의 거리가 다양하다<br />
+③ 위상만 변화시키므로 진폭은 항상 일정하다<br />
+④ QAM은 주파수를 변화시키는 변조 방식이다</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ②**
+
+QAM은 위상과 진폭을 동시에 변화시키므로, 성상도에서 점들이 **격자 형태**로 배치되며 원점에서의 거리(진폭)가 다양합니다. ①은 PSK의 특성이며, ③도 PSK에 해당합니다. ④는 FSK의 설명입니다.
+
+</details>
+<hr />
+<p><strong>객관식 3.</strong> 심볼 전송 속도가 4,000 baud인 64-QAM 시스템의 비트 전송 속도는 얼마입니까?</p>
+<p>① 4,000 bps &nbsp;&nbsp; ② 8,000 bps &nbsp;&nbsp; ③ 16,000 bps &nbsp;&nbsp; ④ 24,000 bps</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ④**
+
+64-QAM에서 M = 64이므로 n = log₂(64) = 6비트/심볼입니다.  
+비트 전송 속도 R_b = R_s × n = 4,000 × 6 = **24,000 bps**입니다.
+
+</details>
+<hr />
+<p><strong>서술형.</strong> PSK에서 변조 차수(M)를 높이면 대역폭 효율은 향상되지만, 동시에 잡음 내성은 저하됩니다. 이러한 트레이드오프가 발생하는 이유를 성상도의 관점에서 설명하십시오.</p>
+<details>
+<summary>정답 확인</summary>
+</details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../chapter12/" class="md-footer__link md-footer__link--prev" aria-label="이전: 12차시: 디지털 변조 입문 — ASK와 FSK의 원리">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                12차시: 디지털 변조 입문 — ASK와 FSK의 원리
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter14/" class="md-footer__link md-footer__link--next" aria-label="다음: 14차시: 디지털 변조 비교 실습 — 성상도와 오답 함정 집중 공략">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                14차시: 디지털 변조 비교 실습 — 성상도와 오답 함정 집중 공략
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 노용철TV | <a href='https://eduflow-greatsong.fly.dev/'>EduFlow</a>로 제작
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+        <script src="../javascripts/mermaid-config.js"></script>
+      
+        <script src="../javascripts/scroll-progress.js"></script>
+      
+        <script src="../javascripts/eduflow-nav.js"></script>
+      
+        <script src="../javascripts/lightbox.js"></script>
+      
+    
+  </body>
+</html>

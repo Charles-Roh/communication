@@ -1,0 +1,3458 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="한전 KDN 등 공공기관 채용시험 통신이론 과목을 혼자서 완주할 수 있도록 설계된 독학용 수험 교재로, 비전공자도 기초부터 핵심 변조 이론까지 체계적으로 학습할 수 있다.">
+      
+      
+        <meta name="author" content="노용철TV (EduFlow)">
+      
+      
+      
+        <link rel="prev" href="../chapter05/">
+      
+      
+        <link rel="next" href="../chapter07/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>6차시: AM 변조 — 진폭으로 정보를 담는 방법 - 통신이론 핵심정리 — 공공기관 채용시험 완전 대비</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6-am" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-header__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6차시: AM 변조 — 진폭으로 정보를 담는 방법
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter01/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter05/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter10/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter16/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-nav__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1차시: 통신이란 무엇인가 — 정보가 이동하는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2차시: 신호의 언어 — 주파수, 진폭, 위상 이해하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3차시: 대역폭과 스펙트럼 — 정보가 차지하는 공간
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4차시: 실습 체험 — 신호 읽기와 기초 개념 확인 문제 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5차시: 변조란 무엇인가 — 반송파에 정보를 싣는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6차시: AM 변조 — 진폭으로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6차시: AM 변조 — 진폭으로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 학습 목표
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 학습 목표">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 핵심 개념 1: 변조 지수와 AM 파형
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 핵심 개념 2: 스펙트럼과 전력 효율
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔢 따라하기 실습
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 도입 — 왜 이걸 배우나요? (5분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-am-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 핵심 개념 1 — AM 변조 원리와 변조 지수 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 핵심 개념 2 — 주파수 스펙트럼과 전력 효율 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔢 따라하기 실습 — 계산 연습 (10분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가 &amp; 성찰 (5분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 도입 — 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 도입 — 왜 이걸 배우나요?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5차시 복습: 변조란 무엇이었습니까?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        일상 비유: 수영장의 파도 기계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AM이 중요한 이유
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-am_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 핵심 개념 1 — AM 변조 원리와 변조 지수
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📖 핵심 개념 1 — AM 변조 원리와 변조 지수">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-1-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-1. AM 변조의 수학적 표현
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-2-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-2. 변조 지수(m)의 정의
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1-2. 변조 지수(m)의 정의">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        비유로 이해하기: 볼륨 조절 노브
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-3. 파형으로 보는 변조 지수
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1-3. 파형으로 보는 변조 지수">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        수치 예시
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-4-over-modulation-m-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-4. 과변조(Over-modulation): m &gt; 1일 때의 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-5. 여러 주파수가 동시에 변조될 때
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1-5. 여러 주파수가 동시에 변조될 때">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        수치 예시
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 핵심 개념 2 — 주파수 스펙트럼과 전력 효율
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📖 핵심 개념 2 — 주파수 스펙트럼과 전력 효율">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-1. AM 신호의 주파수 스펙트럼
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-1. AM 신호의 주파수 스펙트럼">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        비유: 양쪽이 같은 거울
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-2. 스펙트럼 구조 시각화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-3. AM 대역폭
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-3. AM 대역폭">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        수치 예시
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-4-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-4. AM 신호의 전력 구성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-5-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-5. 전력 효율: AM의 근본적 한계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-6-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-6. AM 변형 방식의 등장 배경
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔢 따라하기 실습 — 단계별 계산 연습
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔢 따라하기 실습 — 단계별 계산 연습">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-am_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 1단계: AM 파형의 최대·최소 진폭 비율 구하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 2단계: 스펙트럼 성분 주파수 구하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 3단계: 대역폭 구하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 4단계: 각 성분의 전력 구하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 5단계: 전력 효율 구하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 자주 하는 실수와 주의할 점
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수와 주의할 점">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 1: 변조 지수 공식의 분모와 분자 혼동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-f_m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 2: 대역폭을 f_m으로 구하는 오류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 3: 전력 효율 공식에서 분모 실수
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 4: 복합 변조 지수 계산 시 단순 합산
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 공식 요약표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 형성 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 확인 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 자기점검 체크리스트
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💭 성찰 &amp; 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💭 성찰 &amp; 다음 차시 미리보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        이번 차시 핵심 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-am-dsb-sc-ssb-vsb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔜 다음 차시 미리보기: 7차시 — AM 변형 방식 (DSB-SC, SSB, VSB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7차시: AM 변형 방식 — DSB, SSB, VSB 비교 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8차시: FM 변조 — 주파수로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9차시: AM vs FM 실전 비교 — 기출 문제 집중 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10차시: 디지털 통신의 시작 — 표본화와 양자화 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12차시: 디지털 변조 입문 — ASK와 FSK의 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14차시: 디지털 변조 비교 실습 — 성상도와 오답 함정 집중 공략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15차시: Part 2·3 통합 복습 — 아날로그·디지털 변조 완전 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16차시: 다중화란 무엇인가 — 하나의 채널로 여러 신호 보내기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17차시: CDM과 OFDM — 현대 통신이 선택한 다중화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18차시: 이동통신의 진화 — 1G부터 5G까지의 핵심 개념
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19차시: 통신 시스템 실생활 연결 — 와이파이, 블루투스, 위성통신
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20차시: 전체 통합 모의고사 — 실전 시험 완전 대비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 학습 목표
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 학습 목표">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 핵심 개념 1: 변조 지수와 AM 파형
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 핵심 개념 2: 스펙트럼과 전력 효율
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔢 따라하기 실습
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 도입 — 왜 이걸 배우나요? (5분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-am-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 핵심 개념 1 — AM 변조 원리와 변조 지수 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 핵심 개념 2 — 주파수 스펙트럼과 전력 효율 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔢 따라하기 실습 — 계산 연습 (10분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가 &amp; 성찰 (5분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 도입 — 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 도입 — 왜 이걸 배우나요?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5차시 복습: 변조란 무엇이었습니까?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        일상 비유: 수영장의 파도 기계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AM이 중요한 이유
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-am_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 핵심 개념 1 — AM 변조 원리와 변조 지수
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📖 핵심 개념 1 — AM 변조 원리와 변조 지수">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-1-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-1. AM 변조의 수학적 표현
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-2-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-2. 변조 지수(m)의 정의
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1-2. 변조 지수(m)의 정의">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        비유로 이해하기: 볼륨 조절 노브
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-3. 파형으로 보는 변조 지수
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1-3. 파형으로 보는 변조 지수">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        수치 예시
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-4-over-modulation-m-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-4. 과변조(Over-modulation): m &gt; 1일 때의 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-5. 여러 주파수가 동시에 변조될 때
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1-5. 여러 주파수가 동시에 변조될 때">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        수치 예시
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 핵심 개념 2 — 주파수 스펙트럼과 전력 효율
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📖 핵심 개념 2 — 주파수 스펙트럼과 전력 효율">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-1. AM 신호의 주파수 스펙트럼
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-1. AM 신호의 주파수 스펙트럼">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        비유: 양쪽이 같은 거울
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-2. 스펙트럼 구조 시각화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-3. AM 대역폭
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-3. AM 대역폭">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        수치 예시
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-4-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-4. AM 신호의 전력 구성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-5-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-5. 전력 효율: AM의 근본적 한계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-6-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-6. AM 변형 방식의 등장 배경
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔢 따라하기 실습 — 단계별 계산 연습
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔢 따라하기 실습 — 단계별 계산 연습">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-am_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 1단계: AM 파형의 최대·최소 진폭 비율 구하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 2단계: 스펙트럼 성분 주파수 구하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 3단계: 대역폭 구하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 4단계: 각 성분의 전력 구하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 5단계: 전력 효율 구하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 자주 하는 실수와 주의할 점
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수와 주의할 점">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 1: 변조 지수 공식의 분모와 분자 혼동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-f_m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 2: 대역폭을 f_m으로 구하는 오류
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 3: 전력 효율 공식에서 분모 실수
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 4: 복합 변조 지수 계산 시 단순 합산
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 공식 요약표
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 형성 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 확인 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 자기점검 체크리스트
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💭 성찰 &amp; 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💭 성찰 &amp; 다음 차시 미리보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        이번 차시 핵심 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-am-dsb-sc-ssb-vsb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔜 다음 차시 미리보기: 7차시 — AM 변형 방식 (DSB-SC, SSB, VSB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../chapter05/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="6-am">6차시: AM 변조 — 진폭으로 정보를 담는 방법<a class="headerlink" href="#6-am" title="Permanent link">&para;</a></h1>
+<div class="lesson-banner">
+<p><strong>⏰ 50분</strong> · AM 변조 원리 · 변조 지수 · 스펙트럼 구조 · 전력 효율 · <strong>난이도</strong> ●●●○○</p>
+<p><strong>학습목표</strong>: AM 변조의 원리, 스펙트럼 구조, 전력 효율을 이해하고 계산할 수 있다</p>
+<blockquote>
+<p><strong>오늘의 질문</strong>: "AM 라디오는 어떻게 보이지 않는 전파에 사람의 목소리를 실어 보내는 것일까요?"</p>
+</blockquote>
+</div>
+<hr />
+<h2 id="_1">📋 학습 목표<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AM 변조의 원리와 <strong>변조 지수(m)</strong>의 정의를 설명하고, 변조 지수가 1을 초과할 때 발생하는 문제를 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AM 신호의 <strong>주파수 스펙트럼 구조</strong>(반송파, 상측파대, 하측파대)를 도식으로 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AM 신호의 <strong>전력 구성과 효율</strong>을 계산하고, 전력이 반송파에 집중되는 비효율성을 설명할 수 있다</li>
+</ul>
+<hr />
+<div class="cards-grid">
+<div class="card card-orange">
+<h3 id="1-am">🧠 핵심 개념 1: 변조 지수와 AM 파형<a class="headerlink" href="#1-am" title="Permanent link">&para;</a></h3>
+<p>반송파의 진폭이 얼마나 변하는지를 수치로 표현하는 변조 지수 m의 의미와, 과변조가 발생하는 조건을 학습합니다</p>
+</div>
+<div class="card card-orange">
+<h3 id="2">🧠 핵심 개념 2: 스펙트럼과 전력 효율<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>AM 신호가 주파수 영역에서 어떤 모습인지, 그리고 전체 전력 중 실제 정보를 담는 비율이 얼마나 낮은지를 계산합니다</p>
+</div>
+<div class="card card-blue">
+<h3 id="_2">🔢 따라하기 실습<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>변조 지수와 전력 효율을 직접 계산하여 AM 방식의 특성을 수치로 확인합니다</p>
+</div>
+<div class="card card-red">
+<h3 id="_3">📝 형성 평가<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>객관식·서술형 문제를 통해 AM 변조의 핵심 개념 이해도를 점검합니다</p>
+</div>
+</div>
+<hr />
+<h2 id="_4">⏱️ 수업 흐름<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="steps">
+<div class="step">
+<h4 id="5">🔍 도입 — 왜 이걸 배우나요? (5분)<a class="headerlink" href="#5" title="Permanent link">&para;</a></h4>
+<p>AM 변조의 필요성을 일상 비유로 이해하고, 5차시에서 배운 변조 개념과 연결합니다</p>
+</div>
+<div class="step">
+<h4 id="1-am-15">📖 핵심 개념 1 — AM 변조 원리와 변조 지수 (15분)<a class="headerlink" href="#1-am-15" title="Permanent link">&para;</a></h4>
+<p>AM 변조의 수학적 표현, 변조 지수 m의 정의, 정상 변조·과변조의 차이를 학습합니다</p>
+</div>
+<div class="step">
+<h4 id="2-15">📖 핵심 개념 2 — 주파수 스펙트럼과 전력 효율 (15분)<a class="headerlink" href="#2-15" title="Permanent link">&para;</a></h4>
+<p>AM 신호의 스펙트럼 구조를 분석하고, 전력 효율 공식을 도출하여 AM의 비효율성을 확인합니다</p>
+</div>
+<div class="step">
+<h4 id="10">🔢 따라하기 실습 — 계산 연습 (10분)<a class="headerlink" href="#10" title="Permanent link">&para;</a></h4>
+<p>변조 지수, 대역폭, 전력 효율을 단계별로 직접 계산합니다</p>
+</div>
+<div class="step">
+<h4 id="5_1">📝 형성 평가 &amp; 성찰 (5분)<a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h4>
+<p>확인 문제를 풀고 학습 목표 달성 여부를 자가 점검합니다</p>
+</div>
+</div>
+<hr />
+<h2 id="_5">🔍 도입 — 왜 이걸 배우나요?<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="5_2">5차시 복습: 변조란 무엇이었습니까?<a class="headerlink" href="#5_2" title="Permanent link">&para;</a></h3>
+<p>지난 차시에서 <strong>변조(Modulation)</strong>란 저주파 정보 신호를 고주파 반송파에 실어 먼 거리까지 전송하는 기술이라고 학습했습니다. 반송파의 세 가지 특성—<strong>진폭</strong>, <strong>주파수</strong>, <strong>위상</strong>—중 하나를 정보 신호에 따라 변화시키는 것이 변조의 핵심이었습니다.</p>
+<p>이번 차시에서는 그 중 첫 번째, <strong>진폭을 변화시키는 방법</strong>, 즉 <strong>AM(Amplitude Modulation, 진폭 변조)</strong>을 본격적으로 다루겠습니다.</p>
+<h3 id="_6">일상 비유: 수영장의 파도 기계<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>수영장의 파도 기계를 떠올려 보겠습니다. 파도 기계는 일정한 리듬으로 물결을 만들어 냅니다. 이것이 <strong>반송파</strong>에 해당합니다. 이제 누군가가 파도 기계의 출력 세기를 음악 리듬에 맞춰 조절한다고 상상하겠습니다. 조용한 부분에서는 파도가 낮아지고, 큰 소리 부분에서는 파도가 높아집니다.</p>
+<p>멀리 떨어진 곳에서 수영하고 있는 사람은 파도의 <strong>높낮이 변화 패턴</strong>을 느끼면서 원래의 음악 리듬을 짐작할 수 있습니다. AM 변조가 바로 이와 같은 원리입니다. 전파의 <strong>진폭(세기)</strong>을 음성 신호에 따라 높였다 낮췄다 하면, 수신 측에서 진폭 변화를 읽어 원래의 음성을 복원할 수 있습니다.</p>
+<div class="mermaid">flowchart LR
+    A["음성 신호&lt;br/&gt;(저주파 정보)"] --&gt; B["AM 변조기"]
+    C["반송파&lt;br/&gt;(고주파)"] --&gt; B
+    B --&gt; D["AM 신호&lt;br/&gt;(진폭이 변하는 고주파)"]
+    D --&gt; E["수신기&lt;br/&gt;(진폭 변화 추출)"]
+    E --&gt; F["원래 음성&lt;br/&gt;복원"]</div>
+<p><em>AM 변조의 전체 흐름: 음성 신호가 반송파의 진폭을 변화시키고, 수신기가 이를 복원합니다</em></p>
+<h3 id="am">AM이 중요한 이유<a class="headerlink" href="#am" title="Permanent link">&para;</a></h3>
+<p>AM은 가장 오래되고 구조가 단순한 변조 방식입니다. 수신 회로가 간단하여 저렴하게 만들 수 있기 때문에, AM 라디오 방송은 오늘날에도 전 세계에서 사용되고 있습니다. 또한 AM의 원리를 이해하면, 이를 개선한 <strong>DSB</strong>, <strong>SSB</strong>, <strong>VSB</strong> 등 다양한 변형 방식의 등장 배경과 차이점을 자연스럽게 파악할 수 있습니다.</p>
+<p>통신 관련 시험에서도 AM의 변조 지수 계산, 스펙트럼 분석, 전력 효율 계산은 출제 빈도가 매우 높은 핵심 영역입니다.</p>
+<hr />
+<h2 id="1-am_1">📖 핵심 개념 1 — AM 변조 원리와 변조 지수<a class="headerlink" href="#1-am_1" title="Permanent link">&para;</a></h2>
+<h3 id="1-1-am">1-1. AM 변조의 수학적 표현<a class="headerlink" href="#1-1-am" title="Permanent link">&para;</a></h3>
+<p>AM 변조의 원리를 수식으로 정리하겠습니다. 먼저 두 가지 신호를 정의합니다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>수식</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>정보 신호(변조 신호)</strong></td>
+<td>e_m(t) = E_m · cos(2πf_m·t)</td>
+<td>전달하려는 음성·음악 등의 저주파 신호</td>
+</tr>
+<tr>
+<td><strong>반송파(carrier)</strong></td>
+<td>e_c(t) = E_c · cos(2πf_c·t)</td>
+<td>정보를 실어 나르는 고주파 신호</td>
+</tr>
+</tbody>
+</table>
+<p>여기서 E_m은 정보 신호의 최대 진폭, E_c는 반송파의 최대 진폭, f_m은 정보 신호의 주파수, f_c는 반송파의 주파수입니다.</p>
+<p>AM 변조는 반송파의 진폭을 정보 신호에 비례하여 변화시키는 것이므로, AM 신호는 다음과 같이 표현됩니다.</p>
+<blockquote>
+<p><strong>AM 신호: e_AM(t) = [E_c + E_m · cos(2πf_m·t)] · cos(2πf_c·t)</strong></p>
+</blockquote>
+<p>대괄호 안의 부분이 <strong>시간에 따라 변하는 진폭</strong>입니다. 반송파의 원래 진폭 E_c에 정보 신호 E_m · cos(2πf_m·t)가 더해져서, 진폭이 커졌다 작아졌다를 반복하는 것입니다.</p>
+<h3 id="1-2-m">1-2. 변조 지수(m)의 정의<a class="headerlink" href="#1-2-m" title="Permanent link">&para;</a></h3>
+<p><strong>변조 지수(modulation index)</strong> m은 반송파의 진폭이 정보 신호에 의해 <strong>얼마나 변하는지</strong>를 나타내는 비율입니다.</p>
+<blockquote>
+<p><strong>m = E_m / E_c</strong> (정보 신호의 최대 진폭 ÷ 반송파의 최대 진폭)</p>
+</blockquote>
+<p>변조 지수는 <strong>백분율</strong>로 표현하기도 합니다. m = 0.5이면 변조도 50%, m = 1이면 변조도 100%입니다.</p>
+<p>AM 신호 수식을 변조 지수 m으로 다시 쓰면 다음과 같습니다.</p>
+<blockquote>
+<p><strong>e_AM(t) = E_c [1 + m · cos(2πf_m·t)] · cos(2πf_c·t)</strong></p>
+</blockquote>
+<p>대괄호 안의 [1 + m · cos(2πf_m·t)] 부분을 <strong>포락선(envelope)</strong>이라고 합니다. 수신기는 이 포락선의 변화를 추출하여 원래의 정보 신호를 복원합니다.</p>
+<h4 id="_7">비유로 이해하기: 볼륨 조절 노브<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>음향 믹서의 볼륨 노브를 떠올려 보겠습니다. 반송파가 스피커에서 나오는 일정한 "윙~" 소리라면, 변조 지수 m은 볼륨 노브를 얼마나 크게 돌리는지에 해당합니다.</p>
+<ul>
+<li><strong>m = 0</strong>: 노브를 전혀 돌리지 않음 → 소리 크기 변화 없음 → 정보 없음</li>
+<li><strong>m = 0.5</strong>: 노브를 중간까지 돌림 → 소리가 적당히 커졌다 작아졌다 함</li>
+<li><strong>m = 1</strong>: 노브를 최대로 돌림 → 소리가 최대에서 무음(0)까지 변함</li>
+<li><strong>m &gt; 1</strong>: 노브를 한계 이상으로 밀어붙임 → 소리가 찌그러짐(왜곡)</li>
+</ul>
+<h3 id="1-3">1-3. 파형으로 보는 변조 지수<a class="headerlink" href="#1-3" title="Permanent link">&para;</a></h3>
+<p>AM 신호의 파형에서 변조 지수를 직접 읽어낼 수 있습니다. 파형의 <strong>최대 진폭</strong>과 <strong>최소 진폭</strong>을 측정하면 됩니다.</p>
+<table>
+<thead>
+<tr>
+<th>파형 측정값</th>
+<th>기호</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>최대 진폭</td>
+<td>E_max</td>
+<td>반송파 진폭이 가장 클 때의 값</td>
+</tr>
+<tr>
+<td>최소 진폭</td>
+<td>E_min</td>
+<td>반송파 진폭이 가장 작을 때의 값</td>
+</tr>
+</tbody>
+</table>
+<p>이 값들과 변조 지수의 관계는 다음과 같습니다.</p>
+<blockquote>
+<p><strong>E_max = E_c(1 + m)</strong> , <strong>E_min = E_c(1 - m)</strong></p>
+</blockquote>
+<p>따라서 파형에서 직접 변조 지수를 구하는 공식은 다음과 같습니다.</p>
+<blockquote>
+<p><strong>m = (E_max - E_min) / (E_max + E_min)</strong></p>
+</blockquote>
+<p>이 공식은 시험에서 자주 출제됩니다. 오실로스코프로 AM 파형을 관측했을 때 E_max와 E_min을 읽어 변조 지수를 구하는 문제가 대표적입니다.</p>
+<h4 id="_8">수치 예시<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>반송파의 진폭 E_c = 10V이고, 정보 신호의 진폭 E_m = 5V인 경우를 계산하겠습니다.</p>
+<ul>
+<li>m = E_m / E_c = 5 / 10 = <strong>0.5 (50%)</strong></li>
+<li>E_max = 10 × (1 + 0.5) = <strong>15V</strong></li>
+<li>E_min = 10 × (1 - 0.5) = <strong>5V</strong></li>
+<li>검증: m = (15 - 5) / (15 + 5) = 10 / 20 = <strong>0.5</strong> ✓</li>
+</ul>
+<h3 id="1-4-over-modulation-m-1">1-4. 과변조(Over-modulation): m &gt; 1일 때의 문제<a class="headerlink" href="#1-4-over-modulation-m-1" title="Permanent link">&para;</a></h3>
+<p>변조 지수가 1을 초과하면 어떤 일이 발생하는지 살펴보겠습니다.</p>
+<p>m &gt; 1이면 <strong>E_min = E_c(1 - m)</strong>의 값이 <strong>음수</strong>가 됩니다. 그런데 진폭이라는 물리량은 음수가 될 수 없습니다. 이는 실제로 반송파의 <strong>위상이 반전</strong>되는 현상으로 나타나며, 포락선이 원래 정보 신호의 형태를 유지하지 못하고 찌그러집니다.</p>
+<div class="mermaid">flowchart TD
+    A["m ≤ 1&lt;br/&gt;정상 변조"] --&gt; B["포락선 = 정보 신호 형태 유지"]
+    B --&gt; C["수신기에서 정확한 복원 가능"]
+    D["m &gt; 1&lt;br/&gt;과변조"] --&gt; E["포락선 왜곡&lt;br/&gt;위상 반전 구간 발생"]
+    E --&gt; F["수신기에서 왜곡된 신호 복원"]
+    F --&gt; G["인접 채널 간섭 발생"]</div>
+<p><em>정상 변조와 과변조의 결과 비교</em></p>
+<p><strong>과변조의 문제점을 정리하면 다음과 같습니다.</strong></p>
+<table>
+<thead>
+<tr>
+<th>문제</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>포락선 왜곡</strong></td>
+<td>포락선이 원래 정보 신호의 형태를 잃어, 수신기에서 왜곡된 음성이 복원됩니다</td>
+</tr>
+<tr>
+<td><strong>대역폭 확장</strong></td>
+<td>왜곡으로 인해 고조파 성분이 생성되어 대역폭이 넓어집니다</td>
+</tr>
+<tr>
+<td><strong>인접 채널 간섭</strong></td>
+<td>확장된 대역폭이 옆 채널의 주파수 영역을 침범하여 다른 방송에 간섭을 일으킵니다</td>
+</tr>
+</tbody>
+</table>
+<p>따라서 AM 송신기에서는 <strong>m ≤ 1</strong>이 되도록 반드시 변조 신호의 크기를 제한해야 합니다. 실제 AM 방송에서는 안전 마진을 두어 m을 약 0.7~0.9 수준으로 유지하는 것이 일반적입니다.</p>
+<h3 id="1-5">1-5. 여러 주파수가 동시에 변조될 때<a class="headerlink" href="#1-5" title="Permanent link">&para;</a></h3>
+<p>실제 음성이나 음악은 단일 주파수가 아니라 여러 주파수 성분의 합입니다. n개의 서로 다른 주파수 성분이 각각 m₁, m₂, …, mₙ의 변조 지수로 반송파를 변조할 때, <strong>전체 변조 지수</strong>는 다음과 같이 구합니다.</p>
+<blockquote>
+<p><strong>m_total = √(m₁² + m₂² + … + mₙ²)</strong></p>
+</blockquote>
+<p>이 공식에서 알 수 있듯이, 개별 변조 지수가 모두 1 미만이더라도 합성하면 1을 초과할 수 있습니다. 따라서 복합 신호의 경우 더욱 주의가 필요합니다.</p>
+<h4 id="_9">수치 예시<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>세 주파수 성분의 변조 지수가 각각 m₁ = 0.5, m₂ = 0.6, m₃ = 0.4일 때:</p>
+<ul>
+<li>m_total = √(0.25 + 0.36 + 0.16) = √0.77 ≈ <strong>0.877</strong></li>
+</ul>
+<p>전체 변조 지수가 1 미만이므로 과변조는 발생하지 않습니다.</p>
+<hr />
+<h2 id="2_1">📖 핵심 개념 2 — 주파수 스펙트럼과 전력 효율<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
+<h3 id="2-1-am">2-1. AM 신호의 주파수 스펙트럼<a class="headerlink" href="#2-1-am" title="Permanent link">&para;</a></h3>
+<p>AM 신호의 수식을 삼각함수 곱의 공식을 이용하여 전개하면, 신호의 주파수 구성을 알 수 있습니다.</p>
+<p><strong>e_AM(t) = E_c · cos(2πf_c·t) + (mE_c/2) · cos[2π(f_c + f_m)·t] + (mE_c/2) · cos[2π(f_c - f_m)·t]</strong></p>
+<p>이 전개식에서 세 가지 주파수 성분이 나타납니다.</p>
+<table>
+<thead>
+<tr>
+<th>성분</th>
+<th>주파수</th>
+<th>진폭</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>반송파(Carrier)</strong></td>
+<td>f_c</td>
+<td>E_c</td>
+<td>정보를 담고 있지 않음. 기준 역할</td>
+</tr>
+<tr>
+<td><strong>상측파대(USB: Upper Sideband)</strong></td>
+<td>f_c + f_m</td>
+<td>mE_c / 2</td>
+<td>정보 신호를 담고 있음</td>
+</tr>
+<tr>
+<td><strong>하측파대(LSB: Lower Sideband)</strong></td>
+<td>f_c - f_m</td>
+<td>mE_c / 2</td>
+<td>정보 신호를 담고 있음 (USB와 대칭)</td>
+</tr>
+</tbody>
+</table>
+<p>핵심을 정리하면 다음과 같습니다.</p>
+<ul>
+<li>반송파 자체는 <strong>정보를 담고 있지 않습니다</strong>. 정보는 오직 <strong>측파대(Sideband)</strong>에만 존재합니다.</li>
+<li>상측파대와 하측파대는 <strong>동일한 정보</strong>를 담고 있으며, 반송파 주파수를 기준으로 좌우 대칭입니다.</li>
+</ul>
+<h4 id="_10">비유: 양쪽이 같은 거울<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>벽에 거울을 세워두면, 거울 앞에 놓인 물건과 거울 속 상(像)은 동일한 모습입니다. AM 스펙트럼에서 반송파가 거울이고, 상측파대와 하측파대는 거울 앞뒤의 같은 상에 해당합니다. 같은 정보가 두 번 전송되는 셈이므로, 주파수 자원 측면에서 비효율적이라는 것을 직관적으로 이해할 수 있습니다.</p>
+<h3 id="2-2">2-2. 스펙트럼 구조 시각화<a class="headerlink" href="#2-2" title="Permanent link">&para;</a></h3>
+<p>AM 신호의 주파수 스펙트럼을 시각적으로 나타내겠습니다.</p>
+<div class="svg-diagram">
+<p><svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+<br />
+<!-- 축 --></p>
+<p><line x1="50" y1="230" x2="650" y2="230" stroke="#333" stroke-width="2"/>
+  <line x1="50" y1="230" x2="50" y2="30" stroke="#333" stroke-width="2"/></p>
+<!-- Y축 레이블 -->
+<p><text x="25" y="130" font-size="13" fill="#333" text-anchor="middle" transform="rotate(-90,25,130)">진폭</text></p>
+<!-- X축 레이블 -->
+<p><text x="350" y="270" font-size="13" fill="#333" text-anchor="middle">주파수</text></p>
+<!-- 반송파 -->
+<p><rect x="340" y="60" width="20" height="170" fill="#2196F3" rx="2"/>
+  <text x="350" y="50" font-size="12" fill="#2196F3" text-anchor="middle" font-weight="bold">E_c</text>
+  <text x="350" y="248" font-size="11" fill="#333" text-anchor="middle">f_c</text></p>
+<!-- 하측파대 (LSB) -->
+<p><rect x="190" y="145" width="20" height="85" fill="#FF9800" rx="2"/>
+  <text x="200" y="135" font-size="11" fill="#FF9800" text-anchor="middle" font-weight="bold">mE_c/2</text>
+  <text x="200" y="248" font-size="10" fill="#333" text-anchor="middle">f_c - f_m</text></p>
+<!-- 상측파대 (USB) -->
+<p><rect x="490" y="145" width="20" height="85" fill="#4CAF50" rx="2"/>
+  <text x="500" y="135" font-size="11" fill="#4CAF50" text-anchor="middle" font-weight="bold">mE_c/2</text>
+  <text x="500" y="248" font-size="10" fill="#333" text-anchor="middle">f_c + f_m</text></p>
+<!-- 대역폭 표시 -->
+<p><line x1="190" y1="20" x2="510" y2="20" stroke="#E91E63" stroke-width="2" marker-start="url(#arrowL)" marker-end="url(#arrowR)"/>
+  <text x="350" y="15" font-size="12" fill="#E91E63" text-anchor="middle" font-weight="bold">대역폭 BW = 2f_m</text></p>
+<!-- 라벨 -->
+<p><text x="160" y="190" font-size="11" fill="#FF9800" text-anchor="middle">LSB</text>
+  <text x="160" y="205" font-size="10" fill="#FF9800" text-anchor="middle">(하측파대)</text>
+  <text x="540" y="190" font-size="11" fill="#4CAF50" text-anchor="middle">USB</text>
+  <text x="540" y="205" font-size="10" fill="#4CAF50" text-anchor="middle">(상측파대)</text>
+  <text x="390" y="100" font-size="11" fill="#2196F3" text-anchor="start">반송파</text></p>
+<!-- 화살표 마커 정의 -->
+<p><defs>
+    <marker id="arrowL" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <path d="M8,0 L0,3 L8,6" fill="#E91E63"/>
+    </marker>
+    <marker id="arrowR" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#E91E63"/>
+    </marker>
+  </defs>
+</svg></p>
+</div>
+<p><em>AM 신호의 주파수 스펙트럼: 반송파를 중심으로 상측파대와 하측파대가 대칭 배치됩니다</em></p>
+<h3 id="2-3-am">2-3. AM 대역폭<a class="headerlink" href="#2-3-am" title="Permanent link">&para;</a></h3>
+<p>위 스펙트럼에서 AM 신호가 차지하는 주파수 폭, 즉 <strong>대역폭(Bandwidth)</strong>은 다음과 같습니다.</p>
+<blockquote>
+<p><strong>BW = (f_c + f_m) - (f_c - f_m) = 2f_m</strong></p>
+</blockquote>
+<p>대역폭은 <strong>정보 신호 주파수의 2배</strong>입니다. 이는 같은 정보가 상측파대와 하측파대에 중복 존재하기 때문입니다.</p>
+<h4 id="_11">수치 예시<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p>AM 라디오 방송에서 반송파 주파수 f_c = 1,000 kHz, 전송하려는 음성의 최대 주파수 f_m = 5 kHz인 경우:</p>
+<ul>
+<li>BW = 2 × 5 kHz = <strong>10 kHz</strong></li>
+<li>스펙트럼 범위: 995 kHz ~ 1,005 kHz</li>
+<li>우리나라 AM 방송 채널 간격이 9 kHz인 것은 이 대역폭과 관련이 있습니다</li>
+</ul>
+<h3 id="2-4-am">2-4. AM 신호의 전력 구성<a class="headerlink" href="#2-4-am" title="Permanent link">&para;</a></h3>
+<p>AM 신호의 세 성분(반송파, 상측파대, 하측파대)은 각각 전력을 소비합니다. 각 성분의 전력을 계산하겠습니다.</p>
+<p>부하 저항을 R이라 할 때, 정현파의 전력은 P = (진폭)² / (2R)이므로:</p>
+<table>
+<thead>
+<tr>
+<th>성분</th>
+<th>진폭</th>
+<th>전력</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>반송파</td>
+<td>E_c</td>
+<td>P_c = E_c² / (2R)</td>
+</tr>
+<tr>
+<td>상측파대(USB)</td>
+<td>mE_c / 2</td>
+<td>P_USB = m²E_c² / (8R) = m²P_c / 4</td>
+</tr>
+<tr>
+<td>하측파대(LSB)</td>
+<td>mE_c / 2</td>
+<td>P_LSB = m²E_c² / (8R) = m²P_c / 4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>총 전력</strong>은 세 성분의 합입니다.</p>
+<blockquote>
+<p><strong>P_total = P_c + P_USB + P_LSB = P_c (1 + m²/2)</strong></p>
+</blockquote>
+<p>이 공식을 풀어서 해석하면 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">m (변조 지수)</th>
+<th style="text-align: center;">P_total / P_c</th>
+<th style="text-align: center;">반송파 전력 비율</th>
+<th style="text-align: center;">측파대 전력 비율</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0 (무변조)</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">0%</td>
+</tr>
+<tr>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">1.125</td>
+<td style="text-align: center;">88.9%</td>
+<td style="text-align: center;">11.1%</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.0 (100%)</td>
+<td style="text-align: center;">1.50</td>
+<td style="text-align: center;">66.7%</td>
+<td style="text-align: center;">33.3%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-5-am">2-5. 전력 효율: AM의 근본적 한계<a class="headerlink" href="#2-5-am" title="Permanent link">&para;</a></h3>
+<p>정보는 측파대에만 담겨 있으므로, <strong>실제로 정보 전달에 기여하는 전력</strong>은 측파대 전력뿐입니다. 따라서 AM의 전력 효율은 다음과 같이 정의됩니다.</p>
+<blockquote>
+<p><strong>η = 측파대 전력 / 총 전력 = (m²/2) / (1 + m²/2) = m² / (2 + m²)</strong></p>
+</blockquote>
+<p>변조 지수별 효율을 계산하면 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">m</th>
+<th style="text-align: center;">측파대 전력</th>
+<th style="text-align: center;">총 전력</th>
+<th style="text-align: center;"><strong>효율 η</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0.3</td>
+<td style="text-align: center;">0.045 P_c</td>
+<td style="text-align: center;">1.045 P_c</td>
+<td style="text-align: center;"><strong>4.3%</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">0.125 P_c</td>
+<td style="text-align: center;">1.125 P_c</td>
+<td style="text-align: center;"><strong>11.1%</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">0.7</td>
+<td style="text-align: center;">0.245 P_c</td>
+<td style="text-align: center;">1.245 P_c</td>
+<td style="text-align: center;"><strong>19.7%</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">0.500 P_c</td>
+<td style="text-align: center;">1.500 P_c</td>
+<td style="text-align: center;"><strong>33.3%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>이 표에서 핵심적인 사실을 확인할 수 있습니다.</p>
+<blockquote>
+<p><strong>AM의 최대 전력 효율은 m = 1일 때 33.3%에 불과합니다.</strong></p>
+</blockquote>
+<p>즉, 100% 변조를 달성하더라도 전체 전력의 <strong>2/3는 정보를 담지 않는 반송파</strong>에 소비됩니다. 이는 AM 방식의 근본적인 한계이며, 이를 개선하기 위해 반송파를 제거하거나 한쪽 측파대만 전송하는 변형 방식들이 개발되었습니다.</p>
+<div class="mermaid">pie title "AM 전력 분배 (m=1, 100% 변조)"
+    "반송파 (정보 없음)" : 66.7
+    "상측파대 (USB)" : 16.65
+    "하측파대 (LSB)" : 16.65</div>
+<p><em>m = 1일 때도 전력의 2/3가 정보 없는 반송파에 집중됩니다</em></p>
+<h3 id="2-6-am">2-6. AM 변형 방식의 등장 배경<a class="headerlink" href="#2-6-am" title="Permanent link">&para;</a></h3>
+<p>AM의 비효율성을 극복하기 위해 다양한 변형 방식이 개발되었습니다. 아래 표로 간략히 비교합니다.</p>
+<table>
+<thead>
+<tr>
+<th>방식</th>
+<th>정식 명칭</th>
+<th>특징</th>
+<th>효율 개선</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AM (DSB-FC)</strong></td>
+<td>양측파대 전반송파</td>
+<td>반송파 + 양측파대 모두 전송</td>
+<td>기본 (최대 33.3%)</td>
+</tr>
+<tr>
+<td><strong>DSB-SC</strong></td>
+<td>양측파대 억압반송파</td>
+<td>반송파 제거, 양측파대만 전송</td>
+<td>전력 효율 향상</td>
+</tr>
+<tr>
+<td><strong>SSB</strong></td>
+<td>단측파대</td>
+<td>반송파 제거 + 한쪽 측파대만 전송</td>
+<td>전력 + 대역폭 모두 절약</td>
+</tr>
+</tbody>
+</table>
+<p>이 변형 방식들은 다음 차시에서 자세히 다루겠습니다. 지금은 "AM이 비효율적이기 때문에 개선안이 필요했다"는 흐름을 파악하는 것으로 충분합니다.</p>
+<div class="mermaid">flowchart LR
+    A["AM&lt;br/&gt;(DSB-FC)"] --&gt;|"반송파 제거"| B["DSB-SC"]
+    B --&gt;|"한쪽 측파대 제거"| C["SSB"]
+    A --&gt;|"효율: 최대 33.3%"| D["낮은 효율"]
+    C --&gt;|"효율: 크게 향상"| E["높은 효율"]</div>
+<p><em>AM의 비효율성을 개선하는 변형 방식의 발전 흐름</em></p>
+<hr />
+<h2 id="_12">🔢 따라하기 실습 — 단계별 계산 연습<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>다음 조건의 AM 신호를 분석하는 과정을 단계별로 따라가겠습니다.</p>
+<blockquote>
+<p><strong>문제 조건</strong>: 반송파 주파수 f_c = 500 kHz, 반송파 전력 P_c = 10 kW, 정보 신호 주파수 f_m = 4 kHz, 변조 지수 m = 0.6</p>
+</blockquote>
+<h3 id="1-am_2">📌 1단계: AM 파형의 최대·최소 진폭 비율 구하기<a class="headerlink" href="#1-am_2" title="Permanent link">&para;</a></h3>
+<p>반송파의 진폭을 E_c라 하면:
+- E_max = E_c(1 + m) = E_c(1 + 0.6) = <strong>1.6 E_c</strong>
+- E_min = E_c(1 - m) = E_c(1 - 0.6) = <strong>0.4 E_c</strong></p>
+<p>검증: m = (1.6 - 0.4) / (1.6 + 0.4) = 1.2 / 2.0 = <strong>0.6</strong> ✓</p>
+<h3 id="2_2">📌 2단계: 스펙트럼 성분 주파수 구하기<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>반송파: <strong>500 kHz</strong></li>
+<li>상측파대(USB): 500 + 4 = <strong>504 kHz</strong></li>
+<li>하측파대(LSB): 500 - 4 = <strong>496 kHz</strong></li>
+</ul>
+<h3 id="3">📌 3단계: 대역폭 구하기<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>BW = 2 × f_m = 2 × 4 kHz = <strong>8 kHz</strong></li>
+<li>점유 주파수 범위: 496 kHz ~ 504 kHz</li>
+</ul>
+<h3 id="4">📌 4단계: 각 성분의 전력 구하기<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>반송파 전력: P_c = <strong>10 kW</strong></li>
+<li>USB 전력: P_USB = m² P_c / 4 = (0.36 × 10) / 4 = <strong>0.9 kW</strong></li>
+<li>LSB 전력: P_LSB = m² P_c / 4 = <strong>0.9 kW</strong></li>
+<li>총 전력: P_total = P_c(1 + m²/2) = 10 × (1 + 0.18) = <strong>11.8 kW</strong></li>
+</ul>
+<p>검증: 10 + 0.9 + 0.9 = 11.8 kW ✓</p>
+<h3 id="5_3">📌 5단계: 전력 효율 구하기<a class="headerlink" href="#5_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>측파대 전력 합계: 0.9 + 0.9 = <strong>1.8 kW</strong></li>
+<li>효율: η = 1.8 / 11.8 × 100 ≈ <strong>15.3%</strong></li>
+</ul>
+<p>또는 공식으로: η = m² / (2 + m²) = 0.36 / 2.36 ≈ <strong>15.3%</strong></p>
+<blockquote>
+<p><strong>해석</strong>: 총 11.8 kW를 송출하지만, 실제 정보 전달에 기여하는 전력은 1.8 kW에 불과합니다. 나머지 10 kW는 정보가 없는 반송파에 소비됩니다.</p>
+</blockquote>
+<hr />
+<h2 id="_13">⚠️ 자주 하는 실수와 주의할 점<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<h3 id="1">실수 1: 변조 지수 공식의 분모와 분자 혼동<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>파형에서 변조 지수를 구할 때, <strong>m = (E_max - E_min) / (E_max + E_min)</strong>입니다. 분모가 <strong>합(+)</strong>이라는 점을 주의하겠습니다. E_max - E_min을 2E_c로 나누는 것이 아닙니다.</p>
+<h3 id="2-f_m">실수 2: 대역폭을 f_m으로 구하는 오류<a class="headerlink" href="#2-f_m" title="Permanent link">&para;</a></h3>
+<p>AM의 대역폭은 f_m이 아니라 <strong>2f_m</strong>입니다. 상측파대와 하측파대가 모두 존재하기 때문입니다.</p>
+<h3 id="3_1">실수 3: 전력 효율 공식에서 분모 실수<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<p>효율 η = m² / (2 + m²)에서 분모는 <strong>(2 + m²)</strong>입니다. (1 + m²)이 아닙니다. 총 전력 공식 P_total = P_c(1 + m²/2)에서 P_c로 나눠 정리할 때 주의가 필요합니다.</p>
+<h3 id="4_1">실수 4: 복합 변조 지수 계산 시 단순 합산<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<p>여러 주파수 성분의 변조 지수는 <strong>제곱합의 제곱근</strong>으로 구합니다. m₁ + m₂ + m₃으로 단순 합산하면 안 됩니다. m_total = √(m₁² + m₂² + m₃²)가 올바른 공식입니다.</p>
+<h3 id="_14">핵심 공식 요약표<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>공식</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>변조 지수</td>
+<td>m = E_m / E_c</td>
+<td>0 ≤ m ≤ 1 (정상 범위)</td>
+</tr>
+<tr>
+<td>파형에서 m 구하기</td>
+<td>m = (E_max - E_min) / (E_max + E_min)</td>
+<td>오실로스코프 측정용</td>
+</tr>
+<tr>
+<td>복합 변조 지수</td>
+<td>m_total = √(Σmᵢ²)</td>
+<td>여러 주파수 성분일 때</td>
+</tr>
+<tr>
+<td>대역폭</td>
+<td>BW = 2f_m</td>
+<td>정보 신호 최대 주파수의 2배</td>
+</tr>
+<tr>
+<td>총 전력</td>
+<td>P_total = P_c(1 + m²/2)</td>
+<td>반송파 전력 기준</td>
+</tr>
+<tr>
+<td>USB/LSB 전력</td>
+<td>P_USB = P_LSB = m²P_c / 4</td>
+<td>각 측파대 개별 전력</td>
+</tr>
+<tr>
+<td>전력 효율</td>
+<td>η = m² / (2 + m²)</td>
+<td>최대 33.3% (m=1)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_15">📝 형성 평가<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<div class="assessment">
+<h3 id="_16">📝 확인 문제<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p><strong>객관식 1.</strong> 반송파 진폭 E_c = 20V, 변조 신호 진폭 E_m = 10V인 AM 신호에서 파형의 최대 진폭 E_max는 얼마입니까?</p>
+<p>① 10V　② 20V　③ 30V　④ 40V</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ③ 30V**
+
+m = E_m / E_c = 10/20 = 0.5이고, E_max = E_c(1 + m) = 20 × (1 + 0.5) = 20 × 1.5 = 30V입니다.
+
+</details>
+<hr />
+<p><strong>객관식 2.</strong> AM 신호의 변조 지수 m = 1일 때, 전력 효율은 약 얼마입니까?</p>
+<p>① 약 11%　② 약 25%　③ 약 33%　④ 약 50%</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ③ 약 33%**
+
+η = m² / (2 + m²) = 1 / (2 + 1) = 1/3 ≈ 33.3%입니다. 이것이 AM의 최대 전력 효율이며, 전체 전력의 2/3가 정보 없는 반송파에 소비됩니다.
+
+</details>
+<hr />
+<p><strong>객관식 3.</strong> 반송파 주파수 800 kHz, 정보 신호의 최대 주파수 5 kHz인 AM 방송의 대역폭과 점유 주파수 범위는?</p>
+<p>① BW = 5 kHz, 795~800 kHz<br />
+② BW = 5 kHz, 800~805 kHz<br />
+③ BW = 10 kHz, 795~805 kHz<br />
+④ BW = 10 kHz, 790~810 kHz</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ③ BW = 10 kHz, 795~805 kHz**
+
+AM 대역폭 BW = 2f_m = 2 × 5 = 10 kHz입니다. 하측파대의 최저 주파수는 800 - 5 = 795 kHz, 상측파대의 최고 주파수는 800 + 5 = 805 kHz이므로 점유 범위는 795~805 kHz입니다.
+
+</details>
+<hr />
+<p><strong>서술형.</strong> AM 방송에서 반송파 전력이 50 kW이고 변조 지수가 0.8일 때, (1) 총 송출 전력, (2) 측파대 전력의 합계, (3) 전력 효율을 각각 구하고, 이 결과에서 AM 방식의 한계점을 한 문장으로 서술하십시오.</p>
+<details>
+<summary>정답 확인</summary>
+
+**(1) 총 송출 전력**
+
+P_total = P_c(1 + m²/2) = 50 × (1 + 0.64/2) = 50 × 1.32 = **66 kW**
+
+**(2) 측파대 전력 합계**
+
+P_sideband = P_total - P_c = 66 - 50 = **16 kW**
+
+또는 P_sideband = m²P_c / 2 = 0.64 × 50 / 2 = 16 kW
+
+**(3) 전력 효율**
+
+η = 16 / 66 × 100 ≈ **24.2%**
+
+또는 η = m² / (2 + m²) = 0.64 / 2.64 ≈ 24.2%
+
+**한계점 서술 예시**: 총 66 kW의 전력을 송출하지만 실제 정보 전달에 기여하는 전력은 16 kW(약 24%)에 불과하고, 나머지 50 kW는 정보를 담지 않는 반송파에 소비되므로 전력 효율이 매우 낮습니다.
+
+</details>
+<hr />
+<h3 id="_17">✅ 자기점검 체크리스트<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AM 변조의 원리를 설명하고, 변조 지수 m의 정의(m = E_m / E_c)를 말할 수 있습니까?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 변조 지수가 1을 초과하면 포락선 왜곡과 인접 채널 간섭이 발생하는 이유를 설명할 수 있습니까?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AM 스펙트럼에서 반송파, 상측파대, 하측파대의 주파수 위치와 진폭을 그릴 수 있습니까?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 주어진 조건에서 AM 대역폭(BW = 2f_m)을 구할 수 있습니까?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> P_total = P_c(1 + m²/2) 공식으로 총 전력을 계산하고, 전력 효율 η = m²/(2+m²)을 구할 수 있습니까?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AM의 최대 효율이 33.3%에 불과한 이유와, DSB-SC·SSB가 등장한 배경을 설명할 수 있습니까?</li>
+</ul>
+</div>
+<hr />
+<h2 id="_18">💭 성찰 &amp; 다음 차시 미리보기<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<h3 id="_19">이번 차시 핵심 정리<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>이번 차시에서 학습한 내용을 세 문장으로 요약하겠습니다.</p>
+<ol>
+<li><strong>AM 변조</strong>는 반송파의 진폭을 정보 신호에 따라 변화시키는 방식이며, 그 변화 정도를 <strong>변조 지수 m = E_m / E_c</strong>로 나타냅니다.</li>
+<li>AM 신호의 스펙트럼은 <strong>반송파(f_c)</strong>를 중심으로 <strong>상측파대(f_c + f_m)</strong>와 <strong>하측파대(f_c - f_m)</strong>가 대칭 배치되며, 대역폭은 <strong>2f_m</strong>입니다.</li>
+<li>AM의 전력 효율은 <strong>최대 33.3%(m=1)</strong>에 불과하며, 정보가 없는 반송파에 전력 대부분이 소비되는 것이 근본적인 한계입니다.</li>
+</ol>
+<div class="mermaid">mindmap
+  root((AM 변조&lt;br/&gt;핵심 정리))
+    변조 지수 m
+      m = Em / Ec
+      0 ≤ m ≤ 1 정상
+      m &gt; 1 과변조 → 왜곡
+      복합: 제곱합의 제곱근
+    스펙트럼
+      반송파 fc
+      USB: fc + fm
+      LSB: fc - fm
+      BW = 2fm
+    전력 효율
+      "Pt = Pc × (1 + m²/2)"
+      "η = m² / (2 + m²)"
+      최대 33.3%
+      반송파에 전력 집중</div>
+<p><em>이번 차시에서 다룬 AM 변조의 핵심 개념 맵</em></p>
+<h3 id="7-am-dsb-sc-ssb-vsb">🔜 다음 차시 미리보기: 7차시 — AM 변형 방식 (DSB-SC, SSB, VSB)<a class="headerlink" href="#7-am-dsb-sc-ssb-vsb" title="Permanent link">&para;</a></h3>
+<p>이번 차시에서 AM의 전력 효율이 낮다는 한계를 확인했습니다. 다음 차시에서는 이 문제를 해결하기 위해 등장한 세 가지 변형 방식을 학습합니다.</p>
+<ul>
+<li><strong>DSB-SC</strong>: 정보가 없는 반송파를 아예 제거하면 효율이 어떻게 변하는지</li>
+<li><strong>SSB</strong>: 같은 정보를 담고 있는 두 측파대 중 하나만 전송하면 대역폭이 어떻게 절약되는지</li>
+<li><strong>VSB</strong>: 방송 환경에서 SSB의 단점을 보완한 절충 방식은 무엇인지</li>
+</ul>
+<p>이번 차시의 AM 전력 효율 공식과 스펙트럼 구조를 확실히 이해해 두면, 다음 차시의 내용을 보다 수월하게 학습할 수 있습니다.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../chapter05/" class="md-footer__link md-footer__link--prev" aria-label="이전: 5차시: 변조란 무엇인가 — 반송파에 정보를 싣는 원리">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                5차시: 변조란 무엇인가 — 반송파에 정보를 싣는 원리
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter07/" class="md-footer__link md-footer__link--next" aria-label="다음: 7차시: AM 변형 방식 — DSB, SSB, VSB 비교 분석">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                7차시: AM 변형 방식 — DSB, SSB, VSB 비교 분석
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 노용철TV | <a href='https://eduflow-greatsong.fly.dev/'>EduFlow</a>로 제작
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+        <script src="../javascripts/mermaid-config.js"></script>
+      
+        <script src="../javascripts/scroll-progress.js"></script>
+      
+        <script src="../javascripts/eduflow-nav.js"></script>
+      
+        <script src="../javascripts/lightbox.js"></script>
+      
+    
+  </body>
+</html>

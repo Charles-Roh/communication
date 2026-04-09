@@ -1,0 +1,3245 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="한전 KDN 등 공공기관 채용시험 통신이론 과목을 혼자서 완주할 수 있도록 설계된 독학용 수험 교재로, 비전공자도 기초부터 핵심 변조 이론까지 체계적으로 학습할 수 있다.">
+      
+      
+        <meta name="author" content="노용철TV (EduFlow)">
+      
+      
+      
+        <link rel="prev" href="../chapter16/">
+      
+      
+        <link rel="next" href="../chapter18/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>17차시: CDM과 OFDM — 현대 통신이 선택한 다중화 기술 - 통신이론 핵심정리 — 공공기관 채용시험 완전 대비</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#17-cdm-ofdm" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-header__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              17차시: CDM과 OFDM — 현대 통신이 선택한 다중화 기술
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter01/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter05/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter10/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter16/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-nav__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1차시: 통신이란 무엇인가 — 정보가 이동하는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2차시: 신호의 언어 — 주파수, 진폭, 위상 이해하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3차시: 대역폭과 스펙트럼 — 정보가 차지하는 공간
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4차시: 실습 체험 — 신호 읽기와 기초 개념 확인 문제 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5차시: 변조란 무엇인가 — 반송파에 정보를 싣는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6차시: AM 변조 — 진폭으로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7차시: AM 변형 방식 — DSB, SSB, VSB 비교 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8차시: FM 변조 — 주파수로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9차시: AM vs FM 실전 비교 — 기출 문제 집중 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10차시: 디지털 통신의 시작 — 표본화와 양자화 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12차시: 디지털 변조 입문 — ASK와 FSK의 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14차시: 디지털 변조 비교 실습 — 성상도와 오답 함정 집중 공략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15차시: Part 2·3 통합 복습 — 아날로그·디지털 변조 완전 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16차시: 다중화란 무엇인가 — 하나의 채널로 여러 신호 보내기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17차시: CDM과 OFDM — 현대 통신이 선택한 다중화 기술
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17차시: CDM과 OFDM — 현대 통신이 선택한 다중화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        학습 목표
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="학습 목표">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 CDM의 원리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 OFDM의 원리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 따라하기 실습
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 종합 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cdm-ofdm-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계: 도입 — 왜 CDM과 OFDM인가? (5분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-cdm-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계: 핵심 개념 ① — CDM과 스프레딩 코드 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-ofdm-cp-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계: 핵심 개념 ② — OFDM과 순환 전치(CP) (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cdm-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4단계: 따라하기 실습 — CDM 계산 체험 (8분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5단계: 종합 정리 및 평가 (7분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-cdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ① — CDM (코드 분할 다중화)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ① — CDM (코드 분할 다중화)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 일상 비유: 국제 파티의 대화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 정식 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 핵심 메커니즘: 스프레딩과 디스프레딩
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 직교 코드의 비밀
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdm-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 CDM의 주파수-시간-코드 관계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 CDM의 장단점
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ofdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ② — OFDM (직교 주파수 분할 다중화)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ② — OFDM (직교 주파수 분할 다중화)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 일상 비유: 택배 분산 배송
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 정식 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기존 FDM과 무엇이 다른가?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofdm-ifft-fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 OFDM의 핵심 원리: IFFT와 FFT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isi-cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 다중 경로 간섭(ISI)과 순환 전치(CP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ 다중 경로 간섭(ISI)과 순환 전치(CP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다중 경로 간섭이란?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofdm-isi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        왜 OFDM에서 ISI가 특히 문제인가?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        순환 전치(CP)의 역할
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofdm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 OFDM의 장단점
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cdm_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 따라하기 실습 — CDM 스프레딩·디스프레딩 직접 계산
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 따라하기 실습 — CDM 스프레딩·디스프레딩 직접 계산">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 조건
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Step 1: 스프레딩 (송신)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Step 2: 채널에서의 합성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Step 3: 디스프레딩 — 사용자 A의 데이터 복원
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Step 4: 디스프레딩 — 사용자 B의 데이터 복원
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Step 5: 결과 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fdm-tdm-cdm-ofdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 종합 비교 — FDM · TDM · CDM · OFDM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 종합 비교 — FDM · TDM · CDM · OFDM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 자주 하는 실수와 주의할 점
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 형성 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 자기점검 체크리스트
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💭 성찰 &amp; 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💭 성찰 &amp; 다음 차시 미리보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        이번 차시 핵심 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔮 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18차시: 이동통신의 진화 — 1G부터 5G까지의 핵심 개념
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19차시: 통신 시스템 실생활 연결 — 와이파이, 블루투스, 위성통신
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20차시: 전체 통합 모의고사 — 실전 시험 완전 대비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        학습 목표
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="학습 목표">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 CDM의 원리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 OFDM의 원리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 따라하기 실습
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 종합 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cdm-ofdm-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계: 도입 — 왜 CDM과 OFDM인가? (5분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-cdm-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계: 핵심 개념 ① — CDM과 스프레딩 코드 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-ofdm-cp-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계: 핵심 개념 ② — OFDM과 순환 전치(CP) (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cdm-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4단계: 따라하기 실습 — CDM 계산 체험 (8분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5단계: 종합 정리 및 평가 (7분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-cdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ① — CDM (코드 분할 다중화)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ① — CDM (코드 분할 다중화)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 일상 비유: 국제 파티의 대화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 정식 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 핵심 메커니즘: 스프레딩과 디스프레딩
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 직교 코드의 비밀
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdm-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 CDM의 주파수-시간-코드 관계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 CDM의 장단점
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ofdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ② — OFDM (직교 주파수 분할 다중화)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ② — OFDM (직교 주파수 분할 다중화)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 일상 비유: 택배 분산 배송
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 정식 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기존 FDM과 무엇이 다른가?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofdm-ifft-fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 OFDM의 핵심 원리: IFFT와 FFT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isi-cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 다중 경로 간섭(ISI)과 순환 전치(CP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ 다중 경로 간섭(ISI)과 순환 전치(CP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다중 경로 간섭이란?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofdm-isi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        왜 OFDM에서 ISI가 특히 문제인가?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        순환 전치(CP)의 역할
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofdm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 OFDM의 장단점
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cdm_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 따라하기 실습 — CDM 스프레딩·디스프레딩 직접 계산
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 따라하기 실습 — CDM 스프레딩·디스프레딩 직접 계산">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 조건
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Step 1: 스프레딩 (송신)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Step 2: 채널에서의 합성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Step 3: 디스프레딩 — 사용자 A의 데이터 복원
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Step 4: 디스프레딩 — 사용자 B의 데이터 복원
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Step 5: 결과 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fdm-tdm-cdm-ofdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 종합 비교 — FDM · TDM · CDM · OFDM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 종합 비교 — FDM · TDM · CDM · OFDM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 자주 하는 실수와 주의할 점
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 형성 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 자기점검 체크리스트
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💭 성찰 &amp; 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💭 성찰 &amp; 다음 차시 미리보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        이번 차시 핵심 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔮 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../chapter16/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="17-cdm-ofdm">17차시: CDM과 OFDM — 현대 통신이 선택한 다중화 기술<a class="headerlink" href="#17-cdm-ofdm" title="Permanent link">&para;</a></h1>
+<div class="lesson-banner">
+<p><strong>⏰ 50분</strong> · CDM · OFDM · 스프레딩 코드 · 순환 전치(CP) · <strong>난이도</strong> ●●●○○</p>
+<p><strong>학습목표</strong>: CDM과 OFDM의 동작 원리를 설명하고, FDM·TDM·CDM·OFDM 네 가지 다중화 방식을 비교·분류할 수 있습니다.</p>
+<blockquote>
+<p><strong>오늘의 질문</strong>: "같은 주파수, 같은 시간에 여러 사람이 동시에 통신할 수 있는 방법은 무엇일까요?"</p>
+</blockquote>
+</div>
+<hr />
+<h2 id="_1">학습 목표<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CDM(코드 분할 다중화)의 원리와 스프레딩 코드의 역할을 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> OFDM의 동작 원리와 다중 경로 간섭(ISI)을 극복하는 방법을 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> FDM·TDM·CDM·OFDM을 비교하여 각 방식의 특징을 분류할 수 있다</li>
+</ul>
+<hr />
+<div class="cards-grid">
+<div class="card card-orange">
+<h3 id="cdm">🧠 CDM의 원리<a class="headerlink" href="#cdm" title="Permanent link">&para;</a></h3>
+<p>코드로 신호를 구분하는 다중화 기술 — 스프레딩과 디스프레딩의 핵심 메커니즘을 이해합니다</p>
+</div>
+<div class="card card-orange">
+<h3 id="ofdm">🧠 OFDM의 원리<a class="headerlink" href="#ofdm" title="Permanent link">&para;</a></h3>
+<p>넓은 대역을 수백 개의 좁은 부반송파로 나누어 전송하는 기술 — CP로 다중 경로 간섭을 극복하는 구조를 파악합니다</p>
+</div>
+<div class="card card-blue">
+<h3 id="_2">🔧 따라하기 실습<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>CDM 스프레딩·디스프레딩 과정을 직접 계산하여 원리를 체험합니다</p>
+</div>
+<div class="card card-red">
+<h3 id="_3">📝 종합 비교<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>FDM·TDM·CDM·OFDM 네 가지 다중화 방식을 하나의 표로 정리합니다</p>
+</div>
+</div>
+<hr />
+<h2 id="_4">⏱️ 수업 흐름<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="steps">
+<div class="step">
+<h4 id="1-cdm-ofdm-5">1단계: 도입 — 왜 CDM과 OFDM인가? (5분)<a class="headerlink" href="#1-cdm-ofdm-5" title="Permanent link">&para;</a></h4>
+<p>16차시에서 학습한 FDM과 TDM의 한계를 짚고, 현대 통신이 CDM과 OFDM을 채택한 이유를 확인합니다.</p>
+</div>
+<div class="step">
+<h4 id="2-1-cdm-15">2단계: 핵심 개념 ① — CDM과 스프레딩 코드 (15분)<a class="headerlink" href="#2-1-cdm-15" title="Permanent link">&para;</a></h4>
+<p>CDM의 동작 원리를 일상 비유로 이해한 뒤, 스프레딩 코드의 직교성과 신호 분리 과정을 수식 없이 단계적으로 학습합니다.</p>
+</div>
+<div class="step">
+<h4 id="3-2-ofdm-cp-15">3단계: 핵심 개념 ② — OFDM과 순환 전치(CP) (15분)<a class="headerlink" href="#3-2-ofdm-cp-15" title="Permanent link">&para;</a></h4>
+<p>OFDM의 부반송파 개념을 이해하고, 다중 경로 간섭(ISI) 문제와 이를 해결하는 CP의 역할을 다이어그램으로 학습합니다.</p>
+</div>
+<div class="step">
+<h4 id="4-cdm-8">4단계: 따라하기 실습 — CDM 계산 체험 (8분)<a class="headerlink" href="#4-cdm-8" title="Permanent link">&para;</a></h4>
+<p>간단한 숫자 예제를 통해 스프레딩과 디스프레딩 과정을 직접 계산합니다.</p>
+</div>
+<div class="step">
+<h4 id="5-7">5단계: 종합 정리 및 평가 (7분)<a class="headerlink" href="#5-7" title="Permanent link">&para;</a></h4>
+<p>네 가지 다중화 방식 비교표를 완성하고, 형성 평가 문제를 풀어 학습 내용을 확인합니다.</p>
+</div>
+</div>
+<hr />
+<h2 id="_5">🔍 왜 이걸 배우나요?<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>16차시에서 FDM(주파수 분할)과 TDM(시간 분할)을 학습했습니다. 이 두 방식은 통신의 기초를 이루지만, 현대의 이동통신 환경에서는 몇 가지 중요한 한계에 부딪힙니다.</p>
+<p><strong>FDM의 한계</strong>: 사용자마다 고정된 주파수 대역을 배정하므로, 사용자 수가 늘어나면 주파수 자원이 급격히 부족해집니다. 주파수는 유한한 자원이기 때문입니다.</p>
+<p><strong>TDM의 한계</strong>: 사용자마다 고정된 시간 슬롯을 배정합니다. 통화하지 않는 순간에도 해당 슬롯은 비어 있으므로, 자원 활용 효율이 떨어집니다.</p>
+<p>그렇다면 <strong>같은 주파수, 같은 시간을 여러 사용자가 동시에 사용</strong>할 수는 없을까요? 이 질문에 대한 답이 바로 <strong>CDM</strong>입니다. 그리고 넓은 대역을 잘게 나누어 고속 데이터를 효율적으로 보내는 방법이 <strong>OFDM</strong>입니다.</p>
+<ul>
+<li><strong>CDM</strong>은 3세대(3G) 이동통신인 CDMA2000과 WCDMA의 핵심 기술이었습니다.</li>
+<li><strong>OFDM</strong>은 현재 LTE, 5G NR, Wi-Fi(802.11a/g/n/ac/ax)의 기반 기술입니다.</li>
+</ul>
+<p>즉, 여러분이 스마트폰으로 영상을 보거나 Wi-Fi에 접속할 때마다 OFDM 기술이 작동하고 있습니다. 공공기관 통신이론 시험에서도 이 두 기술의 원리와 특징은 빈출 영역입니다.</p>
+<hr />
+<h2 id="1-cdm">📚 핵심 개념 ① — CDM (코드 분할 다중화)<a class="headerlink" href="#1-cdm" title="Permanent link">&para;</a></h2>
+<h3 id="_6">🎯 일상 비유: 국제 파티의 대화<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>넓은 연회장에서 여러 나라 사람들이 동시에 대화하는 상황을 떠올려 보겠습니다. 한국어, 영어, 일본어, 스페인어를 쓰는 네 쌍의 사람들이 <strong>같은 공간(같은 주파수)</strong>, <strong>같은 시간</strong>에 대화합니다.</p>
+<p>모든 소리가 섞여 있지만, 한국어를 아는 사람은 한국어 대화만 골라서 들을 수 있습니다. 다른 언어는 의미 없는 잡음처럼 들리기 때문입니다.</p>
+<p>CDM이 바로 이 원리입니다. 여기서 <strong>'언어'에 해당하는 것이 스프레딩 코드(Spreading Code)</strong>입니다.</p>
+<h3 id="_7">📖 정식 정의<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><strong>CDM(Code Division Multiplexing, 코드 분할 다중화)</strong>은 모든 사용자가 <strong>같은 주파수 대역</strong>과 <strong>같은 시간</strong>을 공유하되, 각 사용자에게 <strong>서로 다른 고유 코드</strong>를 부여하여 신호를 구분하는 다중화 방식입니다.</p>
+<p>이 기술을 다중 접속(Multiple Access)에 적용한 것을 <strong>CDMA(Code Division Multiple Access)</strong>라고 부릅니다.</p>
+<h3 id="_8">🔑 핵심 메커니즘: 스프레딩과 디스프레딩<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>CDM의 동작은 크게 두 단계로 나뉩니다.</p>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>이름</th>
+<th>동작</th>
+<th>비유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>송신</strong></td>
+<td>스프레딩(Spreading, 확산)</td>
+<td>원래 신호에 고유 코드를 곱하여 넓은 대역으로 퍼뜨림</td>
+<td>내 메시지를 특정 언어로 번역</td>
+</tr>
+<tr>
+<td><strong>수신</strong></td>
+<td>디스프레딩(Despreading, 역확산)</td>
+<td>수신 신호에 같은 코드를 다시 곱하여 원래 신호를 복원</td>
+<td>그 언어를 다시 해석</td>
+</tr>
+</tbody>
+</table>
+<p><strong>스프레딩과 디스프레딩의 전체 흐름:</strong></p>
+<div class="mermaid">flowchart LR
+    A["원래 데이터&lt;br/&gt;(좁은 대역)"] --&gt; B["× 스프레딩 코드"]
+    B --&gt; C["확산된 신호&lt;br/&gt;(넓은 대역)"]
+    C --&gt; D["무선 채널&lt;br/&gt;(다른 사용자 신호와 혼합)"]
+    D --&gt; E["× 같은 코드"]
+    E --&gt; F["원래 데이터 복원"]</div>
+<h3 id="_9">📐 직교 코드의 비밀<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>CDM이 작동하려면, 각 사용자에게 할당되는 코드가 <strong>직교(Orthogonal)</strong> 관계를 만족해야 합니다. 직교란 두 코드를 원소별로 곱한 뒤 모두 더했을 때 합이 <strong>0</strong>이 되는 관계를 말합니다.</p>
+<p>가장 대표적인 직교 코드는 <strong>월시 코드(Walsh Code)</strong>입니다. 간단한 예를 살펴보겠습니다.</p>
+<p><strong>길이 4인 월시 코드 예시:</strong></p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W₀</td>
+<td>+1, +1, +1, +1</td>
+</tr>
+<tr>
+<td>W₁</td>
+<td>+1, −1, +1, −1</td>
+</tr>
+<tr>
+<td>W₂</td>
+<td>+1, +1, −1, −1</td>
+</tr>
+<tr>
+<td>W₃</td>
+<td>+1, −1, −1, +1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>직교성 검증 — W₁과 W₂를 예로 들겠습니다.</strong></p>
+<p>원소별 곱: (+1)(+1), (−1)(+1), (+1)(−1), (−1)(−1) = +1, −1, −1, +1</p>
+<p>합계: +1 + (−1) + (−1) + +1 = <strong>0</strong> ✅</p>
+<p>이처럼 서로 다른 월시 코드의 내적(원소별 곱의 합)은 항상 0입니다. 그러나 같은 코드끼리의 내적은 0이 아니라 코드 길이(여기서는 4)가 됩니다. 이 차이가 바로 신호를 분리하는 핵심 원리입니다.</p>
+<h3 id="cdm-">📊 CDM의 주파수-시간-코드 관계<a class="headerlink" href="#cdm-" title="Permanent link">&para;</a></h3>
+<p>FDM은 <strong>주파수 축</strong>으로, TDM은 <strong>시간 축</strong>으로 사용자를 구분합니다. CDM은 <strong>코드 축</strong>이라는 새로운 차원을 추가한 것입니다.</p>
+<div class="mermaid">flowchart TB
+    subgraph FDM["FDM"]
+        direction LR
+        F1["사용자 A&lt;br/&gt;주파수 1"] ~~~ F2["사용자 B&lt;br/&gt;주파수 2"] ~~~ F3["사용자 C&lt;br/&gt;주파수 3"]
+    end
+    subgraph TDM["TDM"]
+        direction LR
+        T1["사용자 A&lt;br/&gt;시간 슬롯 1"] --&gt; T2["사용자 B&lt;br/&gt;시간 슬롯 2"] --&gt; T3["사용자 C&lt;br/&gt;시간 슬롯 3"]
+    end
+    subgraph CDM_diagram["CDM"]
+        direction LR
+        C1["사용자 A·B·C&lt;br/&gt;같은 주파수, 같은 시간&lt;br/&gt;코드로 구분"]
+    end</div>
+<h3 id="cdm_1">📋 CDM의 장단점<a class="headerlink" href="#cdm_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>장점</strong></td>
+<td>주파수 효율이 높음 (같은 대역을 여러 사용자가 공유)</td>
+</tr>
+<tr>
+<td></td>
+<td>보안성이 우수함 (코드를 모르면 신호 해독 불가)</td>
+</tr>
+<tr>
+<td></td>
+<td>소프트 핸드오프 가능 (이동통신에서 끊김 없는 기지국 전환)</td>
+</tr>
+<tr>
+<td></td>
+<td>간섭에 강함 (확산 스펙트럼 특성)</td>
+</tr>
+<tr>
+<td><strong>단점</strong></td>
+<td>사용자가 많아지면 간섭이 누적됨 (근-원 문제, Near-Far Problem)</td>
+</tr>
+<tr>
+<td></td>
+<td>정밀한 전력 제어가 필요함</td>
+</tr>
+<tr>
+<td></td>
+<td>코드 동기화가 정확해야 함</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>근-원 문제(Near-Far Problem)</strong>: 기지국 가까이에 있는 단말기의 강한 신호가 멀리 있는 단말기의 약한 신호를 압도하는 현상입니다. CDM 시스템에서는 모든 단말기의 수신 전력이 기지국에서 비슷하게 도달하도록 <strong>정밀한 전력 제어</strong>를 수행합니다.</p>
+</blockquote>
+<hr />
+<h2 id="2-ofdm">📚 핵심 개념 ② — OFDM (직교 주파수 분할 다중화)<a class="headerlink" href="#2-ofdm" title="Permanent link">&para;</a></h2>
+<h3 id="_10">🎯 일상 비유: 택배 분산 배송<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>10톤 짜리 대형 화물 하나를 한 대의 대형 트럭으로 보내는 것과, 1톤짜리 소형 트럭 10대에 나누어 동시에 보내는 것을 비교하겠습니다.</p>
+<p>대형 트럭 1대가 고장 나면 전체 화물 배송이 중단됩니다. 하지만 소형 트럭 10대 중 1대가 고장 나면, 나머지 9대의 화물은 무사히 도착하고 1대 분량만 다시 보내면 됩니다.</p>
+<p>OFDM이 바로 이 방식입니다. <strong>하나의 고속 데이터 스트림을 여러 개의 저속 스트림으로 나누어</strong>, 다수의 부반송파(소형 트럭)에 실어 <strong>동시에 병렬 전송</strong>합니다.</p>
+<h3 id="_11">📖 정식 정의<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p><strong>OFDM(Orthogonal Frequency Division Multiplexing, 직교 주파수 분할 다중화)</strong>은 넓은 주파수 대역을 <strong>다수의 좁은 부반송파(Subcarrier)</strong>로 나누고, 각 부반송파가 서로 <strong>직교(Orthogonal)</strong> 관계를 유지하도록 배치하여 데이터를 병렬로 전송하는 방식입니다.</p>
+<h3 id="fdm">기존 FDM과 무엇이 다른가?<a class="headerlink" href="#fdm" title="Permanent link">&para;</a></h3>
+<p>OFDM은 이름에 FDM이 포함되어 있습니다. 기존 FDM과의 핵심 차이를 정리하겠습니다.</p>
+<table>
+<thead>
+<tr>
+<th>비교 항목</th>
+<th>기존 FDM</th>
+<th>OFDM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>부반송파 간격</td>
+<td>넓은 보호 대역(Guard Band) 필요</td>
+<td>직교성으로 보호 대역 불필요</td>
+</tr>
+<tr>
+<td>주파수 효율</td>
+<td>낮음 (빈 공간이 많음)</td>
+<td>높음 (부반송파가 겹치면서도 간섭 없음)</td>
+</tr>
+<tr>
+<td>부반송파 수</td>
+<td>수 개~수십 개</td>
+<td>수백 개~수천 개</td>
+</tr>
+<tr>
+<td>데이터 속도/부반송파</td>
+<td>높음</td>
+<td>낮음 (병렬 합산으로 전체 속도 확보)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>기존 FDM에서는</strong> 부반송파끼리 간섭하지 않도록 사이에 빈 주파수 공간(보호 대역)을 두어야 했습니다. <strong>OFDM에서는</strong> 부반송파의 스펙트럼이 서로 겹치더라도, 직교성 덕분에 수신 측에서 완벽히 분리할 수 있습니다. 그래서 주파수를 훨씬 효율적으로 사용할 수 있습니다.</p>
+<p><strong>FDM과 OFDM의 주파수 활용 비교:</strong></p>
+<div class="mermaid">flowchart TB
+    subgraph FDM_conv["기존 FDM"]
+        direction LR
+        G1["부반송파 1"] ~~~ Gap1["보호&lt;br/&gt;대역"] ~~~ G2["부반송파 2"] ~~~ Gap2["보호&lt;br/&gt;대역"] ~~~ G3["부반송파 3"]
+    end
+    subgraph OFDM_eff["OFDM"]
+        direction LR
+        O1["부반송파가 겹치면서&lt;br/&gt;배치 → 직교성으로&lt;br/&gt;간섭 없이 분리"]
+    end
+    FDM_conv --&gt; |"주파수 낭비"| LOSS["비효율"]
+    OFDM_eff --&gt; |"주파수 절약"| GAIN["고효율"]</div>
+<h3 id="ofdm-ifft-fft">🔑 OFDM의 핵심 원리: IFFT와 FFT<a class="headerlink" href="#ofdm-ifft-fft" title="Permanent link">&para;</a></h3>
+<p>OFDM 시스템에서 다수의 부반송파를 생성하고 분리하는 핵심 도구는 <strong>IFFT(역 고속 푸리에 변환)</strong>와 <strong>FFT(고속 푸리에 변환)</strong>입니다.</p>
+<table>
+<thead>
+<tr>
+<th>위치</th>
+<th>변환</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>송신기</strong></td>
+<td>IFFT</td>
+<td>주파수 영역의 데이터 심볼들을 시간 영역 신호로 변환 (다수 부반송파를 한꺼번에 생성)</td>
+</tr>
+<tr>
+<td><strong>수신기</strong></td>
+<td>FFT</td>
+<td>수신된 시간 영역 신호를 주파수 영역으로 변환 (각 부반송파의 데이터를 분리)</td>
+</tr>
+</tbody>
+</table>
+<p>이 과정 덕분에, OFDM 시스템은 수백 개의 개별 변조기/복조기를 실제로 만들지 않아도 <strong>디지털 신호처리(DSP)</strong>만으로 다수의 부반송파를 다룰 수 있습니다. 이것이 OFDM이 실용화될 수 있었던 핵심 이유입니다.</p>
+<p><strong>OFDM 송수신 전체 흐름:</strong></p>
+<div class="mermaid">flowchart LR
+    A["입력 데이터"] --&gt; B["직렬-병렬&lt;br/&gt;변환"]
+    B --&gt; C["각 부반송파에&lt;br/&gt;심볼 매핑"]
+    C --&gt; D["IFFT"]
+    D --&gt; E["CP 삽입"]
+    E --&gt; F["무선 채널"]
+    F --&gt; G["CP 제거"]
+    G --&gt; H["FFT"]
+    H --&gt; I["각 부반송파에서&lt;br/&gt;심볼 복원"]
+    I --&gt; J["병렬-직렬&lt;br/&gt;변환"]
+    J --&gt; K["출력 데이터"]</div>
+<h3 id="isi-cp">🛡️ 다중 경로 간섭(ISI)과 순환 전치(CP)<a class="headerlink" href="#isi-cp" title="Permanent link">&para;</a></h3>
+<p>OFDM을 이해하는 데 있어 가장 중요한 부분이 바로 <strong>다중 경로 간섭(ISI, Inter-Symbol Interference)</strong> 문제와 이를 해결하는 <strong>순환 전치(CP, Cyclic Prefix)</strong>입니다.</p>
+<h4 id="_12">다중 경로 간섭이란?<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p>무선 환경에서 송신된 신호는 직진 경로 외에도 건물, 지면, 차량 등에 <strong>반사·회절·산란</strong>되어 여러 경로를 통해 수신기에 도달합니다. 각 경로의 길이가 다르므로 <strong>도착 시간이 제각각</strong>입니다.</p>
+<p>이 때문에 먼저 보낸 심볼(데이터 단위)의 늦게 도착한 성분이 다음 심볼과 <strong>겹치는 현상</strong>이 발생합니다. 이것이 <strong>ISI(심볼 간 간섭)</strong>입니다.</p>
+<div class="mermaid">sequenceDiagram
+    participant TX as 송신기
+    participant CH as 무선 채널
+    participant RX as 수신기
+    TX-&gt;&gt;CH: 심볼 1 전송
+    TX-&gt;&gt;CH: 심볼 2 전송
+    Note over CH: 직접 경로 + 반사 경로&lt;br/&gt;(도착 시간 차이 발생)
+    CH-&gt;&gt;RX: 심볼 1 (직접 경로)
+    CH-&gt;&gt;RX: 심볼 1 (반사, 지연) + 심볼 2 (직접)
+    Note over RX: 심볼 1의 잔여 성분이&lt;br/&gt;심볼 2에 간섭 → ISI 발생</div>
+<h4 id="ofdm-isi">왜 OFDM에서 ISI가 특히 문제인가?<a class="headerlink" href="#ofdm-isi" title="Permanent link">&para;</a></h4>
+<p>각 부반송파의 심볼 전송 속도는 낮지만, 여전히 다중 경로로 인한 지연이 심볼 길이를 넘어서면 ISI가 발생합니다. OFDM에서는 부반송파 수가 많을수록 심볼 시간이 길어져 ISI에 강해지는 장점이 있지만, 이것만으로는 완전히 해결되지 않습니다.</p>
+<h4 id="cp">순환 전치(CP)의 역할<a class="headerlink" href="#cp" title="Permanent link">&para;</a></h4>
+<p><strong>CP(Cyclic Prefix, 순환 전치)</strong>는 OFDM 심볼의 <strong>끝부분을 복사하여 심볼 앞에 붙이는 것</strong>입니다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>원래 심볼</strong></td>
+<td>[d₁, d₂, d₃, d₄, d₅, d₆, d₇, d₈]</td>
+</tr>
+<tr>
+<td><strong>CP (끝부분 복사)</strong></td>
+<td>[d₇, d₈]</td>
+</tr>
+<tr>
+<td><strong>CP 삽입 후 전송 신호</strong></td>
+<td>[<strong>d₇, d₈</strong>, d₁, d₂, d₃, d₄, d₅, d₆, d₇, d₈]</td>
+</tr>
+</tbody>
+</table>
+<p>CP 삽입과 제거의 흐름:</p>
+<div class="mermaid">flowchart LR
+    A["OFDM 심볼&lt;br/&gt;[d₁~d₈]"] --&gt; B["끝부분 복사&lt;br/&gt;[d₇, d₈]"]
+    B --&gt; C["앞에 CP 삽입&lt;br/&gt;[d₇,d₈,d₁~d₈]"]
+    C --&gt; D["무선 채널&lt;br/&gt;(다중 경로 지연)"]
+    D --&gt; E["CP 구간 제거"]
+    E --&gt; F["원래 심볼&lt;br/&gt;[d₁~d₈] 복원"]</div>
+<p><strong>CP가 ISI를 해결하는 원리:</strong></p>
+<ol>
+<li><strong>CP의 길이가 채널의 최대 지연 확산(Maximum Delay Spread)보다 길면</strong>, 이전 심볼의 지연 성분은 CP 구간 안에서 모두 소멸됩니다.</li>
+<li>수신기는 CP 구간을 <strong>그냥 버립니다</strong>. CP가 이전 심볼의 간섭을 흡수한 뒤 폐기되므로, 실제 데이터 구간은 깨끗하게 보존됩니다.</li>
+<li>또한 CP는 신호를 <strong>순환(circular)</strong> 구조로 만들어, FFT 연산이 수학적으로 정확하게 동작하도록 보장합니다. (선형 합성곱을 순환 합성곱으로 변환)</li>
+</ol>
+<blockquote>
+<p><strong>CP의 대가</strong>: CP 구간에는 새로운 정보가 없고 기존 데이터의 복사본만 전송됩니다. 따라서 CP 길이만큼 <strong>전송 효율이 감소</strong>합니다. 예를 들어, 심볼 길이의 1/4을 CP로 사용하면, 전체 전송 시간의 약 20%가 CP에 소비됩니다. 이는 OFDM 설계 시 CP 길이를 최적화해야 하는 이유입니다.</p>
+</blockquote>
+<h3 id="ofdm_1">📋 OFDM의 장단점<a class="headerlink" href="#ofdm_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>장점</strong></td>
+<td>주파수 효율이 높음 (직교 부반송파로 주파수 대역을 빈틈없이 사용)</td>
+</tr>
+<tr>
+<td></td>
+<td>다중 경로 간섭에 강함 (CP + 긴 심볼 시간)</td>
+</tr>
+<tr>
+<td></td>
+<td>IFFT/FFT로 구현이 효율적 (하드웨어 복잡도 감소)</td>
+</tr>
+<tr>
+<td></td>
+<td>주파수 선택적 페이딩에 유연하게 대응 가능 (부반송파별 적응 변조)</td>
+</tr>
+<tr>
+<td><strong>단점</strong></td>
+<td><strong>PAPR(Peak-to-Average Power Ratio)</strong>이 높음 — 여러 부반송파의 신호가 동시에 같은 방향으로 합쳐지면 순간 피크 전력이 매우 커짐</td>
+</tr>
+<tr>
+<td></td>
+<td>CP로 인한 전송 효율 저하</td>
+</tr>
+<tr>
+<td></td>
+<td>주파수 오프셋에 민감 (직교성이 깨지면 부반송파 간 간섭 발생)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cdm_2">🔧 따라하기 실습 — CDM 스프레딩·디스프레딩 직접 계산<a class="headerlink" href="#cdm_2" title="Permanent link">&para;</a></h2>
+<p>CDM의 원리를 숫자로 직접 확인하겠습니다. 2명의 사용자(A, B)가 동시에 데이터를 전송하는 상황입니다.</p>
+<h3 id="_13">실습 조건<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>사용자 A의 데이터</td>
+<td>+1 (비트 1)</td>
+</tr>
+<tr>
+<td>사용자 B의 데이터</td>
+<td>−1 (비트 0)</td>
+</tr>
+<tr>
+<td>사용자 A의 코드 (C_A)</td>
+<td>+1, +1, −1, −1</td>
+</tr>
+<tr>
+<td>사용자 B의 코드 (C_B)</td>
+<td>+1, −1, +1, −1</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>참고</strong>: 디지털 데이터에서 비트 1은 +1로, 비트 0은 −1로 표현하는 것이 CDM 계산의 관례입니다.</p>
+</blockquote>
+<h3 id="step-1">📌 Step 1: 스프레딩 (송신)<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h3>
+<p>각 사용자의 데이터에 자신의 코드를 곱합니다.</p>
+<p><strong>사용자 A의 확산 신호:</strong>
+데이터(+1) × 코드(+1, +1, −1, −1) = <strong>+1, +1, −1, −1</strong></p>
+<p><strong>사용자 B의 확산 신호:</strong>
+데이터(−1) × 코드(+1, −1, +1, −1) = <strong>−1, +1, −1, +1</strong></p>
+<h3 id="step-2">📌 Step 2: 채널에서의 합성<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h3>
+<p>무선 채널에서 두 신호가 동시에 전송되므로, 수신기에는 두 신호의 합이 도착합니다.</p>
+<p><strong>합성 신호:</strong>
+(+1, +1, −1, −1) + (−1, +1, −1, +1) = <strong>0, +2, −2, 0</strong></p>
+<h3 id="step-3-a">📌 Step 3: 디스프레딩 — 사용자 A의 데이터 복원<a class="headerlink" href="#step-3-a" title="Permanent link">&para;</a></h3>
+<p>수신기에서 사용자 A의 코드(C_A)를 합성 신호에 곱한 뒤, 원소별 합을 구합니다.</p>
+<p><strong>합성 신호 × C_A:</strong>
+(0)(+1), (+2)(+1), (−2)(−1), (0)(−1) = 0, +2, +2, 0</p>
+<p><strong>합계:</strong> 0 + 2 + 2 + 0 = <strong>+4</strong></p>
+<p><strong>코드 길이(4)로 나누기:</strong> +4 ÷ 4 = <strong>+1</strong> → 사용자 A의 원래 데이터 <strong>+1 (비트 1)</strong> ✅</p>
+<h3 id="step-4-b">📌 Step 4: 디스프레딩 — 사용자 B의 데이터 복원<a class="headerlink" href="#step-4-b" title="Permanent link">&para;</a></h3>
+<p>이번에는 사용자 B의 코드(C_B)를 사용합니다.</p>
+<p><strong>합성 신호 × C_B:</strong>
+(0)(+1), (+2)(−1), (−2)(+1), (0)(−1) = 0, −2, −2, 0</p>
+<p><strong>합계:</strong> 0 + (−2) + (−2) + 0 = <strong>−4</strong></p>
+<p><strong>코드 길이(4)로 나누기:</strong> −4 ÷ 4 = <strong>−1</strong> → 사용자 B의 원래 데이터 <strong>−1 (비트 0)</strong> ✅</p>
+<h3 id="step-5">📌 Step 5: 결과 확인<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>사용자</th>
+<th>원래 데이터</th>
+<th>복원 데이터</th>
+<th>일치 여부</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>+1 (비트 1)</td>
+<td>+1 (비트 1)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>B</td>
+<td>−1 (비트 0)</td>
+<td>−1 (비트 0)</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p>두 사용자의 신호가 같은 주파수, 같은 시간에 섞여 있었지만, <strong>직교 코드</strong> 덕분에 완벽하게 분리되었습니다. 이것이 CDM의 핵심 원리입니다.</p>
+<blockquote>
+<p><strong>직접 해보기</strong>: 사용자 A의 데이터를 −1로, 사용자 B의 데이터를 +1로 바꾸어 같은 과정을 반복해 보십시오. 코드가 직교하는 한 항상 원래 데이터가 복원됩니다.</p>
+</blockquote>
+<hr />
+<h2 id="fdm-tdm-cdm-ofdm">📊 종합 비교 — FDM · TDM · CDM · OFDM<a class="headerlink" href="#fdm-tdm-cdm-ofdm" title="Permanent link">&para;</a></h2>
+<p>네 가지 다중화 방식을 하나의 표로 정리하겠습니다. 이 표는 시험에서 비교 문제로 자주 출제되는 핵심 내용입니다.</p>
+<table>
+<thead>
+<tr>
+<th>비교 항목</th>
+<th>FDM</th>
+<th>TDM</th>
+<th>CDM</th>
+<th>OFDM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>분리 기준</strong></td>
+<td>주파수</td>
+<td>시간</td>
+<td>코드</td>
+<td>주파수(직교 부반송파)</td>
+</tr>
+<tr>
+<td><strong>같은 시간 사용?</strong></td>
+<td>✅ (서로 다른 주파수)</td>
+<td>❌ (시간 슬롯 분리)</td>
+<td>✅ (같은 주파수·시간)</td>
+<td>✅ (서로 다른 부반송파)</td>
+</tr>
+<tr>
+<td><strong>같은 주파수 사용?</strong></td>
+<td>❌ (주파수 분리)</td>
+<td>✅ (같은 주파수)</td>
+<td>✅ (같은 주파수)</td>
+<td>부분적 (부반송파별 분리)</td>
+</tr>
+<tr>
+<td><strong>보호 구간</strong></td>
+<td>보호 대역(Guard Band)</td>
+<td>보호 시간(Guard Time)</td>
+<td>불필요</td>
+<td>CP(Cyclic Prefix)</td>
+</tr>
+<tr>
+<td><strong>주파수 효율</strong></td>
+<td>낮음</td>
+<td>보통</td>
+<td>높음</td>
+<td>매우 높음</td>
+</tr>
+<tr>
+<td><strong>다중 경로 대응</strong></td>
+<td>약함</td>
+<td>약함</td>
+<td>강함(레이크 수신기)</td>
+<td>강함(CP)</td>
+</tr>
+<tr>
+<td><strong>대표 적용 사례</strong></td>
+<td>AM/FM 라디오, 케이블 TV</td>
+<td>T1/E1 전화망, 동기식 전송</td>
+<td>CDMA2000, WCDMA(3G)</td>
+<td>LTE, 5G NR, Wi-Fi</td>
+</tr>
+<tr>
+<td><strong>핵심 기술</strong></td>
+<td>대역통과 필터</td>
+<td>시간 동기화</td>
+<td>직교 코드, 전력 제어</td>
+<td>IFFT/FFT, CP</td>
+</tr>
+</tbody>
+</table>
+<div class="mermaid">mindmap
+  root((다중화 방식))
+    FDM
+      주파수로 분리
+      보호 대역 필요
+      AM/FM 라디오
+    TDM
+      시간으로 분리
+      보호 시간 필요
+      전화망
+    CDM
+      코드로 분리
+      같은 주파수·시간 공유
+      3G 이동통신
+    OFDM
+      직교 부반송파
+      CP로 ISI 극복
+      LTE·5G·Wi-Fi</div>
+<h3 id="_14">⚠️ 자주 하는 실수와 주의할 점<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>실수</th>
+<th>올바른 이해</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"CDM은 주파수를 나눠 쓰므로 FDM과 같다"</td>
+<td>CDM은 <strong>전체 대역을 모든 사용자가 공유</strong>합니다. 코드로 구분하는 것이지, 주파수를 나누는 것이 아닙니다</td>
+</tr>
+<tr>
+<td>"OFDM은 FDM의 일종이 아니다"</td>
+<td>OFDM은 FDM의 <strong>발전형</strong>입니다. 부반송파를 사용한다는 점에서 FDM 계열이지만, 직교성과 IFFT/FFT가 핵심 차이입니다</td>
+</tr>
+<tr>
+<td>"CP는 새로운 데이터를 추가하는 것이다"</td>
+<td>CP는 <strong>기존 심볼의 끝부분을 복사</strong>한 것이며, 새로운 정보가 아닙니다. 오히려 전송 효율을 감소시키는 대가를 치릅니다</td>
+</tr>
+<tr>
+<td>"OFDM에서 부반송파 수를 무한히 늘리면 좋다"</td>
+<td>부반송파 수가 많아지면 심볼 시간이 길어져 ISI에 강해지지만, <strong>PAPR 문제</strong>가 심해지고 주파수 오프셋에 더 민감해집니다</td>
+</tr>
+<tr>
+<td>"CDM에서는 사용자 수에 제한이 없다"</td>
+<td>직교 코드의 개수는 코드 길이에 제한되며, 사용자가 늘수록 <strong>간섭이 누적</strong>됩니다</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_15">📝 형성 평가<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<div class="assessment">
+<h3 id="_16">📝 형성 평가<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p><strong>객관식 1.</strong> CDM에서 여러 사용자의 신호를 같은 주파수·같은 시간에 전송한 후 수신기에서 분리할 수 있는 핵심 원리는 무엇입니까?</p>
+<p>① 각 사용자에게 서로 다른 시간 슬롯을 배정하기 때문이다
+② 각 사용자에게 할당된 스프레딩 코드가 직교(Orthogonal) 관계이기 때문이다
+③ 각 사용자의 신호를 서로 다른 반송파 주파수에 실어 보내기 때문이다
+④ 수신기에서 신호의 세기를 기준으로 사용자를 구분하기 때문이다</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ②**
+
+CDM의 핵심 원리는 각 사용자에게 부여된 스프레딩 코드의 **직교성**입니다. 직교 코드끼리의 내적(원소별 곱의 합)은 0이 되므로, 다른 사용자의 신호 성분은 디스프레딩 과정에서 상쇄됩니다. 같은 코드끼리의 내적은 코드 길이만큼의 값이 나오므로, 원래 데이터를 복원할 수 있습니다.
+
+</details>
+<hr />
+<p><strong>객관식 2.</strong> OFDM 시스템에서 순환 전치(CP, Cyclic Prefix)의 주된 역할은 무엇입니까?</p>
+<p>① 데이터 전송 속도를 높이기 위해 추가 데이터를 삽입한다
+② 부반송파 간의 직교성을 깨뜨려 간섭을 분산시킨다
+③ 다중 경로로 인한 심볼 간 간섭(ISI)을 제거하고, FFT 연산의 정확성을 보장한다
+④ 수신기에서 동기화 신호로 사용하여 타이밍을 맞춘다</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ③**
+
+CP는 OFDM 심볼의 끝부분을 복사하여 앞에 붙인 것입니다. 이전 심볼의 다중 경로 지연 성분이 CP 구간에서 흡수된 후 폐기되므로 ISI가 제거됩니다. 또한 CP는 선형 합성곱을 순환 합성곱으로 변환하여 FFT 기반 복조가 수학적으로 정확하게 동작하도록 보장합니다. 다만, CP는 새로운 정보를 담고 있지 않으므로 전송 효율은 감소합니다.
+
+</details>
+<hr />
+<p><strong>객관식 3.</strong> 다음 중 OFDM의 특징으로 <strong>옳지 않은</strong> 것은 무엇입니까?</p>
+<p>① 송신기에서 IFFT를, 수신기에서 FFT를 사용하여 부반송파를 생성·분리한다
+② 부반송파 간 보호 대역(Guard Band)이 필요 없어 주파수 효율이 높다
+③ 여러 부반송파의 합성으로 PAPR(Peak-to-Average Power Ratio) 문제가 발생할 수 있다
+④ 각 부반송파에 서로 다른 직교 코드를 할당하여 사용자를 구분한다</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ④**
+
+④는 CDM(코드 분할 다중화)의 설명입니다. OFDM은 코드가 아닌 **직교 부반송파**로 데이터를 병렬 전송하는 방식입니다. 사용자 구분은 OFDMA(Orthogonal Frequency Division Multiple Access)에서 부반송파 할당으로 이루어지며, 이는 코드 할당이 아닌 주파수 자원 할당 개념입니다. ①②③은 모두 OFDM의 올바른 특징입니다.
+
+</details>
+<hr />
+<p><strong>서술형 1.</strong> CDM과 OFDM의 다중화 원리가 근본적으로 어떻게 다른지 설명하고, 각각이 적합한 통신 환경의 예를 하나씩 제시하십시오.</p>
+<details>
+<summary>모범 답안 확인</summary>
+
+**CDM**은 모든 사용자가 전체 주파수 대역과 전체 시간을 공유하되, 각 사용자에게 할당된 **직교 스프레딩 코드**로 신호를 구분합니다. 송신 시 데이터를 코드로 확산(스프레딩)하고, 수신 시 같은 코드로 역확산(디스프레딩)하여 원래 데이터를 복원합니다.
+
+**OFDM**은 넓은 주파수 대역을 다수의 좁은 **직교 부반송파**로 나누고, 고속 데이터를 여러 저속 스트림으로 분할하여 각 부반송파에 실어 병렬 전송합니다. IFFT/FFT를 이용하여 부반송파를 효율적으로 생성·분리하며, CP를 삽입하여 다중 경로 간섭을 극복합니다.
+
+**적합한 환경 예시:**
+- CDM: 다수의 음성 통화 사용자가 동시에 접속하는 3G 이동통신 환경 (CDMA2000, WCDMA). 보안성이 중요하고, 사용자별 데이터 속도가 낮은 음성 위주 서비스에 적합합니다.
+- OFDM: 고속 데이터 전송이 필요한 LTE, 5G, Wi-Fi 환경. 다중 경로 환경에서도 높은 주파수 효율로 대용량 데이터를 전송해야 하는 현대 무선 통신에 적합합니다.
+
+</details>
+<hr />
+<h3 id="_17">✅ 자기점검 체크리스트<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CDM에서 스프레딩 코드의 직교성이 왜 중요한지 설명할 수 있습니까?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 스프레딩과 디스프레딩의 과정을 간단한 숫자 예제로 시연할 수 있습니까?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> OFDM이 기존 FDM보다 주파수 효율이 높은 이유를 설명할 수 있습니까?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CP가 ISI를 제거하는 원리와 그 대가(전송 효율 감소)를 설명할 수 있습니까?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> FDM·TDM·CDM·OFDM 네 가지 방식의 핵심 차이를 비교표로 정리할 수 있습니까?</li>
+</ul>
+</div>
+<hr />
+<h2 id="_18">💭 성찰 &amp; 다음 차시 미리보기<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<h3 id="_19">이번 차시 핵심 정리<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>이번 차시에서는 현대 통신의 두 축인 <strong>CDM</strong>과 <strong>OFDM</strong>을 학습했습니다.</p>
+<ul>
+<li><strong>CDM</strong>은 직교 스프레딩 코드를 이용하여 같은 주파수·같은 시간에 여러 사용자의 신호를 중첩시키고, 수신기에서 코드를 이용해 분리하는 기술입니다. 3세대 이동통신의 기반이 되었습니다.</li>
+<li><strong>OFDM</strong>은 넓은 대역을 다수의 직교 부반송파로 나누어 데이터를 병렬 전송하며, CP를 통해 다중 경로 간섭을 극복하는 기술입니다. LTE, 5G, Wi-Fi 등 현대 무선 통신의 표준입니다.</li>
+</ul>
+<p>16차시의 FDM·TDM과 함께, 이제 네 가지 주요 다중화 방식을 모두 학습하였습니다. 각 방식은 서로를 대체하는 것이 아니라, <strong>통신 환경과 요구 조건에 따라 최적의 방식이 선택</strong>되는 것입니다. 실제 시스템에서는 이들을 조합하여 사용하기도 합니다 — 예를 들어, LTE의 OFDMA는 OFDM과 FDMA를 결합한 다중 접속 방식입니다.</p>
+<h3 id="_20">🔮 다음 차시 미리보기<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p><strong>18차시: 이동통신 시스템의 발전 — 1G에서 5G까지</strong></p>
+<p>다음 차시에서는 이번에 학습한 다중화 기술들이 <strong>실제 이동통신 세대(Generation)에서 어떻게 적용</strong>되었는지 살펴보겠습니다. 1G의 아날로그 FDMA, 2G의 TDMA/FDMA, 3G의 CDMA, 4G LTE의 OFDMA, 5G NR의 기술적 특징을 세대별로 비교하며, 각 세대가 이전 세대의 어떤 한계를 극복하기 위해 등장했는지 그 흐름을 정리하겠습니다.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../chapter16/" class="md-footer__link md-footer__link--prev" aria-label="이전: 16차시: 다중화란 무엇인가 — 하나의 채널로 여러 신호 보내기">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                16차시: 다중화란 무엇인가 — 하나의 채널로 여러 신호 보내기
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter18/" class="md-footer__link md-footer__link--next" aria-label="다음: 18차시: 이동통신의 진화 — 1G부터 5G까지의 핵심 개념">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                18차시: 이동통신의 진화 — 1G부터 5G까지의 핵심 개념
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 노용철TV | <a href='https://eduflow-greatsong.fly.dev/'>EduFlow</a>로 제작
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+        <script src="../javascripts/mermaid-config.js"></script>
+      
+        <script src="../javascripts/scroll-progress.js"></script>
+      
+        <script src="../javascripts/eduflow-nav.js"></script>
+      
+        <script src="../javascripts/lightbox.js"></script>
+      
+    
+  </body>
+</html>

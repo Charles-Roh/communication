@@ -1,0 +1,3233 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="한전 KDN 등 공공기관 채용시험 통신이론 과목을 혼자서 완주할 수 있도록 설계된 독학용 수험 교재로, 비전공자도 기초부터 핵심 변조 이론까지 체계적으로 학습할 수 있다.">
+      
+      
+        <meta name="author" content="노용철TV (EduFlow)">
+      
+      
+      
+        <link rel="prev" href="../chapter08/">
+      
+      
+        <link rel="next" href="../chapter10/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>9차시: AM vs FM 실전 비교 — 기출 문제 집중 풀이 - 통신이론 핵심정리 — 공공기관 채용시험 완전 대비</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#9-am-vs-fm" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-header__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              9차시: AM vs FM 실전 비교 — 기출 문제 집중 풀이
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter01/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter05/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter10/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter16/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-nav__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1차시: 통신이란 무엇인가 — 정보가 이동하는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2차시: 신호의 언어 — 주파수, 진폭, 위상 이해하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3차시: 대역폭과 스펙트럼 — 정보가 차지하는 공간
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4차시: 실습 체험 — 신호 읽기와 기초 개념 확인 문제 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5차시: 변조란 무엇인가 — 반송파에 정보를 싣는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6차시: AM 변조 — 진폭으로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7차시: AM 변형 방식 — DSB, SSB, VSB 비교 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8차시: FM 변조 — 주파수로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9차시: AM vs FM 실전 비교 — 기출 문제 집중 풀이
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9차시: AM vs FM 실전 비교 — 기출 문제 집중 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        학습 목표
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 왜 이걸 배우는가?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 왜 이걸 배우는가?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-am-vs-fm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 핵심 개념 1: AM vs FM 비교 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 핵심 개념 2: 기출 유형별 풀이 전략
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-am-vs-fm-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계: AM vs FM 핵심 비교 총정리 (10분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계: 기출 유형 ① — 변조 지수·대역폭 계산 문제 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계: 기출 유형 ② — 비교·특성 판별 문제와 오답 함정 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-part-2-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4단계: Part 2 마무리 — 종합 평가와 성찰 (10분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-am-vs-fm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 1단계: AM vs FM 핵심 비교 총정리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 1단계: AM vs FM 핵심 비교 총정리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 비유로 시작하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#am-vs-fm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 AM vs FM 완전 비교표
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 핵심 공식 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 공식 혼동 주의
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 2단계: 기출 유형 ① — 변조 지수·대역폭 계산 문제
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 2단계: 기출 유형 ① — 변조 지수·대역폭 계산 문제">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 유형 A: AM 변조 지수 계산
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-fm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 유형 B: FM 변조 지수 및 대역폭 계산
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 유형 C: AM 전력 계산
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-am-dsb-vs-ssb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 유형 D: AM 대역폭 비교 문제 (DSB vs SSB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 계산 문제 풀이 전략 요약
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 3단계: 기출 유형 ② — 비교·특성 판별 문제와 오답 함정
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 3단계: 기출 유형 ② — 비교·특성 판별 문제와 오답 함정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 비교형 문제 — 시험 출제 패턴
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 비교형 문제 — 시험 출제 패턴">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 오답 함정 TOP 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 실전 연습 문제 (비교형)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nbfm-vs-wbfm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 NBFM vs WBFM 비교 (빈출 주제)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 대역폭과 S/N비의 교환 관계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Part 2 핵심 요약 박스
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Part 2 핵심 요약 박스">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗂️ Part 2 종합 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Part 2 핵심 키워드 체크리스트
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 형성 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 종합 평가 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 자기점검 체크리스트
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💭 성찰 &amp; 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💭 성찰 &amp; 다음 차시 미리보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 이번 차시를 마치며
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔜 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10차시: 디지털 통신의 시작 — 표본화와 양자화 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12차시: 디지털 변조 입문 — ASK와 FSK의 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14차시: 디지털 변조 비교 실습 — 성상도와 오답 함정 집중 공략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15차시: Part 2·3 통합 복습 — 아날로그·디지털 변조 완전 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16차시: 다중화란 무엇인가 — 하나의 채널로 여러 신호 보내기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17차시: CDM과 OFDM — 현대 통신이 선택한 다중화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18차시: 이동통신의 진화 — 1G부터 5G까지의 핵심 개념
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19차시: 통신 시스템 실생활 연결 — 와이파이, 블루투스, 위성통신
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20차시: 전체 통합 모의고사 — 실전 시험 완전 대비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        학습 목표
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 왜 이걸 배우는가?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 왜 이걸 배우는가?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-am-vs-fm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 핵심 개념 1: AM vs FM 비교 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 핵심 개념 2: 기출 유형별 풀이 전략
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-am-vs-fm-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계: AM vs FM 핵심 비교 총정리 (10분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계: 기출 유형 ① — 변조 지수·대역폭 계산 문제 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계: 기출 유형 ② — 비교·특성 판별 문제와 오답 함정 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-part-2-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4단계: Part 2 마무리 — 종합 평가와 성찰 (10분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-am-vs-fm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 1단계: AM vs FM 핵심 비교 총정리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 1단계: AM vs FM 핵심 비교 총정리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 비유로 시작하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#am-vs-fm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 AM vs FM 완전 비교표
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 핵심 공식 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 공식 혼동 주의
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 2단계: 기출 유형 ① — 변조 지수·대역폭 계산 문제
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 2단계: 기출 유형 ① — 변조 지수·대역폭 계산 문제">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 유형 A: AM 변조 지수 계산
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-fm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 유형 B: FM 변조 지수 및 대역폭 계산
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 유형 C: AM 전력 계산
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-am-dsb-vs-ssb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 유형 D: AM 대역폭 비교 문제 (DSB vs SSB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 계산 문제 풀이 전략 요약
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 3단계: 기출 유형 ② — 비교·특성 판별 문제와 오답 함정
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 3단계: 기출 유형 ② — 비교·특성 판별 문제와 오답 함정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 비교형 문제 — 시험 출제 패턴
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 비교형 문제 — 시험 출제 패턴">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 오답 함정 TOP 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 실전 연습 문제 (비교형)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nbfm-vs-wbfm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 NBFM vs WBFM 비교 (빈출 주제)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 대역폭과 S/N비의 교환 관계
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Part 2 핵심 요약 박스
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Part 2 핵심 요약 박스">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗂️ Part 2 종합 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Part 2 핵심 키워드 체크리스트
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 형성 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 종합 평가 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 자기점검 체크리스트
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💭 성찰 &amp; 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💭 성찰 &amp; 다음 차시 미리보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 이번 차시를 마치며
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔜 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../chapter05/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="9-am-vs-fm">9차시: AM vs FM 실전 비교 — 기출 문제 집중 풀이<a class="headerlink" href="#9-am-vs-fm" title="Permanent link">&para;</a></h1>
+<div class="lesson-banner">
+<p><strong>⏰ 50분</strong> · AM/FM 비교 · 변조 지수 계산 · 대역폭 공식 · 오답 함정 분석 · <strong>난이도</strong> ●●●○○</p>
+<p><strong>학습목표</strong>: AM과 FM의 핵심 특성을 비교하고, 변조 지수·대역폭 계산 문제를 정확히 풀 수 있습니다.</p>
+<blockquote>
+<p><strong>오늘의 질문</strong>: "AM과 FM을 묻는 시험 문제에서, 수험생이 가장 자주 틀리는 함정은 무엇일까요?"</p>
+</blockquote>
+</div>
+<h2 id="_1">학습 목표<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AM과 FM의 핵심 특성 차이를 비교 문제 형태로 정확하게 구분하여 답할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 변조 지수, 대역폭 계산 관련 수치 문제를 풀 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AM/FM 관련 오답 함정 포인트를 인식하고 혼동 없이 정답을 선택할 수 있다</li>
+</ul>
+<hr />
+<h2 id="_2">🎯 왜 이걸 배우는가?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>7차시와 8차시에서 AM과 FM의 원리, 공식, 특성을 각각 학습했습니다. 그러나 시험에서는 <strong>두 방식을 비교하는 문제</strong>가 빈번하게 출제됩니다. "AM의 대역폭 공식은 알겠는데, FM 대역폭 공식과 섞이면 헷갈린다"는 경험은 매우 흔합니다.</p>
+<p>이 차시에서는 이론 학습을 마치고 <strong>실전 문제 풀이</strong>로 전환합니다. 기출 유형을 분석하고, 반복적으로 등장하는 함정을 미리 파악하면 시험장에서의 실수를 크게 줄일 수 있습니다. 지금까지 배운 지식을 <strong>점수로 전환</strong>하는 훈련이라고 생각하시면 됩니다.</p>
+<hr />
+<div class="cards-grid">
+<div class="card card-orange">
+<h3 id="1-am-vs-fm">🧠 핵심 개념 1: AM vs FM 비교 정리<a class="headerlink" href="#1-am-vs-fm" title="Permanent link">&para;</a></h3>
+<p>7~8차시 핵심 공식과 특성을 비교표로 완전 정리</p>
+</div>
+<div class="card card-red">
+<h3 id="2">📋 핵심 개념 2: 기출 유형별 풀이 전략<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>계산형·비교형·함정형 문제의 접근법 훈련</p>
+</div>
+</div>
+<hr />
+<h2 id="_3">⏱️ 수업 흐름<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="steps">
+<div class="step">
+<h4 id="1-am-vs-fm-10">1단계: AM vs FM 핵심 비교 총정리 (10분)<a class="headerlink" href="#1-am-vs-fm-10" title="Permanent link">&para;</a></h4>
+<p>7~8차시에서 학습한 AM과 FM의 핵심 공식, 특성, 차이점을 비교표로 빠르게 정리합니다.</p>
+</div>
+<div class="step">
+<h4 id="2-1-15">2단계: 기출 유형 ① — 변조 지수·대역폭 계산 문제 (15분)<a class="headerlink" href="#2-1-15" title="Permanent link">&para;</a></h4>
+<p>가장 높은 출제 빈도를 보이는 수치 계산 문제를 유형별로 풀어봅니다.</p>
+</div>
+<div class="step">
+<h4 id="3-2-15">3단계: 기출 유형 ② — 비교·특성 판별 문제와 오답 함정 (15분)<a class="headerlink" href="#3-2-15" title="Permanent link">&para;</a></h4>
+<p>AM과 FM의 특성을 비교하는 객관식 문제를 풀면서 대표적인 오답 함정을 분석합니다.</p>
+</div>
+<div class="step">
+<h4 id="4-part-2-10">4단계: Part 2 마무리 — 종합 평가와 성찰 (10분)<a class="headerlink" href="#4-part-2-10" title="Permanent link">&para;</a></h4>
+<p>형성 평가 문제를 풀고, Part 2 아날로그 변조 핵심을 최종 정리합니다.</p>
+</div>
+</div>
+<hr />
+<h2 id="1-am-vs-fm_1">📚 1단계: AM vs FM 핵심 비교 총정리<a class="headerlink" href="#1-am-vs-fm_1" title="Permanent link">&para;</a></h2>
+<h3 id="_4">🔄 비유로 시작하기<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>라디오 주파수를 맞추는 상황을 떠올려 보겠습니다. AM 방송(예: KBS 제1라디오 711kHz)을 들을 때 터널에 들어가면 잡음이 심해집니다. 반면 FM 방송(예: KBS 제1FM 93.1MHz)은 터널 안에서도 비교적 깨끗합니다. 이 차이는 두 변조 방식의 근본적인 특성 차이에서 비롯됩니다.</p>
+<p>시험에서는 이런 <strong>특성 차이</strong>를 정확히 아느냐를 묻습니다. 아래 비교표는 이 차시의 <strong>핵심 무기</strong>입니다. 시험 직전까지 반복 확인해야 할 내용입니다.</p>
+<h3 id="am-vs-fm">📊 AM vs FM 완전 비교표<a class="headerlink" href="#am-vs-fm" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">비교 항목</th>
+<th style="text-align: left;">AM (진폭 변조)</th>
+<th style="text-align: left;">FM (주파수 변조)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>변조 대상</strong></td>
+<td style="text-align: left;">반송파의 <strong>진폭</strong></td>
+<td style="text-align: left;">반송파의 <strong>주파수</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>변조 지수 정의</strong></td>
+<td style="text-align: left;">m = ΔA / A₀ (= E_m / E_c)</td>
+<td style="text-align: left;">β = Δf / f_m</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>변조 지수 범위</strong></td>
+<td style="text-align: left;">0 ≤ m ≤ 1 (과변조 시 m &gt; 1)</td>
+<td style="text-align: left;">β 제한 없음 (보통 β ≫ 1)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>대역폭 공식</strong></td>
+<td style="text-align: left;">BW = 2f_m (DSB-AM 기준)</td>
+<td style="text-align: left;">BW ≈ 2(Δf + f_m) = 2f_m(β + 1) (카슨 공식)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SSB 대역폭</strong></td>
+<td style="text-align: left;">BW = f_m</td>
+<td style="text-align: left;">— (FM에는 SSB 개념 없음)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>잡음 특성</strong></td>
+<td style="text-align: left;">잡음에 <strong>약함</strong> (진폭에 잡음 직접 영향)</td>
+<td style="text-align: left;">잡음에 <strong>강함</strong> (리미터로 진폭 잡음 제거)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S/N비 개선</strong></td>
+<td style="text-align: left;">변조 지수 증가 시 개선 한계 있음</td>
+<td style="text-align: left;">β 증가 시 S/N비 크게 개선</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>대역폭 효율</strong></td>
+<td style="text-align: left;">좁은 대역폭 → 효율적</td>
+<td style="text-align: left;">넓은 대역폭 → 비효율적</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>회로 복잡도</strong></td>
+<td style="text-align: left;">단순</td>
+<td style="text-align: left;">복잡</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>사용 예시</strong></td>
+<td style="text-align: left;">중파(MW) 라디오, 항공 통신</td>
+<td style="text-align: left;">FM 라디오, TV 음성, 이동통신</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>전력 효율</strong></td>
+<td style="text-align: left;">반송파에 전력 집중 (비효율적)</td>
+<td style="text-align: left;">포락선 일정 → 전력 효율 높음</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>시험 핵심 포인트</strong>: 위 표에서 <strong>굵게</strong> 표시된 키워드가 시험에 직접 출제되는 부분입니다.</p>
+</blockquote>
+<h3 id="_5">📐 핵심 공식 정리<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>시험에서 <strong>계산 문제</strong>로 출제되는 공식만 추려 정리하겠습니다.</p>
+<p><strong>AM 관련 공식:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">공식</th>
+<th style="text-align: left;">의미</th>
+<th style="text-align: left;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">m = E_m / E_c</td>
+<td style="text-align: left;">변조 지수 (변조도)</td>
+<td style="text-align: left;">E_m: 신호 진폭, E_c: 반송파 진폭</td>
+</tr>
+<tr>
+<td style="text-align: left;">m = (A_max − A_min) / (A_max + A_min)</td>
+<td style="text-align: left;">파형에서 변조도 계산</td>
+<td style="text-align: left;">오실로스코프 파형 문제에 사용</td>
+</tr>
+<tr>
+<td style="text-align: left;">BW_DSB = 2f_m</td>
+<td style="text-align: left;">DSB-AM 대역폭</td>
+<td style="text-align: left;">f_m: 변조 신호 최대 주파수</td>
+</tr>
+<tr>
+<td style="text-align: left;">BW_SSB = f_m</td>
+<td style="text-align: left;">SSB 대역폭</td>
+<td style="text-align: left;">DSB의 절반</td>
+</tr>
+<tr>
+<td style="text-align: left;">P_t = P_c(1 + m²/2)</td>
+<td style="text-align: left;">총 전력</td>
+<td style="text-align: left;">단일 톤 변조 기준</td>
+</tr>
+</tbody>
+</table>
+<p><strong>FM 관련 공식:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">공식</th>
+<th style="text-align: left;">의미</th>
+<th style="text-align: left;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">β = Δf / f_m</td>
+<td style="text-align: left;">변조 지수</td>
+<td style="text-align: left;">Δf: 최대 주파수 편이, f_m: 변조 주파수</td>
+</tr>
+<tr>
+<td style="text-align: left;">BW ≈ 2(Δf + f_m)</td>
+<td style="text-align: left;">카슨의 법칙</td>
+<td style="text-align: left;">FM 대역폭 계산의 핵심</td>
+</tr>
+<tr>
+<td style="text-align: left;">BW = 2f_m(β + 1)</td>
+<td style="text-align: left;">카슨의 법칙 (변형)</td>
+<td style="text-align: left;">β를 대입한 형태</td>
+</tr>
+</tbody>
+</table>
+<p>다음 다이어그램은 AM과 FM의 공식 체계를 한눈에 보여줍니다.</p>
+<div class="mermaid">flowchart TB
+    A["변조 방식 선택"] --&gt; B["AM&lt;br/&gt;(진폭 변조)"]
+    A --&gt; C["FM&lt;br/&gt;(주파수 변조)"]
+    B --&gt; B1["변조 지수&lt;br/&gt;m = Em / Ec"]
+    B --&gt; B2["대역폭&lt;br/&gt;DSB: 2fm&lt;br/&gt;SSB: fm"]
+    B --&gt; B3["전력&lt;br/&gt;Pt = Pc × (1 + m²/2)"]
+    C --&gt; C1["변조 지수&lt;br/&gt;β = Δf / fm"]
+    C --&gt; C2["대역폭&lt;br/&gt;BW = 2 × (Δf + fm)"]
+    C --&gt; C3["S/N비&lt;br/&gt;β 증가 → 개선"]</div>
+<h3 id="_6">⚠️ 공식 혼동 주의<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>AM의 변조 지수 <strong>m</strong>과 FM의 변조 지수 <strong>β</strong>는 <strong>정의 자체가 다릅니다</strong>.</p>
+<ul>
+<li>AM의 m: <strong>진폭의 비율</strong> → 값이 1을 넘으면 과변조로 왜곡 발생</li>
+<li>FM의 β: <strong>주파수 편이와 변조 주파수의 비율</strong> → 값이 클수록 대역폭이 넓어지고 S/N비가 개선됨</li>
+</ul>
+<p>시험에서 "변조 지수가 2이다"라는 조건이 주어졌을 때, <strong>AM인지 FM인지</strong> 반드시 확인해야 합니다. AM에서 변조 지수 2는 과변조 상태이고, FM에서 변조 지수 2는 정상적인 <strong>광대역 FM(WBFM)</strong>입니다.</p>
+<hr />
+<h2 id="2-1">📚 2단계: 기출 유형 ① — 변조 지수·대역폭 계산 문제<a class="headerlink" href="#2-1" title="Permanent link">&para;</a></h2>
+<p>계산 문제는 공식에 숫자를 대입하는 것이므로, <strong>어떤 공식을 써야 하는지 판단하는 것</strong>이 핵심입니다. 기출 유형별로 풀이 과정을 살펴보겠습니다.</p>
+<hr />
+<h3 id="a-am">📝 유형 A: AM 변조 지수 계산<a class="headerlink" href="#a-am" title="Permanent link">&para;</a></h3>
+<p><strong>[예제 1]</strong> AM 변조파의 최대 진폭이 150V, 최소 진폭이 50V일 때, 변조도(변조 지수)는 얼마입니까?</p>
+<p><strong>풀이 과정:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">단계</th>
+<th style="text-align: left;">내용</th>
+<th style="text-align: left;">계산</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">① 공식 선택</td>
+<td style="text-align: left;">최대·최소 진폭이 주어졌으므로 파형 공식 사용</td>
+<td style="text-align: left;">m = (A_max − A_min) / (A_max + A_min)</td>
+</tr>
+<tr>
+<td style="text-align: left;">② 값 대입</td>
+<td style="text-align: left;">A_max = 150, A_min = 50</td>
+<td style="text-align: left;">m = (150 − 50) / (150 + 50)</td>
+</tr>
+<tr>
+<td style="text-align: left;">③ 계산</td>
+<td style="text-align: left;">분자: 100, 분모: 200</td>
+<td style="text-align: left;">m = 100 / 200 = 0.5</td>
+</tr>
+<tr>
+<td style="text-align: left;">④ 결과 해석</td>
+<td style="text-align: left;">변조도 50%</td>
+<td style="text-align: left;">과변조 아님 (m ≤ 1)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>정답: m = 0.5 (50%)</strong></p>
+<blockquote>
+<p><strong>풀이 포인트</strong>: A_max와 A_min이 주어지면 반드시 <strong>(A_max − A_min) / (A_max + A_min)</strong> 공식을 사용합니다. E_m과 E_c가 직접 주어지면 m = E_m / E_c를 사용합니다.</p>
+</blockquote>
+<hr />
+<p><strong>[예제 2]</strong> 반송파 진폭이 100V이고, 변조 신호 진폭이 80V인 AM 변조파의 변조도는?</p>
+<p><strong>풀이:</strong></p>
+<ul>
+<li>m = E_m / E_c = 80 / 100 = <strong>0.8 (80%)</strong></li>
+</ul>
+<p>이 경우는 공식이 더 단순합니다. <strong>문제에서 어떤 값을 주느냐에 따라 사용하는 공식이 달라진다</strong>는 점을 기억해야 합니다.</p>
+<hr />
+<h3 id="b-fm">📝 유형 B: FM 변조 지수 및 대역폭 계산<a class="headerlink" href="#b-fm" title="Permanent link">&para;</a></h3>
+<p><strong>[예제 3]</strong> FM 변조에서 최대 주파수 편이(Δf)가 75kHz이고, 변조 신호 주파수(f_m)가 15kHz일 때, 변조 지수(β)와 대역폭(BW)을 구하시오.</p>
+<p><strong>풀이 과정:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">단계</th>
+<th style="text-align: left;">내용</th>
+<th style="text-align: left;">계산</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">① 변조 지수 계산</td>
+<td style="text-align: left;">β = Δf / f_m</td>
+<td style="text-align: left;">β = 75kHz / 15kHz = 5</td>
+</tr>
+<tr>
+<td style="text-align: left;">② 대역폭 계산 (카슨 공식)</td>
+<td style="text-align: left;">BW = 2(Δf + f_m)</td>
+<td style="text-align: left;">BW = 2(75 + 15) = 2 × 90 = 180kHz</td>
+</tr>
+<tr>
+<td style="text-align: left;">③ 검증 (변형 공식)</td>
+<td style="text-align: left;">BW = 2f_m(β + 1)</td>
+<td style="text-align: left;">BW = 2 × 15 × (5 + 1) = 2 × 15 × 6 = 180kHz ✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>정답: β = 5, BW = 180kHz</strong></p>
+<blockquote>
+<p><strong>이 수치는 실제 상용 FM 라디오 방송의 표준값입니다.</strong> 시험에서 Δf = 75kHz, f_m = 15kHz 조합은 매우 자주 등장합니다.</p>
+</blockquote>
+<hr />
+<p><strong>[예제 4]</strong> FM 변조에서 변조 지수가 4이고 변조 주파수가 10kHz일 때 대역폭은?</p>
+<p><strong>풀이:</strong></p>
+<ol>
+<li>Δf를 먼저 구합니다: β = Δf / f_m → Δf = β × f_m = 4 × 10 = 40kHz</li>
+<li>카슨 공식 적용: BW = 2(Δf + f_m) = 2(40 + 10) = 2 × 50 = <strong>100kHz</strong></li>
+</ol>
+<p>또는 변형 공식으로 바로 계산: BW = 2f_m(β + 1) = 2 × 10 × 5 = <strong>100kHz</strong></p>
+<hr />
+<h3 id="c-am">📝 유형 C: AM 전력 계산<a class="headerlink" href="#c-am" title="Permanent link">&para;</a></h3>
+<p><strong>[예제 5]</strong> 반송파 전력이 100W이고 변조도가 100%인 AM 변조파의 총 전력은?</p>
+<p><strong>풀이:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">단계</th>
+<th style="text-align: left;">내용</th>
+<th style="text-align: left;">계산</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">① 공식 선택</td>
+<td style="text-align: left;">단일 톤 AM 전력 공식</td>
+<td style="text-align: left;">P_t = P_c(1 + m²/2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">② 값 대입</td>
+<td style="text-align: left;">P_c = 100W, m = 1 (100%)</td>
+<td style="text-align: left;">P_t = 100 × (1 + 1²/2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">③ 계산</td>
+<td style="text-align: left;">1 + 0.5 = 1.5</td>
+<td style="text-align: left;">P_t = 100 × 1.5 = <strong>150W</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>정답: 150W</strong></p>
+<blockquote>
+<p><strong>자주 출제되는 변형</strong>: "변조도 50%일 때 총 전력은?" → P_t = 100 × (1 + 0.25/2) = 100 × 1.125 = <strong>112.5W</strong></p>
+</blockquote>
+<hr />
+<h3 id="d-am-dsb-vs-ssb">📝 유형 D: AM 대역폭 비교 문제 (DSB vs SSB)<a class="headerlink" href="#d-am-dsb-vs-ssb" title="Permanent link">&para;</a></h3>
+<p><strong>[예제 6]</strong> 변조 신호의 최대 주파수가 5kHz인 AM 변조에서 DSB 대역폭과 SSB 대역폭은 각각 얼마입니까?</p>
+<p><strong>풀이:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">방식</th>
+<th style="text-align: left;">공식</th>
+<th style="text-align: left;">계산</th>
+<th style="text-align: left;">결과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">DSB-AM</td>
+<td style="text-align: left;">BW = 2f_m</td>
+<td style="text-align: left;">2 × 5kHz</td>
+<td style="text-align: left;"><strong>10kHz</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">SSB</td>
+<td style="text-align: left;">BW = f_m</td>
+<td style="text-align: left;">5kHz</td>
+<td style="text-align: left;"><strong>5kHz</strong></td>
+</tr>
+</tbody>
+</table>
+<p>SSB는 DSB 대역폭의 정확히 <strong>절반</strong>입니다. 이 관계는 시험에서 매우 자주 묻는 내용입니다.</p>
+<hr />
+<h3 id="_7">🔑 계산 문제 풀이 전략 요약<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="mermaid">flowchart TD
+    Q["문제 읽기"] --&gt; J{"AM인가&lt;br/&gt;FM인가?"}
+    J --&gt;|AM| A1{"주어진 값은?"}
+    J --&gt;|FM| F1{"주어진 값은?"}
+    A1 --&gt;|"Amax, Amin"| A2["m = (Amax−Amin)/(Amax+Amin)"]
+    A1 --&gt;|"Em, Ec"| A3["m = Em / Ec"]
+    A1 --&gt;|"Pc, m"| A4["Pt = Pc(1 + m²/2)"]
+    A1 --&gt;|"fm"| A5["DSB: 2fm&lt;br/&gt;SSB: fm"]
+    F1 --&gt;|"Δf, fm"| F2["β = Δf / fm"]
+    F1 --&gt;|"β, fm"| F3["Δf = β × fm"]
+    F2 --&gt; F4["BW = 2(Δf + fm)"]
+    F3 --&gt; F4</div>
+<hr />
+<h2 id="3-2">📚 3단계: 기출 유형 ② — 비교·특성 판별 문제와 오답 함정<a class="headerlink" href="#3-2" title="Permanent link">&para;</a></h2>
+<h3 id="_8">🎯 비교형 문제 — 시험 출제 패턴<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>비교형 문제는 "다음 중 AM과 FM의 차이에 대한 설명으로 <strong>옳지 않은 것</strong>은?"과 같은 형태로 출제됩니다. 이 유형에서는 <strong>하나의 틀린 보기</strong>를 찾아야 하므로, 정확한 비교 지식이 필요합니다.</p>
+<hr />
+<h4 id="top-5">🚨 오답 함정 TOP 5<a class="headerlink" href="#top-5" title="Permanent link">&para;</a></h4>
+<p>시험에서 수험생이 가장 많이 틀리는 함정을 분석하겠습니다.</p>
+<hr />
+<p><strong>함정 ① — "FM은 대역폭이 좁다"</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">항목</th>
+<th style="text-align: left;">사실</th>
+<th style="text-align: left;">함정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AM 대역폭</td>
+<td style="text-align: left;">DSB: 2f_m (비교적 좁음)</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">FM 대역폭</td>
+<td style="text-align: left;">2(Δf + f_m) (AM보다 훨씬 넓음)</td>
+<td style="text-align: left;">"FM이 잡음에 강하니까 효율적 = 대역폭도 작을 것이다"라고 착각</td>
+</tr>
+</tbody>
+</table>
+<p><strong>핵심</strong>: FM은 잡음 성능을 <strong>넓은 대역폭과 교환</strong>하여 얻는 것입니다. 이것을 <strong>대역폭과 S/N비의 교환(trade-off)</strong>이라고 합니다.</p>
+<hr />
+<p><strong>함정 ② — "변조 지수와 주파수 편이를 혼동"</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">개념</th>
+<th style="text-align: left;">정의</th>
+<th style="text-align: left;">단위</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>주파수 편이 (Δf)</strong></td>
+<td style="text-align: left;">반송파 주파수가 변조에 의해 벗어나는 최대 크기</td>
+<td style="text-align: left;">Hz (kHz)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>변조 지수 (β)</strong></td>
+<td style="text-align: left;">Δf를 변조 주파수 f_m으로 나눈 <strong>비율</strong></td>
+<td style="text-align: left;">무차원 (단위 없음)</td>
+</tr>
+</tbody>
+</table>
+<p>시험에서 "주파수 편이가 50kHz이다"라는 조건을 보고 이것을 변조 지수로 착각하는 경우가 있습니다. <strong>Δf ≠ β</strong>입니다. 반드시 f_m으로 나누어야 β를 구할 수 있습니다.</p>
+<hr />
+<p><strong>함정 ③ — "SSB 대역폭을 FM에 적용"</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">변조 방식</th>
+<th style="text-align: left;">SSB 적용 가능 여부</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AM (DSB)</td>
+<td style="text-align: left;">✅ → SSB로 대역폭을 절반으로 줄일 수 있음</td>
+</tr>
+<tr>
+<td style="text-align: left;">FM</td>
+<td style="text-align: left;">❌ → FM에는 SSB 개념이 적용되지 않음</td>
+</tr>
+</tbody>
+</table>
+<p>FM은 주파수를 변화시키는 방식이므로, 상측파·하측파라는 개념이 AM과 동일하게 적용되지 않습니다. 시험에서 "FM의 SSB 대역폭은?"이라는 보기가 나오면 <strong>틀린 보기</strong>입니다.</p>
+<hr />
+<p><strong>함정 ④ — "AM의 변조 지수가 1을 넘으면 FM처럼 된다"</strong></p>
+<p>이것은 완전히 잘못된 설명입니다. AM에서 m &gt; 1이면 <strong>과변조(overmodulation)</strong>가 발생하여 신호가 왜곡됩니다. FM으로 변하는 것이 아닙니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">조건</th>
+<th style="text-align: left;">AM</th>
+<th style="text-align: left;">FM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">변조 지수 &gt; 1</td>
+<td style="text-align: left;"><strong>과변조</strong> → 포락선 왜곡 발생</td>
+<td style="text-align: left;">정상 동작 (WBFM)</td>
+</tr>
+<tr>
+<td style="text-align: left;">변조 지수 &lt; 1</td>
+<td style="text-align: left;">정상 동작</td>
+<td style="text-align: left;"><strong>협대역 FM (NBFM)</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>함정 ⑤ — "카슨의 법칙은 AM에도 적용된다"</strong></p>
+<p><strong>카슨의 법칙 BW = 2(Δf + f_m)은 FM 전용 공식입니다.</strong> AM의 대역폭 공식은 BW = 2f_m이며, 카슨의 법칙과는 무관합니다.</p>
+<hr />
+<h3 id="_9">📋 실전 연습 문제 (비교형)<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>다음 문제를 직접 풀어보겠습니다. 정답을 먼저 생각한 후 해설을 확인하시기 바랍니다.</p>
+<hr />
+<p><strong>[연습 1]</strong> 다음 중 FM 변조에 대한 설명으로 <strong>옳지 않은 것</strong>은?</p>
+<p>① FM의 변조 지수 β는 최대 주파수 편이를 변조 주파수로 나눈 값이다
+② FM은 AM에 비해 잡음에 강하다
+③ FM의 대역폭은 AM보다 좁다
+④ FM의 S/N비는 변조 지수를 높이면 개선된다</p>
+<details><summary>정답 확인</summary>
+
+**정답: ③**
+
+FM의 대역폭은 AM보다 **넓습니다**. FM은 넓은 대역폭을 사용하는 대신 잡음 성능(S/N비)을 개선하는 방식입니다. 카슨 공식 BW = 2(Δf + f_m)에서 알 수 있듯이, 주파수 편이 Δf가 크면 대역폭도 그만큼 넓어집니다.
+
+</details>
+
+<hr />
+<p><strong>[연습 2]</strong> AM 변조에서 변조도가 50%이고 반송파 전력이 200W일 때, 총 송신 전력은?</p>
+<p>① 212.5W
+② 225W
+③ 250W
+④ 300W</p>
+<details><summary>정답 확인</summary>
+
+**정답: ②**
+
+P_t = P_c(1 + m²/2) = 200 × (1 + 0.5²/2) = 200 × (1 + 0.25/2) = 200 × (1 + 0.125) = 200 × 1.125 = **225W**
+
+m = 0.5 (50%)를 대입할 때, m² = 0.25이고, 이것을 2로 나누면 0.125입니다.
+
+</details>
+
+<hr />
+<p><strong>[연습 3]</strong> FM 변조에서 최대 주파수 편이가 60kHz이고 변조 주파수가 20kHz일 때, 카슨의 법칙에 의한 대역폭은?</p>
+<p>① 80kHz
+② 120kHz
+③ 160kHz
+④ 200kHz</p>
+<details><summary>정답 확인</summary>
+
+**정답: ③**
+
+BW = 2(Δf + f_m) = 2(60 + 20) = 2 × 80 = **160kHz**
+
+변조 지수 β = 60/20 = 3이므로, 변형 공식으로 검증하면 BW = 2 × 20 × (3 + 1) = 2 × 20 × 4 = 160kHz로 동일합니다.
+
+</details>
+
+<hr />
+<p><strong>[연습 4]</strong> 다음 중 AM과 FM의 비교에 대한 설명으로 <strong>옳은 것</strong>은?</p>
+<p>① AM의 변조 지수는 제한이 없으나, FM의 변조 지수는 1 이하여야 한다
+② FM은 진폭 제한기(리미터)를 사용하여 잡음을 억제한다
+③ AM은 FM보다 넓은 대역폭을 사용한다
+④ FM의 SSB 전송으로 대역폭을 절반으로 줄일 수 있다</p>
+<details><summary>정답 확인</summary>
+
+**정답: ②**
+
+FM 수신기에는 **리미터(진폭 제한기)**가 포함되어 있어, 전송 중에 진폭에 실린 잡음을 제거할 수 있습니다. 이것이 FM이 잡음에 강한 핵심 이유입니다.
+
+오답 분석:
+- ①번: 반대입니다. AM의 변조 지수가 1 이하(과변조 방지), FM의 변조 지수는 제한 없음
+- ③번: AM이 FM보다 **좁은** 대역폭을 사용합니다
+- ④번: SSB 개념은 FM에 적용되지 않습니다
+
+</details>
+
+<hr />
+<p><strong>[연습 5]</strong> AM 변조파의 최대 진폭이 200V, 최소 진폭이 40V일 때, 반송파 진폭(E_c)은 얼마입니까?</p>
+<p>① 80V
+② 100V
+③ 120V
+④ 160V</p>
+<details><summary>정답 확인</summary>
+
+**정답: ③**
+
+AM 변조파에서 반송파 진폭은 최대 진폭과 최소 진폭의 **평균**입니다.
+
+E_c = (A_max + A_min) / 2 = (200 + 40) / 2 = 240 / 2 = **120V**
+
+참고로 변조 신호 진폭은 E_m = (A_max − A_min) / 2 = (200 − 40) / 2 = 80V이고,
+변조도 m = E_m / E_c = 80 / 120 ≈ 0.667 (66.7%)입니다.
+
+</details>
+
+<hr />
+<h3 id="nbfm-vs-wbfm">📊 NBFM vs WBFM 비교 (빈출 주제)<a class="headerlink" href="#nbfm-vs-wbfm" title="Permanent link">&para;</a></h3>
+<p>시험에서 <strong>협대역 FM(NBFM)</strong>과 <strong>광대역 FM(WBFM)</strong>의 차이를 묻는 문제도 자주 출제됩니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">구분</th>
+<th style="text-align: left;">NBFM (협대역 FM)</th>
+<th style="text-align: left;">WBFM (광대역 FM)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>변조 지수</strong></td>
+<td style="text-align: left;">β ≪ 1 (보통 β &lt; 0.5)</td>
+<td style="text-align: left;">β ≫ 1 (보통 β &gt; 1)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>대역폭</strong></td>
+<td style="text-align: left;">≈ 2f_m (AM과 비슷)</td>
+<td style="text-align: left;">2(Δf + f_m) (카슨 공식)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S/N비</strong></td>
+<td style="text-align: left;">AM과 유사</td>
+<td style="text-align: left;">AM보다 훨씬 우수</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>사용 예</strong></td>
+<td style="text-align: left;">무전기, 아마추어 무선</td>
+<td style="text-align: left;">FM 라디오 방송</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>시험 포인트</strong>: NBFM의 대역폭이 AM의 DSB 대역폭(2f_m)과 거의 같다는 사실은 자주 출제됩니다.</p>
+</blockquote>
+<div class="mermaid">flowchart LR
+    FM["FM 변조"] --&gt; NB["NBFM&lt;br/&gt;β ≪ 1"]
+    FM --&gt; WB["WBFM&lt;br/&gt;β ≫ 1"]
+    NB --&gt; NB1["대역폭 ≈ 2fm&lt;br/&gt;AM과 유사"]
+    WB --&gt; WB1["대역폭 = 2(Δf + fm)&lt;br/&gt;넓은 대역폭"]
+    NB --&gt; NB2["S/N비: 보통"]
+    WB --&gt; WB2["S/N비: 우수"]</div>
+<hr />
+<h3 id="sn">🔄 대역폭과 S/N비의 교환 관계<a class="headerlink" href="#sn" title="Permanent link">&para;</a></h3>
+<p>FM에서 변조 지수 β를 높이면 대역폭이 넓어지지만 S/N비는 개선됩니다. 이 관계를 정량적으로 표현하면 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">β 값</th>
+<th style="text-align: left;">대역폭 (f_m = 15kHz 기준)</th>
+<th style="text-align: left;">S/N비 경향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2 × 15 × (1+1) = 60kHz</td>
+<td style="text-align: left;">기본</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">2 × 15 × (3+1) = 120kHz</td>
+<td style="text-align: left;">개선</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">2 × 15 × (5+1) = 180kHz</td>
+<td style="text-align: left;">크게 개선</td>
+</tr>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">2 × 15 × (10+1) = 330kHz</td>
+<td style="text-align: left;">매우 우수</td>
+</tr>
+</tbody>
+</table>
+<p>이 표에서 확인할 수 있듯이, β가 커질수록 대역폭은 비례하여 증가합니다. 시험에서 "FM에서 대역폭을 넓히면 S/N비가 개선된다"는 설명이 나오면 <strong>올바른 설명</strong>입니다.</p>
+<hr />
+<h2 id="part-2">📚 Part 2 핵심 요약 박스<a class="headerlink" href="#part-2" title="Permanent link">&para;</a></h2>
+<p>9차시를 마지막으로 Part 2 "아날로그 변조의 핵심: AM과 FM 완전 정복"이 완료됩니다. 아래는 Part 2 전체의 핵심을 압축한 요약입니다.</p>
+<h3 id="part-2_1">🗂️ Part 2 종합 정리<a class="headerlink" href="#part-2_1" title="Permanent link">&para;</a></h3>
+<div class="mermaid">mindmap
+  root((아날로그 변조))
+    AM
+      변조 지수 m
+        m = Em/Ec
+        0 ≤ m ≤ 1
+      대역폭
+        DSB: 2fm
+        SSB: fm
+      전력
+        "Pt = Pc(1 + m²/2)"
+      특성
+        잡음에 약함
+        회로 단순
+        대역폭 좁음
+    FM
+      변조 지수 β
+        β = Δf/fm
+        제한 없음
+      대역폭
+        카슨 공식
+        "2(Δf + fm)"
+      NBFM vs WBFM
+        NBFM: β 작음
+        WBFM: β 큼
+      특성
+        잡음에 강함
+        회로 복잡
+        대역폭 넓음</div>
+<h3 id="part-2_2">📋 Part 2 핵심 키워드 체크리스트<a class="headerlink" href="#part-2_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">번호</th>
+<th style="text-align: left;">키워드</th>
+<th style="text-align: left;">핵심 내용</th>
+<th style="text-align: left;">관련 차시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">진폭 변조 (AM)</td>
+<td style="text-align: left;">반송파의 진폭을 변조 신호에 따라 변화</td>
+<td style="text-align: left;">7차시</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">변조도 m</td>
+<td style="text-align: left;">m = E_m / E_c, 과변조: m &gt; 1</td>
+<td style="text-align: left;">7차시</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">DSB / SSB</td>
+<td style="text-align: left;">DSB 대역폭 2f_m, SSB 대역폭 f_m</td>
+<td style="text-align: left;">7차시</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">AM 전력</td>
+<td style="text-align: left;">P_t = P_c(1 + m²/2)</td>
+<td style="text-align: left;">7차시</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">주파수 변조 (FM)</td>
+<td style="text-align: left;">반송파의 주파수를 변조 신호에 따라 변화</td>
+<td style="text-align: left;">8차시</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">주파수 편이 Δf</td>
+<td style="text-align: left;">반송파 주파수의 최대 변화량</td>
+<td style="text-align: left;">8차시</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">변조 지수 β</td>
+<td style="text-align: left;">β = Δf / f_m</td>
+<td style="text-align: left;">8차시</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">카슨의 법칙</td>
+<td style="text-align: left;">BW = 2(Δf + f_m)</td>
+<td style="text-align: left;">8차시</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">NBFM / WBFM</td>
+<td style="text-align: left;">β 기준으로 구분, 대역폭과 S/N비 차이</td>
+<td style="text-align: left;">8~9차시</td>
+</tr>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">대역폭-S/N비 교환</td>
+<td style="text-align: left;">FM에서 β 증가 → 대역폭↑, S/N비↑</td>
+<td style="text-align: left;">9차시</td>
+</tr>
+<tr>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">리미터</td>
+<td style="text-align: left;">FM 수신기의 진폭 잡음 제거 장치</td>
+<td style="text-align: left;">9차시</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_10">📝 형성 평가<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<div class="assessment">
+<h3 id="_11">📝 종합 평가 문제<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p><strong>객관식 1.</strong> 반송파 전력이 400W이고, 변조도가 100%인 단일 톤 AM 변조파의 총 송신 전력은?</p>
+<p>① 400W
+② 500W
+③ 600W
+④ 800W</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ③**
+
+P_t = P_c(1 + m²/2) = 400 × (1 + 1²/2) = 400 × (1 + 0.5) = 400 × 1.5 = **600W**
+
+m = 1 (100%)일 때 m² = 1이고, 이를 2로 나누면 0.5입니다. 따라서 총 전력은 반송파 전력의 1.5배가 됩니다.
+
+</details>
+<hr />
+<p><strong>객관식 2.</strong> FM 변조에서 변조 주파수를 2배로 높이고 최대 주파수 편이는 그대로 유지하면, 변조 지수 β와 카슨 대역폭은 각각 어떻게 변합니까?</p>
+<p>① β: 2배, BW: 2배
+② β: 1/2배, BW: 감소
+③ β: 1/2배, BW: 증가
+④ β: 2배, BW: 감소</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ③**
+
+β = Δf / f_m에서, f_m이 2배가 되면 β는 **1/2배**가 됩니다.
+
+대역폭은 BW = 2(Δf + f_m)이므로, Δf는 그대로이고 f_m이 2배가 되면:
+- 원래: BW = 2(Δf + f_m)
+- 변경 후: BW' = 2(Δf + 2f_m) = 2Δf + 4f_m
+
+예를 들어 Δf = 75kHz, f_m = 15kHz인 경우:
+- 원래: BW = 2(75 + 15) = 180kHz
+- 변경 후: BW' = 2(75 + 30) = 210kHz → **증가**
+
+β는 줄어들지만 f_m 증가 효과로 대역폭은 오히려 증가합니다.
+
+</details>
+<hr />
+<p><strong>객관식 3.</strong> 다음 중 옳은 설명을 <strong>모두</strong> 고르면?</p>
+<p>ㄱ. AM의 변조 지수는 1을 초과할 수 없다
+ㄴ. FM에서 β를 높이면 대역폭이 넓어지고 S/N비가 개선된다
+ㄷ. NBFM의 대역폭은 DSB-AM의 대역폭과 비슷하다
+ㄹ. 카슨의 법칙은 AM과 FM 모두에 적용된다</p>
+<p>① ㄱ, ㄴ
+② ㄴ, ㄷ
+③ ㄱ, ㄴ, ㄷ
+④ ㄴ, ㄷ, ㄹ</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ②**
+
+- ㄱ: **부분적으로 부정확** — AM에서 m &gt; 1이 되면 **과변조**가 발생하여 신호가 왜곡되지만, 물리적으로 1을 초과하는 상황은 존재합니다. "1을 초과할 수 없다"는 표현은 "1을 초과하면 안 된다(설계 제한)"로 해석할 수 있으나, 시험에서는 일반적으로 "m ≤ 1이어야 정상 동작"으로 출제됩니다. 문맥에 따라 달라질 수 있으므로 주의가 필요합니다.
+- ㄴ: **올바름** — FM의 핵심 특성입니다
+- ㄷ: **올바름** — NBFM은 β가 매우 작아 대역폭이 ≈ 2f_m으로 DSB-AM과 유사합니다
+- ㄹ: **틀림** — 카슨의 법칙은 **FM 전용** 공식입니다
+
+따라서 확실히 올바른 것은 ㄴ, ㄷ입니다.
+
+</details>
+<hr />
+<p><strong>서술형.</strong> AM과 FM 중 FM이 잡음에 강한 이유를 두 가지 측면에서 설명하시오.</p>
+<details>
+<summary>정답 확인</summary>
+
+**모범 답안:**
+
+FM이 잡음에 강한 이유는 크게 두 가지입니다.
+
+**첫째, 정보 전달 방식의 차이입니다.** AM은 정보를 반송파의 **진폭**에 실어 전달하는데, 대부분의 잡음은 신호의 진폭에 영향을 주므로 정보가 직접 훼손됩니다. 반면 FM은 정보를 반송파의 **주파수 변화**에 실어 전달하므로, 진폭에 잡음이 실려도 정보에 미치는 영향이 적습니다.
+
+**둘째, FM 수신기에 포함된 리미터(진폭 제한기) 때문입니다.** FM 수신기는 수신된 신호의 진폭을 일정하게 깎아내는 리미터 회로를 사용합니다. 이를 통해 전송 과정에서 진폭에 실린 잡음 성분을 효과적으로 제거할 수 있습니다.
+
+</details>
+<hr />
+<h3 id="_12">✅ 자기점검 체크리스트<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AM과 FM의 핵심 특성 차이(변조 대상, 잡음 특성, 대역폭, 회로 복잡도)를 정확히 구분할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AM 변조도 계산 공식 두 가지(E_m/E_c, 파형 공식)를 상황에 맞게 선택하여 풀 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> FM 변조 지수(β)와 주파수 편이(Δf)의 차이를 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 카슨의 법칙으로 FM 대역폭을 정확히 계산할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AM 전력 공식 P_t = P_c(1 + m²/2)를 적용하여 풀 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 오답 함정 5가지(FM 대역폭, 편이 vs 변조 지수, SSB 적용, 과변조, 카슨 공식 적용 범위)를 인식할 수 있다</li>
+</ul>
+</div>
+<hr />
+<h2 id="_13">💭 성찰 &amp; 다음 차시 미리보기<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<h3 id="_14">📌 이번 차시를 마치며<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>이번 차시에서는 AM과 FM의 핵심 공식과 특성을 비교표로 정리하고, 기출 유형별로 문제를 풀어보았습니다. 계산 문제는 <strong>올바른 공식을 선택하는 것</strong>이 절반이며, 비교 문제는 <strong>정확한 사실 관계 파악</strong>이 핵심입니다.</p>
+<p>특히 다음 세 가지는 시험 직전까지 반복 확인이 필요합니다:</p>
+<ol>
+<li><strong>AM</strong>: m = E_m / E_c, BW = 2f_m, P_t = P_c(1 + m²/2)</li>
+<li><strong>FM</strong>: β = Δf / f_m, BW = 2(Δf + f_m)</li>
+<li><strong>차이점</strong>: 잡음 특성, 대역폭, SSB 적용 가능 여부</li>
+</ol>
+<p>이것으로 <strong>Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복</strong>을 마무리합니다. AM과 FM은 아날로그 통신의 양대 축이며, 이후 학습할 디지털 변조의 기초가 됩니다.</p>
+<h3 id="_15">🔜 다음 차시 미리보기<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p><strong>10차시: 디지털 통신의 시작 — 표본화와 양자화</strong>에서는 아날로그 신호를 디지털 신호로 변환하는 첫 단계를 학습합니다. "아날로그 음성을 어떻게 0과 1로 바꿀 수 있는가?"라는 질문에서 출발하여, <strong>표본화 정리(나이퀴스트 정리)</strong>와 <strong>양자화</strong> 과정을 다룹니다. Part 3 — 디지털 통신의 기초로 새로운 영역이 시작됩니다.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../chapter08/" class="md-footer__link md-footer__link--prev" aria-label="이전: 8차시: FM 변조 — 주파수로 정보를 담는 방법">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                8차시: FM 변조 — 주파수로 정보를 담는 방법
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter10/" class="md-footer__link md-footer__link--next" aria-label="다음: 10차시: 디지털 통신의 시작 — 표본화와 양자화 원리">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                10차시: 디지털 통신의 시작 — 표본화와 양자화 원리
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 노용철TV | <a href='https://eduflow-greatsong.fly.dev/'>EduFlow</a>로 제작
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+        <script src="../javascripts/mermaid-config.js"></script>
+      
+        <script src="../javascripts/scroll-progress.js"></script>
+      
+        <script src="../javascripts/eduflow-nav.js"></script>
+      
+        <script src="../javascripts/lightbox.js"></script>
+      
+    
+  </body>
+</html>

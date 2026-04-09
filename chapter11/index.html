@@ -1,0 +1,3666 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="한전 KDN 등 공공기관 채용시험 통신이론 과목을 혼자서 완주할 수 있도록 설계된 독학용 수험 교재로, 비전공자도 기초부터 핵심 변조 이론까지 체계적으로 학습할 수 있다.">
+      
+      
+        <meta name="author" content="노용철TV (EduFlow)">
+      
+      
+      
+        <link rel="prev" href="../chapter10/">
+      
+      
+        <link rel="next" href="../chapter12/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술 - 통신이론 핵심정리 — 공공기관 채용시험 완전 대비</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-header__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter01/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter05/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter10/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter16/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-nav__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1차시: 통신이란 무엇인가 — 정보가 이동하는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2차시: 신호의 언어 — 주파수, 진폭, 위상 이해하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3차시: 대역폭과 스펙트럼 — 정보가 차지하는 공간
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4차시: 실습 체험 — 신호 읽기와 기초 개념 확인 문제 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5차시: 변조란 무엇인가 — 반송파에 정보를 싣는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6차시: AM 변조 — 진폭으로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7차시: AM 변형 방식 — DSB, SSB, VSB 비교 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8차시: FM 변조 — 주파수로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9차시: AM vs FM 실전 비교 — 기출 문제 집중 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10차시: 디지털 통신의 시작 — 표본화와 양자화 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        학습 목표
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="학습 목표">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 핵심 개념 1: 소스 부호화 vs 채널 부호화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 핵심 개념 2: 오류 검출·정정 기법
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 따라하기 실습
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 시험 대비 포인트
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계: 도입 — 왜 오류가 생길까? (7분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계: 핵심 개념 ① — 소스 부호화와 채널 부호화의 구분 (10분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계: 핵심 개념 ② — 패리티 검사와 해밍 코드 (18분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4단계: 따라하기 실습 — 직접 오류를 찾아보기 (8분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5단계: 정리 및 평가 (7분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 1단계: 왜 오류가 생길까?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 1단계: 왜 오류가 생길까?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤔 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📮 일상 비유: 등기우편의 '보험'
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 통신 채널에서 오류가 발생하는 원인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 2단계: 소스 부호화와 채널 부호화의 구분
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 2단계: 소스 부호화와 채널 부호화의 구분">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 비유로 이해하기: 택배 포장
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 소스 부호화 vs 채널 부호화 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 디지털 통신 시스템에서의 위치
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 시험 함정 포인트
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 부호율(Code Rate)이란?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 3단계: 오류 검출·정정 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 3단계: 오류 검출·정정 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔎 오류 검출 vs 오류 정정
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parity-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 패리티 검사(Parity Check)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟢 패리티 검사(Parity Check)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        비유: 출석부 인원 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        짝수 패리티와 홀수 패리티
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        동작 과정 (짝수 패리티 기준)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        패리티 검사의 한계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2차원 패리티 검사
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hamming-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔵 해밍 코드(Hamming Code)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔵 해밍 코드(Hamming Code)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        비유: 좌표로 위치 찾기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        해밍 코드의 구조
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        검사 비트의 담당 범위
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        해밍 코드 인코딩 과정 (예시)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        해밍 코드 디코딩 과정 (오류 검출·정정)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hamming-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        해밍 거리(Hamming Distance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 주요 오류 제어 기법 비교 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 4단계: 따라하기 실습 — 직접 오류를 찾아보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 4단계: 따라하기 실습 — 직접 오류를 찾아보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 1: 패리티 비트 계산
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-74" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 2: 해밍(7,4) 코드 인코딩
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 3: 해밍 코드 오류 정정
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 시험 빈출 함정 정리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 시험 빈출 함정 정리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        함정 1: "패리티 검사는 모든 오류를 검출할 수 있다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        함정 2: "해밍 코드는 여러 비트 오류를 정정할 수 있다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        함정 3: "채널 부호화는 데이터를 압축한다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        함정 4: "오류 검출 = 오류 정정"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        함정 5: 해밍 코드의 검사 비트 위치
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 공식 정리
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12차시: 디지털 변조 입문 — ASK와 FSK의 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14차시: 디지털 변조 비교 실습 — 성상도와 오답 함정 집중 공략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15차시: Part 2·3 통합 복습 — 아날로그·디지털 변조 완전 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16차시: 다중화란 무엇인가 — 하나의 채널로 여러 신호 보내기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17차시: CDM과 OFDM — 현대 통신이 선택한 다중화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18차시: 이동통신의 진화 — 1G부터 5G까지의 핵심 개념
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19차시: 통신 시스템 실생활 연결 — 와이파이, 블루투스, 위성통신
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20차시: 전체 통합 모의고사 — 실전 시험 완전 대비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        학습 목표
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="학습 목표">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 핵심 개념 1: 소스 부호화 vs 채널 부호화
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 핵심 개념 2: 오류 검출·정정 기법
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 따라하기 실습
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 시험 대비 포인트
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계: 도입 — 왜 오류가 생길까? (7분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계: 핵심 개념 ① — 소스 부호화와 채널 부호화의 구분 (10분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계: 핵심 개념 ② — 패리티 검사와 해밍 코드 (18분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4단계: 따라하기 실습 — 직접 오류를 찾아보기 (8분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5단계: 정리 및 평가 (7분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 1단계: 왜 오류가 생길까?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 1단계: 왜 오류가 생길까?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤔 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📮 일상 비유: 등기우편의 '보험'
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 통신 채널에서 오류가 발생하는 원인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 2단계: 소스 부호화와 채널 부호화의 구분
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 2단계: 소스 부호화와 채널 부호화의 구분">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 비유로 이해하기: 택배 포장
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 소스 부호화 vs 채널 부호화 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 디지털 통신 시스템에서의 위치
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 시험 함정 포인트
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 부호율(Code Rate)이란?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 3단계: 오류 검출·정정 기법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 3단계: 오류 검출·정정 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔎 오류 검출 vs 오류 정정
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parity-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 패리티 검사(Parity Check)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟢 패리티 검사(Parity Check)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        비유: 출석부 인원 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        짝수 패리티와 홀수 패리티
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        동작 과정 (짝수 패리티 기준)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        패리티 검사의 한계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2차원 패리티 검사
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hamming-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔵 해밍 코드(Hamming Code)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔵 해밍 코드(Hamming Code)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        비유: 좌표로 위치 찾기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        해밍 코드의 구조
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        검사 비트의 담당 범위
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        해밍 코드 인코딩 과정 (예시)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        해밍 코드 디코딩 과정 (오류 검출·정정)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hamming-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        해밍 거리(Hamming Distance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 주요 오류 제어 기법 비교 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 4단계: 따라하기 실습 — 직접 오류를 찾아보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 4단계: 따라하기 실습 — 직접 오류를 찾아보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 1: 패리티 비트 계산
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-74" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 2: 해밍(7,4) 코드 인코딩
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 3: 해밍 코드 오류 정정
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 시험 빈출 함정 정리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 시험 빈출 함정 정리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        함정 1: "패리티 검사는 모든 오류를 검출할 수 있다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        함정 2: "해밍 코드는 여러 비트 오류를 정정할 수 있다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        함정 3: "채널 부호화는 데이터를 압축한다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        함정 4: "오류 검출 = 오류 정정"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        함정 5: 해밍 코드의 검사 비트 위치
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 공식 정리
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../chapter10/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="11">11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술<a class="headerlink" href="#11" title="Permanent link">&para;</a></h1>
+<div class="lesson-banner">
+<p><strong>⏰ 50분</strong> · 채널 부호화 · 패리티 검사 · 해밍 코드 · <strong>난이도</strong> ●●●○○</p>
+<p><strong>학습목표</strong>: 채널 부호화의 필요성을 설명하고, 패리티 검사와 해밍 코드의 오류 검출·정정 원리를 구분하여 서술할 수 있습니다.</p>
+<blockquote>
+<p><strong>오늘의 질문</strong>: "카카오톡 메시지가 전파 방해를 받아도 정확히 도착하는 이유는 무엇일까요?"</p>
+</blockquote>
+</div>
+<hr />
+<h2 id="_1">학습 목표<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 채널 부호화(오류 검출·정정)의 필요성과 기본 원리를 설명할 수 있다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 패리티 검사, 해밍 코드의 동작 원리를 개략적으로 설명할 수 있다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 소스 부호화와 채널 부호화의 역할 차이를 구분하여 설명할 수 있다.</li>
+</ul>
+<hr />
+<div class="cards-grid">
+<div class="card card-orange">
+<h3 id="1-vs">🧠 핵심 개념 1: 소스 부호화 vs 채널 부호화<a class="headerlink" href="#1-vs" title="Permanent link">&para;</a></h3>
+<p>압축과 오류 보호, 두 가지 부호화의 역할 차이를 명확히 구분합니다.</p>
+</div>
+<div class="card card-orange">
+<h3 id="2">🧠 핵심 개념 2: 오류 검출·정정 기법<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>패리티 검사와 해밍 코드의 원리를 단계별로 이해합니다.</p>
+</div>
+<div class="card card-blue">
+<h3 id="_2">🔧 따라하기 실습<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>직접 패리티 비트를 계산하고, 해밍 코드로 오류 위치를 찾아봅니다.</p>
+</div>
+<div class="card card-red">
+<h3 id="_3">📝 시험 대비 포인트<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>'검출'과 '정정'의 차이, 시험 빈출 함정을 집중 정리합니다.</p>
+</div>
+</div>
+<hr />
+<h2 id="_4">⏱️ 수업 흐름<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="steps">
+<div class="step">
+<h4 id="1-7">1단계: 도입 — 왜 오류가 생길까? (7분)<a class="headerlink" href="#1-7" title="Permanent link">&para;</a></h4>
+<p>통신 채널에서 오류가 발생하는 이유를 일상 비유로 이해하고, 채널 부호화의 필요성을 파악합니다.</p>
+</div>
+<div class="step">
+<h4 id="2-1-10">2단계: 핵심 개념 ① — 소스 부호화와 채널 부호화의 구분 (10분)<a class="headerlink" href="#2-1-10" title="Permanent link">&para;</a></h4>
+<p>두 가지 부호화의 목적, 위치, 역할 차이를 명확히 정리합니다.</p>
+</div>
+<div class="step">
+<h4 id="3-2-18">3단계: 핵심 개념 ② — 패리티 검사와 해밍 코드 (18분)<a class="headerlink" href="#3-2-18" title="Permanent link">&para;</a></h4>
+<p>오류 검출과 오류 정정의 대표 기법을 단계별로 학습합니다.</p>
+</div>
+<div class="step">
+<h4 id="4-8">4단계: 따라하기 실습 — 직접 오류를 찾아보기 (8분)<a class="headerlink" href="#4-8" title="Permanent link">&para;</a></h4>
+<p>패리티 비트 계산과 해밍 코드 오류 위치 탐색을 직접 수행합니다.</p>
+</div>
+<div class="step">
+<h4 id="5-7">5단계: 정리 및 평가 (7분)<a class="headerlink" href="#5-7" title="Permanent link">&para;</a></h4>
+<p>핵심 내용을 요약하고, 형성 평가와 자기점검을 수행합니다.</p>
+</div>
+</div>
+<hr />
+<h2 id="1">📚 1단계: 왜 오류가 생길까?<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="_5">🤔 왜 이걸 배우나요?<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>여러분이 스마트폰으로 메시지를 보낼 때, 그 데이터는 전파를 타고 기지국을 거쳐 상대방에게 전달됩니다. 이 과정에서 전자레인지의 전자파 간섭, 건물 반사로 인한 신호 감쇠, 다른 사용자의 신호와의 혼선 등 수많은 방해 요소가 존재합니다. 그런데도 메시지가 정확하게 도착하는 것은, 데이터를 보내기 전에 <strong>오류를 발견하고 바로잡을 수 있는 추가 정보</strong>를 함께 실어 보내기 때문입니다.</p>
+<p>이 추가 정보를 만들어 붙이는 과정이 바로 <strong>채널 부호화(Channel Coding)</strong>입니다.</p>
+<h3 id="_6">📮 일상 비유: 등기우편의 '보험'<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>일반 우편은 빠르고 저렴하지만, 분실되면 추적할 방법이 없습니다. 반면 등기우편은 배달 확인 번호가 붙어 있어서 분실 시 추적이 가능합니다. 여기서 배달 확인 번호는 편지 내용 자체가 아니라, <strong>편지가 정확히 도착했는지 확인하기 위한 부가 정보</strong>입니다.</p>
+<p>채널 부호화도 같은 원리입니다. 원래 데이터에 <strong>잉여 비트(Redundancy)</strong>를 추가하여, 수신 측이 데이터가 올바른지 확인하고 문제가 있으면 복구할 수 있도록 합니다.</p>
+<h3 id="_7">🔍 통신 채널에서 오류가 발생하는 원인<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">오류 원인</th>
+<th style="text-align: left;">설명</th>
+<th style="text-align: left;">예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>열잡음(Thermal Noise)</strong></td>
+<td style="text-align: left;">전자 회로 내부에서 자연적으로 발생하는 잡음</td>
+<td style="text-align: left;">모든 전자 장비에 존재</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>간섭(Interference)</strong></td>
+<td style="text-align: left;">다른 신호원으로부터의 방해</td>
+<td style="text-align: left;">전자레인지 ↔ Wi-Fi</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>페이딩(Fading)</strong></td>
+<td style="text-align: left;">전파 경로의 변화로 신호 세기가 변동</td>
+<td style="text-align: left;">이동 중 통화 품질 저하</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>임펄스 잡음</strong></td>
+<td style="text-align: left;">순간적으로 큰 에너지를 가진 잡음</td>
+<td style="text-align: left;">번개, 전기 스파크</td>
+</tr>
+</tbody>
+</table>
+<p>이러한 원인으로 인해 전송된 비트 '0'이 '1'로 바뀌거나, '1'이 '0'으로 바뀌는 <strong>비트 오류(Bit Error)</strong>가 발생합니다. 채널 부호화는 이 문제를 해결하기 위한 핵심 기술입니다.</p>
+<hr />
+<h2 id="2_1">📚 2단계: 소스 부호화와 채널 부호화의 구분<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
+<p>디지털 통신 시스템에서 '부호화'라는 용어는 두 가지 서로 다른 맥락에서 사용됩니다. 이 둘을 혼동하면 시험에서 오답을 선택하기 쉬우므로, 명확히 구분해야 합니다.</p>
+<h3 id="_8">📦 비유로 이해하기: 택배 포장<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>여행 가방을 싼다고 가정하겠습니다.</p>
+<ul>
+<li><strong>소스 부호화</strong>는 짐을 최대한 압축하여 작은 가방에 넣는 것과 같습니다. 불필요한 공간을 줄여서 <strong>효율적으로 담는 것</strong>이 목적입니다.</li>
+<li><strong>채널 부호화</strong>는 깨지기 쉬운 물건에 뽁뽁이(에어캡)를 감싸는 것과 같습니다. 부피는 커지지만, 충격을 받아도 <strong>내용물이 손상되지 않도록 보호하는 것</strong>이 목적입니다.</li>
+</ul>
+<p>즉, 소스 부호화는 데이터를 <strong>줄이고</strong>, 채널 부호화는 데이터를 <strong>늘립니다</strong>. 방향이 정반대입니다.</p>
+<h3 id="vs">📊 소스 부호화 vs 채널 부호화 비교<a class="headerlink" href="#vs" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">구분</th>
+<th style="text-align: left;">소스 부호화</th>
+<th style="text-align: left;">채널 부호화</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>목적</strong></td>
+<td style="text-align: left;">데이터 압축 (불필요한 정보 제거)</td>
+<td style="text-align: left;">오류 검출·정정 (잉여 정보 추가)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>데이터 크기 변화</strong></td>
+<td style="text-align: left;">줄어듦</td>
+<td style="text-align: left;">늘어남</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>핵심 이론</strong></td>
+<td style="text-align: left;">샤논의 소스 부호화 정리</td>
+<td style="text-align: left;">샤논의 채널 부호화 정리</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>처리 위치</strong></td>
+<td style="text-align: left;">송신기 앞단</td>
+<td style="text-align: left;">송신기 뒷단 (변조 직전)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>대표 기법</strong></td>
+<td style="text-align: left;">허프만 부호, 산술 부호화</td>
+<td style="text-align: left;">패리티 검사, 해밍 코드, CRC</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>관련 개념</strong></td>
+<td style="text-align: left;">엔트로피, 정보량</td>
+<td style="text-align: left;">부호율, 해밍 거리</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>일상 비유</strong></td>
+<td style="text-align: left;">ZIP 파일 압축</td>
+<td style="text-align: left;">뽁뽁이로 감싸서 보호</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_9">🔄 디지털 통신 시스템에서의 위치<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>아래 다이어그램은 송신 측에서 데이터가 처리되는 순서를 보여줍니다. 소스 부호화가 먼저 수행되고, 채널 부호화가 그 다음에 수행됩니다.</p>
+<div class="mermaid">flowchart LR
+    A["정보원&lt;br/&gt;(원본 데이터)"] --&gt; B["소스 부호화&lt;br/&gt;(압축)"]
+    B --&gt; C["채널 부호화&lt;br/&gt;(오류 보호)"]
+    C --&gt; D["변조&lt;br/&gt;(전송 신호 생성)"]
+    D --&gt; E["통신 채널"]
+    E --&gt; F["복조"]
+    F --&gt; G["채널 복호화&lt;br/&gt;(오류 검출·정정)"]
+    G --&gt; H["소스 복호화&lt;br/&gt;(압축 해제)"]
+    H --&gt; I["수신자"]</div>
+<blockquote>
+<p>송신 측: 소스 부호화 → 채널 부호화 → 변조<br />
+수신 측: 복조 → 채널 복호화 → 소스 복호화<br />
+순서가 정확히 <strong>대칭</strong>된다는 점을 기억하십시오.</p>
+</blockquote>
+<h3 id="_10">⚠️ 시험 함정 포인트<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>시험에서 "부호화의 목적은?"이라는 질문이 나올 때, <strong>어떤 부호화인지</strong> 반드시 확인해야 합니다.</p>
+<ul>
+<li>"부호화를 통해 데이터 양이 줄어든다" → <strong>소스 부호화</strong>에 해당</li>
+<li>"부호화를 통해 오류를 검출할 수 있다" → <strong>채널 부호화</strong>에 해당</li>
+<li>"부호화는 항상 데이터를 압축한다" → ❌ 틀린 설명 (채널 부호화는 데이터를 늘림)</li>
+</ul>
+<h3 id="code-rate">📐 부호율(Code Rate)이란?<a class="headerlink" href="#code-rate" title="Permanent link">&para;</a></h3>
+<p>채널 부호화에서 <strong>부호율(R)</strong>은 원래 데이터 비트 수 대비 전체 전송 비트 수의 비율입니다.</p>
+<p><strong>부호율 R = k / n</strong></p>
+<ul>
+<li><strong>k</strong>: 원래 정보 비트 수 (실제 데이터)</li>
+<li><strong>n</strong>: 전송되는 전체 비트 수 (정보 비트 + 잉여 비트)</li>
+</ul>
+<p>예를 들어, 4비트의 데이터를 전송하기 위해 7비트를 사용한다면 부호율은 R = 4/7 ≈ 0.57입니다. 이 경우 전체 전송 비트 중 약 57%만 실제 정보이고, 나머지 43%는 오류 보호를 위한 잉여 비트입니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">부호율</th>
+<th style="text-align: left;">의미</th>
+<th style="text-align: left;">특징</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">R이 1에 가까울수록</td>
+<td style="text-align: left;">잉여 비트가 적음</td>
+<td style="text-align: left;">전송 효율 높음, 오류 정정 능력 낮음</td>
+</tr>
+<tr>
+<td style="text-align: left;">R이 0에 가까울수록</td>
+<td style="text-align: left;">잉여 비트가 많음</td>
+<td style="text-align: left;">전송 효율 낮음, 오류 정정 능력 높음</td>
+</tr>
+</tbody>
+</table>
+<p>부호율은 <strong>전송 효율</strong>과 <strong>오류 정정 능력</strong> 사이의 균형을 나타내는 핵심 지표입니다.</p>
+<hr />
+<h2 id="3">📚 3단계: 오류 검출·정정 기법<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>이 단계에서는 채널 부호화의 대표적인 기법인 <strong>패리티 검사</strong>와 <strong>해밍 코드</strong>를 학습합니다. 먼저 '검출'과 '정정'의 차이를 명확히 이해하겠습니다.</p>
+<h3 id="vs_1">🔎 오류 검출 vs 오류 정정<a class="headerlink" href="#vs_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">구분</th>
+<th style="text-align: left;">오류 검출(Error Detection)</th>
+<th style="text-align: left;">오류 정정(Error Correction)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>정의</strong></td>
+<td style="text-align: left;">오류가 발생했는지 <strong>여부</strong>를 알아냄</td>
+<td style="text-align: left;">오류가 어디에서 발생했는지 <strong>위치</strong>를 찾아 바로잡음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>비유</strong></td>
+<td style="text-align: left;">시험지에 틀린 문제가 있다는 것을 아는 것</td>
+<td style="text-align: left;">몇 번 문제가 틀렸는지 찾아서 고치는 것</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>잉여 비트 수</strong></td>
+<td style="text-align: left;">상대적으로 적음</td>
+<td style="text-align: left;">상대적으로 많음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>대표 기법</strong></td>
+<td style="text-align: left;">패리티 검사, CRC</td>
+<td style="text-align: left;">해밍 코드, 리드-솔로몬 코드</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>핵심 구분</strong>: 검출은 "틀렸다"까지만, 정정은 "여기가 틀렸으니 이렇게 고친다"까지 수행합니다.</p>
+</blockquote>
+<div class="mermaid">flowchart TD
+    A["수신된 데이터"] --&gt; B{"오류 발생?"}
+    B -- "아니오" --&gt; C["정상 수신 완료"]
+    B -- "예" --&gt; D{"정정 가능?"}
+    D -- "예&lt;br/&gt;(오류 정정 코드)" --&gt; E["오류 위치 파악&lt;br/&gt;→ 자동 복구"]
+    D -- "아니오&lt;br/&gt;(오류 검출만)" --&gt; F["재전송 요청&lt;br/&gt;(ARQ)"]</div>
+<blockquote>
+<p>오류를 검출만 할 수 있는 경우, 송신 측에 재전송을 요청하는 <strong>ARQ(Automatic Repeat reQuest)</strong> 방식을 사용합니다. 오류를 정정할 수 있는 경우에는 <strong>FEC(Forward Error Correction)</strong> 방식으로 수신 측에서 자체 복구합니다.</p>
+</blockquote>
+<hr />
+<h3 id="parity-check">🟢 패리티 검사(Parity Check)<a class="headerlink" href="#parity-check" title="Permanent link">&para;</a></h3>
+<h4 id="_11">비유: 출석부 인원 확인<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p>교실에서 30명이 수업을 듣는다고 가정하겠습니다. 선생님이 출석을 부른 후 "전체 인원이 짝수인지 홀수인지"만 확인하면, 누군가 빠졌는지 바로 알 수 있습니다. 만약 30명이어야 하는데 29명이라면, 한 명이 빠진 것입니다. 다만, 누가 빠졌는지는 알 수 없습니다.</p>
+<p>패리티 검사도 동일한 원리입니다. 전송할 데이터 비트들의 '1'의 개수를 세어서, 그 합이 짝수 또는 홀수가 되도록 <strong>1비트를 추가</strong>합니다.</p>
+<h4 id="_12">정의<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p><strong>패리티 검사(Parity Check)</strong>는 데이터 비트열에서 '1'의 총 개수가 짝수(짝수 패리티) 또는 홀수(홀수 패리티)가 되도록 1비트의 <strong>패리티 비트</strong>를 추가하는 오류 검출 기법입니다.</p>
+<h4 id="_13">짝수 패리티와 홀수 패리티<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">종류</th>
+<th style="text-align: left;">규칙</th>
+<th style="text-align: left;">예시 (데이터: 1011001)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>짝수 패리티(Even Parity)</strong></td>
+<td style="text-align: left;">전체 '1'의 개수가 짝수가 되도록</td>
+<td style="text-align: left;">'1'이 4개 → 패리티 비트 = <strong>0</strong> → 1011001<strong>0</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>홀수 패리티(Odd Parity)</strong></td>
+<td style="text-align: left;">전체 '1'의 개수가 홀수가 되도록</td>
+<td style="text-align: left;">'1'이 4개 → 패리티 비트 = <strong>1</strong> → 1011001<strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_14">동작 과정 (짝수 패리티 기준)<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<p><strong>[송신 측]</strong></p>
+<ol>
+<li>전송할 데이터: <code>1 0 1 1 0 0 1</code></li>
+<li>'1'의 개수를 셈: 4개 (짝수)</li>
+<li>짝수를 유지해야 하므로 패리티 비트 = <code>0</code></li>
+<li>전송 데이터: <code>1 0 1 1 0 0 1 0</code></li>
+</ol>
+<p><strong>[수신 측]</strong></p>
+<ol>
+<li>수신된 데이터: <code>1 0 1 1 0 0 1 0</code></li>
+<li>전체 '1'의 개수를 셈: 4개 (짝수) → ✅ 오류 없음</li>
+</ol>
+<p><strong>[오류 발생 시]</strong></p>
+<ol>
+<li>수신된 데이터: <code>1 0 1 **0** 0 0 1 0</code> (4번째 비트가 1→0으로 변함)</li>
+<li>전체 '1'의 개수를 셈: 3개 (홀수) → ❌ 오류 검출!</li>
+</ol>
+<h4 id="_15">패리티 검사의 한계<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<p>패리티 검사는 <strong>1비트 오류</strong>는 검출할 수 있지만, 중요한 한계가 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">상황</th>
+<th style="text-align: left;">결과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1비트 오류</td>
+<td style="text-align: left;">✅ 검출 가능</td>
+</tr>
+<tr>
+<td style="text-align: left;">2비트 동시 오류</td>
+<td style="text-align: left;">❌ 검출 불가 ('1'의 짝·홀 관계가 유지됨)</td>
+</tr>
+<tr>
+<td style="text-align: left;">3비트 오류</td>
+<td style="text-align: left;">✅ 검출 가능</td>
+</tr>
+<tr>
+<td style="text-align: left;">오류 위치 파악</td>
+<td style="text-align: left;">❌ 불가 (어디가 틀렸는지 모름)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>정리</strong>: 패리티 검사는 <strong>홀수 개의 비트 오류만 검출</strong>할 수 있으며, <strong>짝수 개의 비트 오류는 검출할 수 없습니다</strong>. 또한 오류의 위치를 알 수 없으므로 <strong>정정은 불가능</strong>합니다.</p>
+</blockquote>
+<h4 id="2_2">2차원 패리티 검사<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h4>
+<p>1차원 패리티의 한계를 보완하기 위해, 데이터를 <strong>행렬 형태</strong>로 배열하고 행 방향과 열 방향 모두에 패리티 비트를 추가하는 방법이 <strong>2차원 패리티 검사(Two-Dimensional Parity Check)</strong>입니다.</p>
+<p>아래 표는 4비트씩 3행으로 구성된 데이터에 짝수 패리티를 적용한 예시입니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">비트1</th>
+<th style="text-align: center;">비트2</th>
+<th style="text-align: center;">비트3</th>
+<th style="text-align: center;">비트4</th>
+<th style="text-align: center;">행 패리티</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">행1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">행2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><strong>0</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">행3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>열 패리티</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>행 패리티: 각 행의 '1' 개수가 짝수가 되도록</li>
+<li>열 패리티: 각 열의 '1' 개수가 짝수가 되도록</li>
+</ul>
+<p>2차원 패리티 검사는 행과 열이 교차하는 지점을 통해 <strong>1비트 오류의 위치를 특정하여 정정</strong>할 수 있습니다. 다만, 특정 패턴의 다중 비트 오류에서는 여전히 한계가 있습니다.</p>
+<hr />
+<h3 id="hamming-code">🔵 해밍 코드(Hamming Code)<a class="headerlink" href="#hamming-code" title="Permanent link">&para;</a></h3>
+<h4 id="_16">비유: 좌표로 위치 찾기<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<p>여러분이 바둑판 위에 돌 하나를 올려놓았다고 가정하겠습니다. 누군가 그 돌을 몰래 다른 위치로 옮겼을 때, 돌이 원래 자리에 있는지 확인하려면 어떻게 해야 할까요? 만약 "행 번호"와 "열 번호"를 미리 기록해두었다면, 두 정보를 조합하여 돌이 어디로 이동했는지 정확히 알 수 있습니다.</p>
+<p>해밍 코드도 이와 유사합니다. 여러 개의 검사 비트를 서로 다른 <strong>겹침 영역</strong>에 배치하여, 오류가 발생한 비트의 <strong>정확한 위치(좌표)</strong>를 알아냅니다.</p>
+<h4 id="_17">정의<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<p><strong>해밍 코드(Hamming Code)</strong>는 리처드 해밍(Richard Hamming)이 1950년에 제안한 오류 정정 부호로, 데이터 비트 사이에 여러 개의 <strong>검사 비트(패리티 비트)</strong>를 전략적으로 삽입하여 <strong>1비트 오류의 위치를 찾아 자동으로 정정</strong>할 수 있는 기법입니다.</p>
+<h4 id="_18">해밍 코드의 구조<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>해밍 코드에서 검사 비트는 반드시 <strong>2의 거듭제곱 위치</strong>(1, 2, 4, 8, 16, ...)에 배치됩니다. 나머지 위치에는 데이터 비트가 들어갑니다.</p>
+<p><strong>해밍(7,4) 코드</strong> — 가장 기본적인 형태</p>
+<ul>
+<li>전체 7비트 = 데이터 4비트 + 검사 3비트</li>
+<li>부호율 R = 4/7 ≈ 0.57</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">비트 위치</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>역할</strong></td>
+<td style="text-align: center;">P₁</td>
+<td style="text-align: center;">P₂</td>
+<td style="text-align: center;">D₁</td>
+<td style="text-align: center;">P₃</td>
+<td style="text-align: center;">D₂</td>
+<td style="text-align: center;">D₃</td>
+<td style="text-align: center;">D₄</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2진수 위치</strong></td>
+<td style="text-align: center;">001</td>
+<td style="text-align: center;">010</td>
+<td style="text-align: center;">011</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">111</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>P₁, P₂, P₃</strong>: 검사 비트 (패리티 비트)</li>
+<li><strong>D₁, D₂, D₃, D₄</strong>: 데이터 비트</li>
+</ul>
+<h4 id="_19">검사 비트의 담당 범위<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<p>각 검사 비트가 어떤 비트들을 검사하는지는 <strong>비트 위치의 2진수 표현</strong>에 의해 결정됩니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">검사 비트</th>
+<th style="text-align: left;">검사 기준</th>
+<th style="text-align: left;">검사 대상 위치</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>P₁</strong> (위치 1)</td>
+<td style="text-align: left;">2진수의 첫째 자리가 1인 위치</td>
+<td style="text-align: left;">1, 3, 5, 7</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>P₂</strong> (위치 2)</td>
+<td style="text-align: left;">2진수의 둘째 자리가 1인 위치</td>
+<td style="text-align: left;">2, 3, 6, 7</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>P₃</strong> (위치 4)</td>
+<td style="text-align: left;">2진수의 셋째 자리가 1인 위치</td>
+<td style="text-align: left;">4, 5, 6, 7</td>
+</tr>
+</tbody>
+</table>
+<div class="mermaid">flowchart TD
+    subgraph "P₁ 검사 그룹"
+        A1["위치 1&lt;br/&gt;P₁"]
+        A3["위치 3&lt;br/&gt;D₁"]
+        A5["위치 5&lt;br/&gt;D₂"]
+        A7["위치 7&lt;br/&gt;D₄"]
+    end
+    subgraph "P₂ 검사 그룹"
+        B2["위치 2&lt;br/&gt;P₂"]
+        B3["위치 3&lt;br/&gt;D₁"]
+        B6["위치 6&lt;br/&gt;D₃"]
+        B7["위치 7&lt;br/&gt;D₄"]
+    end
+    subgraph "P₃ 검사 그룹"
+        C4["위치 4&lt;br/&gt;P₃"]
+        C5["위치 5&lt;br/&gt;D₂"]
+        C6["위치 6&lt;br/&gt;D₃"]
+        C7["위치 7&lt;br/&gt;D₄"]
+    end</div>
+<blockquote>
+<p>위 다이어그램은 세 검사 비트가 각각 어떤 위치의 비트를 담당하는지 보여줍니다. 각 데이터 비트는 <strong>두 개 이상의 검사 그룹에 동시에 속해</strong> 있어서, 오류 발생 시 어떤 그룹에서 문제가 생겼는지 조합하면 정확한 위치를 알아낼 수 있습니다.</p>
+</blockquote>
+<h4 id="_20">해밍 코드 인코딩 과정 (예시)<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<p>전송할 데이터가 <code>1 0 1 1</code>이라고 가정하겠습니다.</p>
+<p><strong>1단계</strong>: 데이터 비트를 해당 위치에 배치</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">위치</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">역할</td>
+<td style="text-align: center;">P₁</td>
+<td style="text-align: center;">P₂</td>
+<td style="text-align: center;">D₁</td>
+<td style="text-align: center;">P₃</td>
+<td style="text-align: center;">D₂</td>
+<td style="text-align: center;">D₃</td>
+<td style="text-align: center;">D₄</td>
+</tr>
+<tr>
+<td style="text-align: left;">값</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>2단계</strong>: 각 검사 비트 계산 (짝수 패리티 기준)</p>
+<ul>
+<li><strong>P₁</strong>: 위치 1, 3, 5, 7 → ?, 1, 0, 1 → '1'이 2개 → P₁ = <strong>0</strong> (짝수 유지)</li>
+<li><strong>P₂</strong>: 위치 2, 3, 6, 7 → ?, 1, 1, 1 → '1'이 3개 → P₂ = <strong>1</strong> (짝수로 만들기)</li>
+<li><strong>P₃</strong>: 위치 4, 5, 6, 7 → ?, 0, 1, 1 → '1'이 2개 → P₃ = <strong>0</strong> (짝수 유지)</li>
+</ul>
+<p><strong>3단계</strong>: 완성된 해밍 코드</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">위치</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">값</td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p>전송 데이터: <code>0 1 1 0 0 1 1</code></p>
+<h4 id="_21">해밍 코드 디코딩 과정 (오류 검출·정정)<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<p>수신 측에서 <code>0 1 1 0 **1** 1 1</code>을 받았다고 가정하겠습니다 (위치 5의 비트가 0→1로 변경됨).</p>
+<p><strong>1단계</strong>: 각 검사 그룹의 패리티 확인</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">검사</th>
+<th style="text-align: left;">대상 위치</th>
+<th style="text-align: left;">수신된 값</th>
+<th style="text-align: center;">'1'의 개수</th>
+<th style="text-align: center;">패리티 결과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>S₁</strong> (P₁ 그룹)</td>
+<td style="text-align: left;">1, 3, 5, 7</td>
+<td style="text-align: left;">0, 1, <strong>1</strong>, 1</td>
+<td style="text-align: center;">3개 (홀수)</td>
+<td style="text-align: center;">❌ 오류 → S₁ = <strong>1</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S₂</strong> (P₂ 그룹)</td>
+<td style="text-align: left;">2, 3, 6, 7</td>
+<td style="text-align: left;">1, 1, 1, 1</td>
+<td style="text-align: center;">4개 (짝수)</td>
+<td style="text-align: center;">✅ 정상 → S₂ = <strong>0</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S₃</strong> (P₃ 그룹)</td>
+<td style="text-align: left;">4, 5, 6, 7</td>
+<td style="text-align: left;">0, <strong>1</strong>, 1, 1</td>
+<td style="text-align: center;">3개 (홀수)</td>
+<td style="text-align: center;">❌ 오류 → S₃ = <strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>2단계</strong>: 신드롬(Syndrome) 계산</p>
+<p>신드롬 = S₃S₂S₁ = <strong>1 0 1</strong> = 5(10진수)</p>
+<p><strong>3단계</strong>: 오류 위치 파악 및 정정</p>
+<p>신드롬 값 5는 <strong>위치 5</strong>에 오류가 있다는 의미입니다. 위치 5의 비트를 반전시킵니다.</p>
+<ul>
+<li>수신: <code>0 1 1 0 **1** 1 1</code></li>
+<li>정정: <code>0 1 1 0 **0** 1 1</code> ✅</li>
+</ul>
+<p>원래 데이터 <code>1 0 1 1</code>이 정확하게 복원되었습니다.</p>
+<blockquote>
+<p><strong>신드롬(Syndrome)</strong>이라는 단어는 의학에서 '증후군'을 의미합니다. 통신에서의 신드롬도 마찬가지로, 수신 데이터에 나타나는 '증상'을 분석하여 어디가 아픈지(오류 위치) 진단하는 것입니다.</p>
+</blockquote>
+<h4 id="hamming-distance">해밍 거리(Hamming Distance)<a class="headerlink" href="#hamming-distance" title="Permanent link">&para;</a></h4>
+<p>두 부호어(코드워드) 사이에서 <strong>서로 다른 비트의 개수</strong>를 <strong>해밍 거리</strong>라고 합니다.</p>
+<p>예시:
+- <code>1010110</code>과 <code>1011100</code>을 비교하면, 3번째, 4번째, 5번째 비트가 다릅니다.
+- 따라서 해밍 거리 = <strong>3</strong></p>
+<p>해밍 거리와 오류 능력의 관계는 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">최소 해밍 거리 (d_min)</th>
+<th style="text-align: left;">오류 검출 능력</th>
+<th style="text-align: left;">오류 정정 능력</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">d_min</td>
+<td style="text-align: left;">d_min - 1 비트 오류 검출</td>
+<td style="text-align: left;">(d_min - 1) / 2 비트 오류 정정</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">1비트 오류 검출</td>
+<td style="text-align: left;">정정 불가</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">2비트 오류 검출</td>
+<td style="text-align: left;">1비트 오류 정정</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">4비트 오류 검출</td>
+<td style="text-align: left;">2비트 오류 정정</td>
+</tr>
+</tbody>
+</table>
+<p>해밍(7,4) 코드의 최소 해밍 거리는 <strong>3</strong>이므로, <strong>1비트 오류를 정정</strong>하거나 <strong>2비트 오류를 검출</strong>할 수 있습니다. 단, 1비트 정정과 2비트 검출을 동시에 수행하려면 추가 패리티 비트가 필요합니다(SEC-DED 코드).</p>
+<hr />
+<h3 id="_22">📋 주요 오류 제어 기법 비교 정리<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">기법</th>
+<th style="text-align: center;">오류 검출</th>
+<th style="text-align: center;">오류 정정</th>
+<th style="text-align: left;">잉여 비트 수</th>
+<th style="text-align: left;">적용 분야</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>단순 패리티</strong></td>
+<td style="text-align: center;">✅ (1비트)</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: left;">1비트</td>
+<td style="text-align: left;">직렬 통신, 메모리</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2차원 패리티</strong></td>
+<td style="text-align: center;">✅ (다중 비트)</td>
+<td style="text-align: center;">✅ (1비트)</td>
+<td style="text-align: left;">행·열 패리티 비트</td>
+<td style="text-align: left;">데이터 통신</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>해밍 코드</strong></td>
+<td style="text-align: center;">✅ (2비트)</td>
+<td style="text-align: center;">✅ (1비트)</td>
+<td style="text-align: left;">log₂n + 1 비트</td>
+<td style="text-align: left;">메모리 ECC, 위성 통신</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CRC</strong></td>
+<td style="text-align: center;">✅ (버스트 오류)</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: left;">16~32비트</td>
+<td style="text-align: left;">이더넷, USB, 저장장치</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>컨볼루션 코드</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ (다중 비트)</td>
+<td style="text-align: left;">연속적</td>
+<td style="text-align: left;">이동통신, 위성 통신</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>CRC(Cyclic Redundancy Check)</strong>와 컨볼루션 코드는 이 차시의 범위를 넘어서므로, 이름과 특징만 알아두십시오. 시험에서 기법의 이름과 검출·정정 가능 여부를 묻는 문제가 출제됩니다.</p>
+</blockquote>
+<hr />
+<h2 id="4">🔧 4단계: 따라하기 실습 — 직접 오류를 찾아보기<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">실습 1: 패리티 비트 계산<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<p>다음 데이터에 <strong>짝수 패리티</strong> 비트를 추가하십시오.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">문제</th>
+<th style="text-align: left;">데이터</th>
+<th style="text-align: center;">'1'의 개수</th>
+<th style="text-align: center;">패리티 비트</th>
+<th style="text-align: left;">전송 데이터</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">(1)</td>
+<td style="text-align: left;">1 1 0 1 0 1 0</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: left;">?</td>
+</tr>
+<tr>
+<td style="text-align: left;">(2)</td>
+<td style="text-align: left;">0 0 1 0 0 1 1</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: left;">?</td>
+</tr>
+<tr>
+<td style="text-align: left;">(3)</td>
+<td style="text-align: left;">1 1 1 1 1 1 1</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: left;">?</td>
+</tr>
+</tbody>
+</table>
+<details><summary>실습 1 정답 확인</summary>
+
+| 문제 | 데이터 | '1'의 개수 | 패리티 비트 | 전송 데이터 |
+|:---|:---|:---:|:---:|:---|
+| (1) | 1 1 0 1 0 1 0 | 4개 (짝수) | **0** | 1 1 0 1 0 1 0 **0** |
+| (2) | 0 0 1 0 0 1 1 | 3개 (홀수) | **1** | 0 0 1 0 0 1 1 **1** |
+| (3) | 1 1 1 1 1 1 1 | 7개 (홀수) | **1** | 1 1 1 1 1 1 1 **1** |
+
+</details>
+
+<h3 id="2-74">실습 2: 해밍(7,4) 코드 인코딩<a class="headerlink" href="#2-74" title="Permanent link">&para;</a></h3>
+<p>데이터 <code>1 1 0 1</code>을 해밍(7,4) 코드로 인코딩하십시오.</p>
+<p><strong>단계 1</strong>: 데이터 비트 배치</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">위치</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">역할</td>
+<td style="text-align: center;">P₁</td>
+<td style="text-align: center;">P₂</td>
+<td style="text-align: center;">D₁</td>
+<td style="text-align: center;">P₃</td>
+<td style="text-align: center;">D₂</td>
+<td style="text-align: center;">D₃</td>
+<td style="text-align: center;">D₄</td>
+</tr>
+<tr>
+<td style="text-align: left;">값</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>단계 2</strong>: 검사 비트 계산 (여러분이 직접 계산하십시오)</p>
+<ul>
+<li>P₁ (위치 1, 3, 5, 7): ?, 1, 1, 1 → '1'이 3개 → P₁ = ?</li>
+<li>P₂ (위치 2, 3, 6, 7): ?, 1, 0, 1 → '1'이 2개 → P₂ = ?</li>
+<li>P₃ (위치 4, 5, 6, 7): ?, 1, 0, 1 → '1'이 2개 → P₃ = ?</li>
+</ul>
+<details><summary>실습 2 정답 확인</summary>
+
+- **P₁**: '1'이 3개 → 짝수로 만들려면 P₁ = **1** (총 4개)
+- **P₂**: '1'이 2개 → 짝수 유지 P₂ = **0** (총 2개)
+- **P₃**: '1'이 2개 → 짝수 유지 P₃ = **0** (총 2개)
+
+완성된 해밍 코드:
+
+| 위치 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 값 | **1** | **0** | 1 | **0** | 1 | 0 | 1 |
+
+전송 데이터: `1 0 1 0 1 0 1`
+
+</details>
+
+<h3 id="3_1">실습 3: 해밍 코드 오류 정정<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<p>수신된 데이터가 <code>1 0 1 0 1 **1** 1</code>입니다 (원래 실습 2에서 보낸 데이터). 오류 위치를 찾고 정정하십시오.</p>
+<p><strong>힌트</strong>: 각 검사 그룹의 패리티를 확인하여 신드롬을 구하십시오.</p>
+<details><summary>실습 3 정답 확인</summary>
+
+| 검사 | 대상 위치 | 수신된 값 | '1'의 개수 | 결과 |
+|:---|:---|:---|:---:|:---:|
+| S₁ (P₁ 그룹) | 1, 3, 5, 7 | 1, 1, 1, 1 | 4개 (짝수) | ✅ → S₁ = **0** |
+| S₂ (P₂ 그룹) | 2, 3, 6, 7 | 0, 1, **1**, 1 | 3개 (홀수) | ❌ → S₂ = **1** |
+| S₃ (P₃ 그룹) | 4, 5, 6, 7 | 0, 1, **1**, 1 | 3개 (홀수) | ❌ → S₃ = **1** |
+
+신드롬 = S₃S₂S₁ = **1 1 0** = **6** (10진수)
+
+→ **위치 6**에 오류 발생! 비트를 반전시킵니다.
+
+- 수신: `1 0 1 0 1 **1** 1`
+- 정정: `1 0 1 0 1 **0** 1` ✅
+
+복원된 데이터 비트(위치 3, 5, 6, 7): `1, 1, 0, 1` = 원래 데이터와 일치!
+
+</details>
+
+<hr />
+<h2 id="_23">⚠️ 시험 빈출 함정 정리<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
+<h3 id="1_2">함정 1: "패리티 검사는 모든 오류를 검출할 수 있다"<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h3>
+<p>❌ <strong>틀린 설명입니다.</strong> 패리티 검사는 <strong>홀수 개</strong>의 비트 오류만 검출할 수 있습니다. 2비트, 4비트 등 <strong>짝수 개의 비트 오류</strong>는 검출할 수 없습니다.</p>
+<h3 id="2_3">함정 2: "해밍 코드는 여러 비트 오류를 정정할 수 있다"<a class="headerlink" href="#2_3" title="Permanent link">&para;</a></h3>
+<p>❌ <strong>틀린 설명입니다.</strong> 기본 해밍(7,4) 코드는 <strong>1비트 오류만 정정</strong>할 수 있습니다. 2비트 이상의 오류가 발생하면 오히려 잘못된 위치를 정정하여 데이터를 더 손상시킬 수 있습니다.</p>
+<h3 id="3_2">함정 3: "채널 부호화는 데이터를 압축한다"<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h3>
+<p>❌ <strong>틀린 설명입니다.</strong> 데이터를 압축하는 것은 <strong>소스 부호화</strong>입니다. 채널 부호화는 잉여 비트를 추가하므로 데이터가 <strong>늘어납니다</strong>.</p>
+<h3 id="4_1">함정 4: "오류 검출 = 오류 정정"<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<p>❌ <strong>다른 개념입니다.</strong> 검출은 "오류가 있다"는 사실만 알려주고, 정정은 "어디에서 오류가 발생했는지 찾아서 고치는" 것까지 포함합니다. 정정은 검출보다 더 많은 잉여 비트가 필요합니다.</p>
+<h3 id="5">함정 5: 해밍 코드의 검사 비트 위치<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<p>시험에서 "해밍 코드에서 검사 비트가 배치되는 위치는?"이라는 질문이 출제됩니다. 정답은 반드시 <strong>2의 거듭제곱 위치</strong>(1, 2, 4, 8, 16, ...)입니다. 3, 5, 6, 7 등의 위치는 데이터 비트가 들어가는 자리입니다.</p>
+<hr />
+<h2 id="_24">📚 핵심 공식 정리<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h2>
+<p>해밍 코드에서 필요한 검사 비트 수를 구하는 공식입니다.</p>
+<p><strong>2^r ≥ m + r + 1</strong></p>
+<ul>
+<li><strong>m</strong>: 데이터 비트 수</li>
+<li><strong>r</strong>: 검사 비트 수</li>
+</ul>
+<p>예를 들어, 데이터가 4비트(m=4)인 경우:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">r 값</th>
+<th style="text-align: center;">2^r</th>
+<th style="text-align: center;">m + r + 1</th>
+<th style="text-align: center;">충족 여부</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4 + 2 + 1 = 7</td>
+<td style="text-align: center;">❌ (4 &lt; 7)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4 + 3 + 1 = 8</td>
+<td style="text-align: center;">✅ (8 ≥ 8)</td>
+</tr>
+</tbody>
+</table>
+<p>따라서 r = <strong>3</strong>, 전체 비트 수 n = m + r = 4 + 3 = <strong>7</strong> → 해밍(7,4) 코드</p>
+<hr />
+<div class="assessment">
+<h2 id="_25">📝 형성 평가<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
+<p><strong>객관식 1.</strong> 소스 부호화와 채널 부호화에 대한 설명으로 <strong>올바른</strong> 것은?</p>
+<p>① 소스 부호화는 잉여 비트를 추가하여 오류를 검출한다<br />
+② 채널 부호화는 데이터를 압축하여 전송 효율을 높인다<br />
+③ 소스 부호화는 데이터를 줄이고, 채널 부호화는 데이터를 늘린다<br />
+④ 채널 부호화는 소스 부호화보다 먼저 수행된다</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ③**
+
+소스 부호화는 불필요한 정보를 제거하여 데이터를 **압축(줄임)**하고, 채널 부호화는 잉여 비트를 추가하여 데이터를 **늘립니다**. ①은 채널 부호화의 설명이고, ②는 소스 부호화의 설명입니다. ④는 순서가 반대입니다(소스 부호화 → 채널 부호화).
+
+</details>
+<hr />
+<p><strong>객관식 2.</strong> 짝수 패리티를 사용하는 시스템에서 데이터 <code>1 0 1 1 0 1</code>에 추가될 패리티 비트의 값은?</p>
+<p>① 0<br />
+② 1<br />
+③ 데이터에 따라 결정할 수 없다<br />
+④ 패리티 비트는 2비트이다</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ②**
+
+데이터 `1 0 1 1 0 1`에서 '1'의 개수는 4개(짝수)입니다. 짝수 패리티는 전체 '1'의 개수가 짝수가 되어야 하므로... 잠깐, 다시 세겠습니다. 1, 0, 1, 1, 0, 1 → '1'이 **4개**입니다. 짝수를 유지하려면 패리티 비트 = 0이어야 합니다.
+
+**수정: 정답은 ①입니다.**
+
+'1'이 4개(짝수)이므로 짝수 패리티를 유지하려면 패리티 비트 = **0**입니다.
+
+</details>
+<hr />
+<p><strong>객관식 3.</strong> 해밍(7,4) 코드에 대한 설명으로 <strong>틀린</strong> 것은?</p>
+<p>① 검사 비트는 위치 1, 2, 4에 배치된다<br />
+② 1비트 오류를 검출하고 정정할 수 있다<br />
+③ 최소 해밍 거리는 3이다<br />
+④ 3비트 이상의 오류도 정정할 수 있다</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ④**
+
+해밍(7,4) 코드는 최소 해밍 거리가 3이므로, **1비트 오류 정정** 또는 **2비트 오류 검출**이 가능합니다. 3비트 이상의 오류를 정정하는 것은 불가능합니다. ①, ②, ③은 모두 올바른 설명입니다.
+
+</details>
+<hr />
+<p><strong>서술형.</strong> 단순 패리티 검사가 2비트 동시 오류를 검출하지 못하는 이유를 설명하십시오.</p>
+<details>
+<summary>정답 확인</summary>
+
+**모범 답안:**
+
+단순 패리티 검사는 전체 비트에서 '1'의 개수가 짝수인지 홀수인지만 확인합니다. 2비트가 동시에 오류가 발생하면(예: 0→1, 1→0), '1'의 개수가 하나 늘고 하나 줄어서 **전체 '1'의 짝·홀 관계가 그대로 유지**됩니다. 따라서 수신 측에서는 패리티가 정상으로 보이므로 오류를 검출할 수 없습니다.
+
+</details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../chapter10/" class="md-footer__link md-footer__link--prev" aria-label="이전: 10차시: 디지털 통신의 시작 — 표본화와 양자화 원리">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                10차시: 디지털 통신의 시작 — 표본화와 양자화 원리
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter12/" class="md-footer__link md-footer__link--next" aria-label="다음: 12차시: 디지털 변조 입문 — ASK와 FSK의 원리">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                12차시: 디지털 변조 입문 — ASK와 FSK의 원리
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 노용철TV | <a href='https://eduflow-greatsong.fly.dev/'>EduFlow</a>로 제작
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+        <script src="../javascripts/mermaid-config.js"></script>
+      
+        <script src="../javascripts/scroll-progress.js"></script>
+      
+        <script src="../javascripts/eduflow-nav.js"></script>
+      
+        <script src="../javascripts/lightbox.js"></script>
+      
+    
+  </body>
+</html>

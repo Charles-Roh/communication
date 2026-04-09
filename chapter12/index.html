@@ -1,0 +1,3457 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="한전 KDN 등 공공기관 채용시험 통신이론 과목을 혼자서 완주할 수 있도록 설계된 독학용 수험 교재로, 비전공자도 기초부터 핵심 변조 이론까지 체계적으로 학습할 수 있다.">
+      
+      
+        <meta name="author" content="노용철TV (EduFlow)">
+      
+      
+      
+        <link rel="prev" href="../chapter11/">
+      
+      
+        <link rel="next" href="../chapter13/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>12차시: 디지털 변조 입문 — ASK와 FSK의 원리 - 통신이론 핵심정리 — 공공기관 채용시험 완전 대비</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#12-ask-fsk" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-header__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              12차시: 디지털 변조 입문 — ASK와 FSK의 원리
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter01/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter05/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter10/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter16/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-nav__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1차시: 통신이란 무엇인가 — 정보가 이동하는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2차시: 신호의 언어 — 주파수, 진폭, 위상 이해하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3차시: 대역폭과 스펙트럼 — 정보가 차지하는 공간
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4차시: 실습 체험 — 신호 읽기와 기초 개념 확인 문제 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5차시: 변조란 무엇인가 — 반송파에 정보를 싣는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6차시: AM 변조 — 진폭으로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7차시: AM 변형 방식 — DSB, SSB, VSB 비교 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8차시: FM 변조 — 주파수로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9차시: AM vs FM 실전 비교 — 기출 문제 집중 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10차시: 디지털 통신의 시작 — 표본화와 양자화 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12차시: 디지털 변조 입문 — ASK와 FSK의 원리
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12차시: 디지털 변조 입문 — ASK와 FSK의 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        학습 목표
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="학습 목표">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ask-0-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 ASK — 진폭으로 0과 1을 표현
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsk-0-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 FSK — 주파수로 0과 1을 표현
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 비교 실습
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계: 도입 — 디지털 변조가 왜 필요한가 (7분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-ask-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계: 핵심 개념 ① — ASK의 원리와 특성 (13분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-fsk-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계: 핵심 개념 ② — FSK의 원리와 특성 (13분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ask-vs-fsk-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4단계: 비교 실습 — ASK vs FSK 파형 그리기 (10분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5단계: 형성 평가 및 성찰 (7분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 왜 이것을 배우는가 — 디지털 변조의 필요성
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 왜 이것을 배우는가 — 디지털 변조의 필요성">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11차시에서 여기까지
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-askamplitude-shift-keying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ① — ASK(Amplitude Shift Keying, 진폭 편이 변조)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ① — ASK(Amplitude Shift Keying, 진폭 편이 변조)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 비유로 시작하기: 전구의 켜짐과 꺼짐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 수식 표현
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASK의 동작 과정
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASK 파형의 이해
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📏 ASK의 대역폭
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ ASK의 치명적 약점 — 잡음 취약성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASK의 활용 사례
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fskfrequency-shift-keying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ② — FSK(Frequency Shift Keying, 주파수 편이 변조)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ② — FSK(Frequency Shift Keying, 주파수 편이 변조)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 비유로 시작하기: 두 가지 음높이의 휘파람
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 수식 표현
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSK의 동작 과정
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsk_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSK 파형의 이해
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsk_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📏 FSK의 대역폭
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsk_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💪 FSK의 강점 — 잡음 내성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsk_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSK의 활용 사례
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ask-fsk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 ASK와 FSK 종합 비교
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 ASK와 FSK 종합 비교">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 트레이드오프
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ask-fsk_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ 비교 실습 — ASK와 FSK 파형 직접 그려보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✍️ 비교 실습 — ASK와 FSK 파형 직접 그려보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 조건
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 단계별 진행
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 자주 하는 실수와 주의할 점
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수와 주의할 점">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ask-0-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 1: "ASK에서 비트 '0'일 때 주파수가 0이 된다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fsk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 2: "FSK는 진폭이 변하지 않으므로 항상 일정한 전력을 소비한다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ask-r_b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 3: "ASK의 대역폭 = $R_b$이다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-fsk-delta-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 4: "FSK의 대역폭 공식에서 $\Delta F$를 빠뜨린다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 심화 — 대역폭 효율 비교와 시험 출제 포인트
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📐 심화 — 대역폭 효율 비교와 시험 출제 포인트">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bandwidth-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        대역폭 효율(Bandwidth Efficiency)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        시험 빈출 포인트 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 디지털 변조 방식의 전체 지도 미리보기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 형성 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 자기점검 체크리스트
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💭 성찰 &amp; 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💭 성찰 &amp; 다음 차시 미리보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        이번 차시를 돌아보며
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14차시: 디지털 변조 비교 실습 — 성상도와 오답 함정 집중 공략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15차시: Part 2·3 통합 복습 — 아날로그·디지털 변조 완전 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16차시: 다중화란 무엇인가 — 하나의 채널로 여러 신호 보내기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17차시: CDM과 OFDM — 현대 통신이 선택한 다중화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18차시: 이동통신의 진화 — 1G부터 5G까지의 핵심 개념
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19차시: 통신 시스템 실생활 연결 — 와이파이, 블루투스, 위성통신
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20차시: 전체 통합 모의고사 — 실전 시험 완전 대비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        학습 목표
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="학습 목표">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ask-0-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 ASK — 진폭으로 0과 1을 표현
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsk-0-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 FSK — 주파수로 0과 1을 표현
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 비교 실습
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계: 도입 — 디지털 변조가 왜 필요한가 (7분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-ask-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계: 핵심 개념 ① — ASK의 원리와 특성 (13분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-fsk-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계: 핵심 개념 ② — FSK의 원리와 특성 (13분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ask-vs-fsk-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4단계: 비교 실습 — ASK vs FSK 파형 그리기 (10분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5단계: 형성 평가 및 성찰 (7분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 왜 이것을 배우는가 — 디지털 변조의 필요성
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 왜 이것을 배우는가 — 디지털 변조의 필요성">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11차시에서 여기까지
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-askamplitude-shift-keying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ① — ASK(Amplitude Shift Keying, 진폭 편이 변조)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ① — ASK(Amplitude Shift Keying, 진폭 편이 변조)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 비유로 시작하기: 전구의 켜짐과 꺼짐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 수식 표현
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASK의 동작 과정
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASK 파형의 이해
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📏 ASK의 대역폭
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ ASK의 치명적 약점 — 잡음 취약성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASK의 활용 사례
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fskfrequency-shift-keying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ② — FSK(Frequency Shift Keying, 주파수 편이 변조)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ② — FSK(Frequency Shift Keying, 주파수 편이 변조)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔑 비유로 시작하기: 두 가지 음높이의 휘파람
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 수식 표현
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSK의 동작 과정
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsk_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSK 파형의 이해
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsk_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📏 FSK의 대역폭
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsk_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💪 FSK의 강점 — 잡음 내성
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsk_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSK의 활용 사례
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ask-fsk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 ASK와 FSK 종합 비교
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 ASK와 FSK 종합 비교">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 트레이드오프
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ask-fsk_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ 비교 실습 — ASK와 FSK 파형 직접 그려보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✍️ 비교 실습 — ASK와 FSK 파형 직접 그려보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 조건
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 단계별 진행
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 자주 하는 실수와 주의할 점
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수와 주의할 점">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ask-0-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 1: "ASK에서 비트 '0'일 때 주파수가 0이 된다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fsk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 2: "FSK는 진폭이 변하지 않으므로 항상 일정한 전력을 소비한다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ask-r_b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 3: "ASK의 대역폭 = $R_b$이다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-fsk-delta-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 4: "FSK의 대역폭 공식에서 $\Delta F$를 빠뜨린다"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 심화 — 대역폭 효율 비교와 시험 출제 포인트
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📐 심화 — 대역폭 효율 비교와 시험 출제 포인트">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bandwidth-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        대역폭 효율(Bandwidth Efficiency)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        시험 빈출 포인트 정리
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 디지털 변조 방식의 전체 지도 미리보기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 형성 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 자기점검 체크리스트
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💭 성찰 &amp; 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💭 성찰 &amp; 다음 차시 미리보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        이번 차시를 돌아보며
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../chapter10/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="12-ask-fsk">12차시: 디지털 변조 입문 — ASK와 FSK의 원리<a class="headerlink" href="#12-ask-fsk" title="Permanent link">&para;</a></h1>
+<div class="lesson-banner">
+<p><strong>⏰ 50분</strong> · ASK(진폭 편이 변조) · FSK(주파수 편이 변조) · 대역폭과 비트율 · <strong>난이도</strong> ●●●○○</p>
+<p><strong>학습목표</strong>: ASK와 FSK의 변조 원리를 설명하고, 두 방식의 대역폭·잡음 특성을 비교할 수 있습니다.</p>
+<blockquote>
+<p><strong>오늘의 질문</strong>: "0과 1이라는 단순한 숫자 두 개를, 전파라는 물결 위에 어떻게 실어 보낼 수 있을까요?"</p>
+</blockquote>
+</div>
+<hr />
+<h2 id="_1">학습 목표<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> ASK(진폭 편이 변조)의 원리와 잡음 취약성의 이유를 설명할 수 있다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> FSK(주파수 편이 변조)의 원리와 ASK와의 차이를 비교하여 설명할 수 있다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> ASK·FSK의 대역폭과 비트 전송률 관계를 설명할 수 있다.</li>
+</ul>
+<hr />
+<div class="cards-grid">
+<div class="card card-orange">
+<h3 id="ask-0-1">🧠 ASK — 진폭으로 0과 1을 표현<a class="headerlink" href="#ask-0-1" title="Permanent link">&para;</a></h3>
+<p>전구를 켜고 끄듯이, 반송파의 <strong>크기(진폭)</strong>를 바꿔 디지털 데이터를 전달하는 가장 기본적인 디지털 변조 방식입니다.</p>
+</div>
+<div class="card card-orange">
+<h3 id="fsk-0-1">🧠 FSK — 주파수로 0과 1을 표현<a class="headerlink" href="#fsk-0-1" title="Permanent link">&para;</a></h3>
+<p>높은 음과 낮은 음을 번갈아 내듯이, 반송파의 <strong>빠르기(주파수)</strong>를 바꿔 비트 정보를 전달하는 방식입니다.</p>
+</div>
+<div class="card card-blue">
+<h3 id="_2">🔧 비교 실습<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>ASK와 FSK의 파형을 직접 그려 보고, 대역폭·잡음 내성·활용 사례를 표로 정리합니다.</p>
+</div>
+<div class="card card-red">
+<h3 id="_3">📝 형성 평가<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>객관식 3문항 + 서술형 1문항으로 핵심 개념의 이해도를 점검합니다.</p>
+</div>
+</div>
+<hr />
+<h2 id="_4">⏱️ 수업 흐름<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="steps">
+<div class="step">
+<h4 id="1-7">1단계: 도입 — 디지털 변조가 왜 필요한가 (7분)<a class="headerlink" href="#1-7" title="Permanent link">&para;</a></h4>
+<p>아날로그 변조와 디지털 변조의 관계를 짚고, 0과 1을 전파에 싣는다는 것이 무엇인지 일상 비유를 통해 이해합니다.</p>
+</div>
+<div class="step">
+<h4 id="2-1-ask-13">2단계: 핵심 개념 ① — ASK의 원리와 특성 (13분)<a class="headerlink" href="#2-1-ask-13" title="Permanent link">&para;</a></h4>
+<p>ASK의 동작 원리, 수식 표현, 대역폭, 잡음 취약성을 학습합니다.</p>
+</div>
+<div class="step">
+<h4 id="3-2-fsk-13">3단계: 핵심 개념 ② — FSK의 원리와 특성 (13분)<a class="headerlink" href="#3-2-fsk-13" title="Permanent link">&para;</a></h4>
+<p>FSK의 동작 원리, 수식 표현, 대역폭, 잡음 내성을 학습하고 ASK와 비교합니다.</p>
+</div>
+<div class="step">
+<h4 id="4-ask-vs-fsk-10">4단계: 비교 실습 — ASK vs FSK 파형 그리기 (10분)<a class="headerlink" href="#4-ask-vs-fsk-10" title="Permanent link">&para;</a></h4>
+<p>주어진 비트열에 대해 ASK·FSK 파형을 직접 스케치하고 특성 비교표를 완성합니다.</p>
+</div>
+<div class="step">
+<h4 id="5-7">5단계: 형성 평가 및 성찰 (7분)<a class="headerlink" href="#5-7" title="Permanent link">&para;</a></h4>
+<p>확인 문제를 풀고, 학습 목표 달성 여부를 자가 점검합니다.</p>
+</div>
+</div>
+<hr />
+<h2 id="_5">📚 왜 이것을 배우는가 — 디지털 변조의 필요성<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="11">11차시에서 여기까지<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>지난 차시까지 여러분은 <strong>아날로그 신호를 디지털로 변환</strong>(PCM, 델타 변조)하고, 전송 과정에서 생기는 오류를 <strong>부호화</strong>로 관리하는 방법을 학습했습니다. 이제 디지털 데이터(0과 1의 나열)가 준비되었습니다.</p>
+<p>그런데 한 가지 문제가 남아 있습니다. <strong>0과 1의 전기 신호를 그대로 안테나에 실어 보낼 수 있을까요?</strong></p>
+<p>답은 "그렇지 않습니다"입니다. 디지털 베이스밴드 신호는 주파수가 매우 낮아서 전파로 효율적으로 방사되지 않습니다. 따라서 <strong>높은 주파수의 반송파(carrier wave)</strong>에 디지털 정보를 실어야 합니다. 이 과정이 바로 <strong>디지털 변조(Digital Modulation)</strong>입니다.</p>
+<p>아날로그 변조(AM, FM, PM)에서는 아날로그 신호가 반송파의 진폭·주파수·위상을 <strong>연속적으로</strong> 변화시켰습니다. 디지털 변조에서는 디지털 신호(0 또는 1)가 반송파의 진폭·주파수·위상을 <strong>이산적으로(불연속적으로)</strong> 변화시킵니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">구분</th>
+<th style="text-align: center;">아날로그 변조</th>
+<th style="text-align: center;">디지털 변조</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">변조 신호</td>
+<td style="text-align: center;">연속적인 아날로그 파형</td>
+<td style="text-align: center;">0과 1의 이산 데이터</td>
+</tr>
+<tr>
+<td style="text-align: center;">반송파 변화</td>
+<td style="text-align: center;">연속적(부드러운 변화)</td>
+<td style="text-align: center;">불연속적(단계적 전환)</td>
+</tr>
+<tr>
+<td style="text-align: center;">대표 방식</td>
+<td style="text-align: center;">AM, FM, PM</td>
+<td style="text-align: center;">ASK, FSK, PSK</td>
+</tr>
+</tbody>
+</table>
+<p>아래 다이어그램은 아날로그 변조와 디지털 변조의 대응 관계를 보여줍니다.</p>
+<div class="mermaid">flowchart LR
+    A["아날로그 변조"] --- B["AM&lt;br/&gt;(진폭 변조)"]
+    A --- C["FM&lt;br/&gt;(주파수 변조)"]
+    A --- D["PM&lt;br/&gt;(위상 변조)"]
+    E["디지털 변조"] --- F["ASK&lt;br/&gt;(진폭 편이)"]
+    E --- G["FSK&lt;br/&gt;(주파수 편이)"]
+    E --- H["PSK&lt;br/&gt;(위상 편이)"]
+    B -. "대응" .-&gt; F
+    C -. "대응" .-&gt; G
+    D -. "대응" .-&gt; H</div>
+<p><em>아날로그 변조의 세 방식(AM, FM, PM)과 디지털 변조의 세 방식(ASK, FSK, PSK)은 각각 진폭, 주파수, 위상이라는 같은 파라미터를 변화시킨다는 점에서 서로 대응합니다.</em></p>
+<p>이번 차시에서는 이 세 가지 디지털 변조 중 <strong>ASK</strong>와 <strong>FSK</strong>를 집중적으로 다루겠습니다. PSK(위상 편이 변조)는 13차시에서 학습합니다.</p>
+<hr />
+<h2 id="1-askamplitude-shift-keying">📚 핵심 개념 ① — ASK(Amplitude Shift Keying, 진폭 편이 변조)<a class="headerlink" href="#1-askamplitude-shift-keying" title="Permanent link">&para;</a></h2>
+<h3 id="_6">🔑 비유로 시작하기: 전구의 켜짐과 꺼짐<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>어두운 방에서 전구 하나로 친구에게 신호를 보내는 상황을 떠올려 보겠습니다. <strong>전구를 켜면 "1"</strong>, <strong>전구를 끄면 "0"</strong>입니다. 이것이 ASK의 핵심 원리입니다.</p>
+<p>반송파라는 "꾸준히 흔들리는 물결"이 있다고 상상하겠습니다. 비트 1을 보낼 때는 이 물결을 <strong>크게</strong> 흔들고, 비트 0을 보낼 때는 물결을 <strong>잠잠하게</strong>(진폭 = 0) 만드는 것입니다.</p>
+<h3 id="_7">📐 정확한 정의<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><strong>ASK(진폭 편이 변조)</strong>는 디지털 데이터 '1'과 '0'에 따라 반송파의 <strong>진폭을 이산적으로 전환</strong>(shift)하는 변조 방식입니다.</p>
+<p>가장 기본적인 형태인 <strong>OOK(On-Off Keying)</strong>에서는 다음과 같이 동작합니다.</p>
+<ul>
+<li><strong>비트 '1'</strong> → 반송파를 그대로 출력 (On)</li>
+<li><strong>비트 '0'</strong> → 반송파를 출력하지 않음, 즉 진폭 = 0 (Off)</li>
+</ul>
+<h3 id="_8">📊 수식 표현<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>ASK 변조된 신호 $s(t)$는 다음과 같이 표현됩니다.</p>
+<p>$$
+s(t) = m(t) \cdot A_c \cos(2\pi f_c t)
+$$</p>
+<p>여기서 각 기호의 의미는 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">기호</th>
+<th style="text-align: center;">의미</th>
+<th style="text-align: left;">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">$m(t)$</td>
+<td style="text-align: center;">변조 신호(디지털 데이터)</td>
+<td style="text-align: left;">비트 '1'이면 1, 비트 '0'이면 0</td>
+</tr>
+<tr>
+<td style="text-align: center;">$A_c$</td>
+<td style="text-align: center;">반송파 진폭</td>
+<td style="text-align: left;">반송파의 최대 크기</td>
+</tr>
+<tr>
+<td style="text-align: center;">$f_c$</td>
+<td style="text-align: center;">반송파 주파수</td>
+<td style="text-align: left;">반송파의 빠르기</td>
+</tr>
+<tr>
+<td style="text-align: center;">$t$</td>
+<td style="text-align: center;">시간</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table>
+<p>이 수식을 해석하면 간단합니다. $m(t) = 1$일 때는 $A_c \cos(2\pi f_c t)$, 즉 원래 반송파가 그대로 출력됩니다. $m(t) = 0$일 때는 $0 \times A_c \cos(2\pi f_c t) = 0$, 신호가 사라집니다.</p>
+<h3 id="ask">ASK의 동작 과정<a class="headerlink" href="#ask" title="Permanent link">&para;</a></h3>
+<div class="mermaid">flowchart LR
+    A["디지털 데이터&lt;br/&gt;1 0 1 1 0"] --&gt; B["ASK 변조기"]
+    C["반송파&lt;br/&gt;cos(2πf_c·t)"] --&gt; B
+    B --&gt; D["ASK 신호 출력&lt;br/&gt;진폭이 On/Off 반복"]
+    D --&gt; E["채널(전송 매체)"]
+    E --&gt; F["ASK 복조기"]
+    F --&gt; G["복원된 데이터&lt;br/&gt;1 0 1 1 0"]</div>
+<p><em>ASK 시스템의 기본 흐름: 디지털 데이터와 반송파가 변조기에서 곱해지고, 수신측에서 복조하여 원래 데이터를 복원합니다.</em></p>
+<h3 id="ask_1">ASK 파형의 이해<a class="headerlink" href="#ask_1" title="Permanent link">&para;</a></h3>
+<p>비트열 <strong>1 0 1 1 0</strong>이 입력될 때 ASK 파형이 어떻게 변하는지 정리하겠습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">비트 구간</th>
+<th style="text-align: center;">입력 비트</th>
+<th style="text-align: center;">반송파 진폭</th>
+<th style="text-align: center;">파형 상태</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">구간 1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$A_c$ (최대)</td>
+<td style="text-align: center;">반송파 출력 (On)</td>
+</tr>
+<tr>
+<td style="text-align: center;">구간 2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">신호 없음 (Off)</td>
+</tr>
+<tr>
+<td style="text-align: center;">구간 3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$A_c$ (최대)</td>
+<td style="text-align: center;">반송파 출력 (On)</td>
+</tr>
+<tr>
+<td style="text-align: center;">구간 4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$A_c$ (최대)</td>
+<td style="text-align: center;">반송파 출력 (On)</td>
+</tr>
+<tr>
+<td style="text-align: center;">구간 5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">신호 없음 (Off)</td>
+</tr>
+</tbody>
+</table>
+<p>정리하면, ASK 파형을 시간 축 위에 놓으면 반송파 모양의 파도가 나타났다 사라졌다를 반복하는 형태가 됩니다. 마치 손전등을 껐다 켰다 하는 모습과 같습니다.</p>
+<h3 id="ask_2">📏 ASK의 대역폭<a class="headerlink" href="#ask_2" title="Permanent link">&para;</a></h3>
+<p>ASK의 대역폭은 비트 전송률과 직접적인 관계가 있습니다.</p>
+<p>$$
+BW_{ASK} = 2 \times f_b = 2 \times R_b
+$$</p>
+<p>여기서 $f_b$는 디지털 신호의 최대 기저대역 주파수, $R_b$는 <strong>비트 전송률(bit rate)</strong>입니다.</p>
+<blockquote>
+<p><strong>예시</strong>: 비트 전송률이 1,000 bps(bit per second)일 때, ASK 신호의 대역폭은 $2 \times 1{,}000 = 2{,}000$ Hz, 즉 <strong>2 kHz</strong>가 됩니다.</p>
+</blockquote>
+<p><strong>왜 2배인가?</strong> 디지털 베이스밴드 신호의 대역폭이 $R_b$ Hz이고, 이것을 반송파에 곱하면(변조하면) 반송파 주파수 양쪽으로 기저대역 대역폭만큼 스펙트럼이 퍼지기 때문입니다. 이는 아날로그 AM의 대역폭이 원래 신호 대역폭의 2배인 것과 같은 원리입니다.</p>
+<p>$$
+BW_{ASK} = 2R_b \quad \text{(기본 ASK, 필터링 없는 경우)}
+$$</p>
+<p>실제로는 롤오프 필터 등을 적용하면 대역폭이 약간 달라질 수 있지만, 시험에서는 위 공식이 기본이 됩니다.</p>
+<h3 id="ask_3">⚠️ ASK의 치명적 약점 — 잡음 취약성<a class="headerlink" href="#ask_3" title="Permanent link">&para;</a></h3>
+<p>ASK가 단순하고 구현이 쉬운 데 비해 실무에서 많이 쓰이지 않는 이유가 있습니다. 바로 <strong>잡음(noise)에 매우 취약</strong>하다는 점입니다.</p>
+<p><strong>왜 취약할까요?</strong> 그 이유를 단계별로 살펴보겠습니다.</p>
+<ol>
+<li><strong>ASK는 진폭으로 정보를 구분합니다.</strong> 비트 '1'은 진폭이 크고, 비트 '0'은 진폭이 0입니다.</li>
+<li><strong>채널 잡음은 신호의 진폭을 직접 변화시킵니다.</strong> 전송 과정에서 외부 잡음이 더해지면 신호의 크기가 원래 값에서 벗어납니다.</li>
+<li><strong>수신기 입장에서는 진폭 변화의 원인을 구분할 수 없습니다.</strong> 진폭이 바뀐 것이 원래 데이터 때문인지, 잡음 때문인지 알기 어렵습니다.</li>
+</ol>
+<p>구체적인 예를 들겠습니다. 비트 '0'을 보냈는데 잡음이 진폭을 키워버리면, 수신기는 이것을 비트 '1'로 착각할 수 있습니다. 반대로, 비트 '1'을 보냈는데 잡음이 진폭을 줄여버리면 비트 '0'으로 오인할 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">상황</th>
+<th style="text-align: center;">송신 비트</th>
+<th style="text-align: center;">잡음 영향</th>
+<th style="text-align: center;">수신 판단</th>
+<th style="text-align: center;">결과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">정상</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">없음</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">✅ 정확</td>
+</tr>
+<tr>
+<td style="text-align: center;">잡음 감쇄</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">진폭 감소</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">❌ 오류</td>
+</tr>
+<tr>
+<td style="text-align: center;">정상</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">없음</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">✅ 정확</td>
+</tr>
+<tr>
+<td style="text-align: center;">잡음 증가</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">진폭 증가</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">❌ 오류</td>
+</tr>
+</tbody>
+</table>
+<p>이 문제는 ASK의 본질적인 한계입니다. 진폭이라는 파라미터 자체가 잡음에 의해 쉽게 왜곡되기 때문입니다.</p>
+<h3 id="ask_4">ASK의 활용 사례<a class="headerlink" href="#ask_4" title="Permanent link">&para;</a></h3>
+<p>잡음에 취약하지만, ASK는 <strong>구현이 단순하고 비용이 낮다</strong>는 장점이 있어 다음과 같은 환경에서 여전히 사용됩니다.</p>
+<ul>
+<li><strong>광통신(광섬유)</strong>: 광섬유 내부는 외부 전자기 잡음의 영향을 거의 받지 않으므로 ASK(OOK)가 효과적입니다. 레이저를 켜고 끄는 방식으로 0과 1을 전송합니다.</li>
+<li><strong>RFID(무선 주파수 인식)</strong>: 짧은 거리에서 낮은 데이터율로 통신하므로 ASK 방식이 많이 사용됩니다.</li>
+<li><strong>리모컨(적외선 통신)</strong>: TV 리모컨은 적외선 LED를 점멸하여 명령을 전달하는데, 이것이 ASK(OOK)의 한 형태입니다.</li>
+</ul>
+<hr />
+<h2 id="2-fskfrequency-shift-keying">📚 핵심 개념 ② — FSK(Frequency Shift Keying, 주파수 편이 변조)<a class="headerlink" href="#2-fskfrequency-shift-keying" title="Permanent link">&para;</a></h2>
+<h3 id="_9">🔑 비유로 시작하기: 두 가지 음높이의 휘파람<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>한 가지 비유를 들겠습니다. 친구와 약속한 신호 체계가 있다고 상상하겠습니다. <strong>높은 음의 휘파람을 불면 "1"</strong>, <strong>낮은 음의 휘파람을 불면 "0"</strong>입니다. 휘파람의 크기(세기)는 항상 같고, <strong>음의 높낮이(주파수)</strong>만 바꾸어 정보를 전달합니다.</p>
+<p>이것이 바로 FSK의 핵심입니다. ASK가 전구의 밝기(진폭)를 조절했다면, FSK는 <strong>소리의 높이(주파수)</strong>를 조절합니다.</p>
+<h3 id="_10">📐 정확한 정의<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p><strong>FSK(주파수 편이 변조)</strong>는 디지털 데이터 '1'과 '0'에 따라 반송파의 <strong>주파수를 이산적으로 전환</strong>(shift)하는 변조 방식입니다.</p>
+<ul>
+<li><strong>비트 '1'</strong> → 주파수 $f_1$ (높은 주파수)을 출력</li>
+<li><strong>비트 '0'</strong> → 주파수 $f_2$ (낮은 주파수)을 출력</li>
+</ul>
+<p>여기서 $f_1$과 $f_2$는 서로 다른 두 개의 주파수이며, 이 두 주파수를 <strong>마크(mark) 주파수</strong>와 <strong>스페이스(space) 주파수</strong>라고 부르기도 합니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">용어</th>
+<th style="text-align: center;">대응 비트</th>
+<th style="text-align: center;">주파수</th>
+<th style="text-align: center;">비유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">마크(Mark)</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$f_1$ (높은 주파수)</td>
+<td style="text-align: center;">높은 휘파람</td>
+</tr>
+<tr>
+<td style="text-align: center;">스페이스(Space)</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">$f_2$ (낮은 주파수)</td>
+<td style="text-align: center;">낮은 휘파람</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_11">📊 수식 표현<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>FSK 변조된 신호 $s(t)$는 입력 비트에 따라 다음 두 가지 중 하나가 됩니다.</p>
+<p>$$
+s(t) = \begin{cases} A_c \cos(2\pi f_1 t), &amp; \text{비트 '1'일 때} \ A_c \cos(2\pi f_2 t), &amp; \text{비트 '0'일 때} \end{cases}
+$$</p>
+<p>여기서 중요한 점은 <strong>진폭 $A_c$는 항상 동일</strong>하다는 것입니다. 달라지는 것은 오직 주파수뿐입니다.</p>
+<h3 id="fsk">FSK의 동작 과정<a class="headerlink" href="#fsk" title="Permanent link">&para;</a></h3>
+<div class="mermaid">flowchart LR
+    A["디지털 데이터&lt;br/&gt;1 0 1 1 0"] --&gt; B["FSK 변조기"]
+    C["반송파 1: f₁"] --&gt; B
+    D["반송파 2: f₂"] --&gt; B
+    B --&gt; E["FSK 신호 출력&lt;br/&gt;주파수가 f₁/f₂ 교대"]
+    E --&gt; F["채널"]
+    F --&gt; G["FSK 복조기"]
+    G --&gt; H["복원된 데이터&lt;br/&gt;1 0 1 1 0"]</div>
+<p><em>FSK 시스템에서는 두 개의 서로 다른 주파수 반송파가 준비되어 있고, 입력 비트에 따라 선택됩니다.</em></p>
+<p>ASK 변조기와의 차이를 주목하겠습니다. ASK에서는 반송파 하나에 데이터를 곱했지만, FSK에서는 <strong>두 개의 반송파 중 하나를 선택</strong>하는 구조입니다.</p>
+<h3 id="fsk_1">FSK 파형의 이해<a class="headerlink" href="#fsk_1" title="Permanent link">&para;</a></h3>
+<p>비트열 <strong>1 0 1 1 0</strong>이 입력될 때 FSK 파형이 어떻게 변하는지 정리하겠습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">비트 구간</th>
+<th style="text-align: center;">입력 비트</th>
+<th style="text-align: center;">출력 주파수</th>
+<th style="text-align: center;">파형 특징</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">구간 1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$f_1$ (높은 주파수)</td>
+<td style="text-align: center;">빽빽한 파형</td>
+</tr>
+<tr>
+<td style="text-align: center;">구간 2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">$f_2$ (낮은 주파수)</td>
+<td style="text-align: center;">느슨한 파형</td>
+</tr>
+<tr>
+<td style="text-align: center;">구간 3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$f_1$ (높은 주파수)</td>
+<td style="text-align: center;">빽빽한 파형</td>
+</tr>
+<tr>
+<td style="text-align: center;">구간 4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$f_1$ (높은 주파수)</td>
+<td style="text-align: center;">빽빽한 파형</td>
+</tr>
+<tr>
+<td style="text-align: center;">구간 5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">$f_2$ (낮은 주파수)</td>
+<td style="text-align: center;">느슨한 파형</td>
+</tr>
+</tbody>
+</table>
+<p>ASK와 비교하면 차이가 명확합니다. ASK에서는 비트 '0' 구간에 <strong>신호 자체가 사라졌지만</strong>, FSK에서는 비트 '0' 구간에도 <strong>신호가 존재합니다</strong>. 단지 주파수가 다를 뿐입니다.</p>
+<h3 id="fsk_2">📏 FSK의 대역폭<a class="headerlink" href="#fsk_2" title="Permanent link">&para;</a></h3>
+<p>FSK의 대역폭은 ASK보다 넓습니다. 이는 두 개의 서로 다른 주파수를 사용하기 때문입니다.</p>
+<p>$$
+BW_{FSK} = 2\Delta f + 2f_b = 2(\Delta f + R_b)
+$$</p>
+<p>여기서 각 기호의 의미는 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">기호</th>
+<th style="text-align: left;">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">$\Delta f$</td>
+<td style="text-align: left;">두 반송파 주파수 사이의 편이(차이): $\Delta f = \lvert f_1 - f_2 \rvert / 2$ 또는 $\Delta f = f_1 - f_c = f_c - f_2$</td>
+</tr>
+<tr>
+<td style="text-align: center;">$f_b = R_b$</td>
+<td style="text-align: left;">비트 전송률</td>
+</tr>
+<tr>
+<td style="text-align: center;">$BW_{FSK}$</td>
+<td style="text-align: left;">FSK 신호의 전체 대역폭</td>
+</tr>
+</tbody>
+</table>
+<p>보다 간단하게 표현하면, 두 주파수 $f_1$과 $f_2$의 간격을 $\Delta F = f_1 - f_2$라 할 때:</p>
+<p>$$
+BW_{FSK} = \Delta F + 2R_b
+$$</p>
+<blockquote>
+<p><strong>예시</strong>: $f_1 = 1{,}200$ Hz, $f_2 = 800$ Hz이고 비트 전송률 $R_b = 200$ bps일 때,
+$\Delta F = 1{,}200 - 800 = 400$ Hz이므로
+$BW_{FSK} = 400 + 2 \times 200 = 800$ Hz가 됩니다.</p>
+</blockquote>
+<p><strong>핵심 포인트</strong>: FSK의 대역폭은 주파수 편이($\Delta F$)가 커질수록 넓어집니다. 이는 FSK가 ASK보다 일반적으로 <strong>더 넓은 대역폭을 필요로 한다</strong>는 것을 의미합니다.</p>
+<h3 id="fsk_3">💪 FSK의 강점 — 잡음 내성<a class="headerlink" href="#fsk_3" title="Permanent link">&para;</a></h3>
+<p>FSK가 ASK보다 잡음에 강한 이유를 살펴보겠습니다.</p>
+<ol>
+<li><strong>FSK는 주파수로 정보를 구분합니다.</strong> 비트 '1'은 높은 주파수, 비트 '0'은 낮은 주파수입니다.</li>
+<li><strong>채널 잡음은 주로 신호의 진폭을 변화시킵니다.</strong> 하지만 FSK에서 수신기가 판별하는 것은 진폭이 아니라 <strong>주파수</strong>입니다.</li>
+<li><strong>따라서 진폭 잡음이 주파수 판별에 미치는 영향이 상대적으로 작습니다.</strong></li>
+</ol>
+<p>이것은 FM(주파수 변조)이 AM(진폭 변조)보다 잡음에 강한 것과 같은 원리입니다. 아날로그 변조에서 배운 "FM의 잡음 내성 우위"가 디지털 변조에서도 그대로 적용됩니다.</p>
+<div class="mermaid">flowchart TD
+    A["채널 잡음 발생"] --&gt; B{"잡음의 영향"}
+    B --&gt; C["진폭 변화"]
+    B --&gt; D["주파수 변화&lt;br/&gt;(상대적으로 작음)"]
+    C --&gt; E["ASK 수신기&lt;br/&gt;진폭으로 판별"]
+    D --&gt; F["FSK 수신기&lt;br/&gt;주파수로 판별"]
+    E --&gt; G["❌ 오류 발생 가능성 높음"]
+    F --&gt; H["✅ 오류 발생 가능성 낮음"]</div>
+<p><em>잡음이 주로 진폭에 영향을 미치므로, 진폭으로 판별하는 ASK가 주파수로 판별하는 FSK보다 잡음에 취약합니다.</em></p>
+<h3 id="fsk_4">FSK의 활용 사례<a class="headerlink" href="#fsk_4" title="Permanent link">&para;</a></h3>
+<p>FSK의 잡음 내성 덕분에 다음과 같은 환경에서 널리 사용됩니다.</p>
+<ul>
+<li><strong>전화 모뎀(구형)</strong>: 과거 전화선 모뎀의 저속 통신(300 bps 등)에 FSK가 사용되었습니다. 전화선의 잡음이 많았기 때문입니다.</li>
+<li><strong>무선 호출기(삐삐)</strong>: FSK 방식으로 메시지를 수신했습니다.</li>
+<li><strong>AIS(선박 자동 식별 장치)</strong>: 해상 통신의 잡음 환경에서 FSK 계열의 변조가 사용됩니다.</li>
+<li><strong>Bluetooth 기본 모드</strong>: GFSK(Gaussian FSK)라는 FSK의 변형을 사용합니다.</li>
+</ul>
+<hr />
+<h2 id="ask-fsk">🔍 ASK와 FSK 종합 비교<a class="headerlink" href="#ask-fsk" title="Permanent link">&para;</a></h2>
+<p>지금까지 학습한 ASK와 FSK의 특성을 한 표로 정리하겠습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">비교 항목</th>
+<th style="text-align: center;">ASK</th>
+<th style="text-align: center;">FSK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>변화시키는 파라미터</strong></td>
+<td style="text-align: center;">진폭</td>
+<td style="text-align: center;">주파수</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>비트 '1' 표현</strong></td>
+<td style="text-align: center;">반송파 출력 (On)</td>
+<td style="text-align: center;">주파수 $f_1$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>비트 '0' 표현</strong></td>
+<td style="text-align: center;">신호 없음 (Off)</td>
+<td style="text-align: center;">주파수 $f_2$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>진폭의 변화</strong></td>
+<td style="text-align: center;">있음 (핵심 정보)</td>
+<td style="text-align: center;">없음 (항상 일정)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>대역폭</strong></td>
+<td style="text-align: center;">$2R_b$</td>
+<td style="text-align: center;">$\Delta F + 2R_b$ (더 넓음)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>잡음 내성</strong></td>
+<td style="text-align: center;">약함 ❌</td>
+<td style="text-align: center;">강함 ✅</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>구현 복잡도</strong></td>
+<td style="text-align: center;">단순</td>
+<td style="text-align: center;">보통</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>대역폭 효율</strong></td>
+<td style="text-align: center;">높음</td>
+<td style="text-align: center;">낮음</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>대표 활용</strong></td>
+<td style="text-align: center;">광통신, RFID</td>
+<td style="text-align: center;">모뎀, Bluetooth</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_12">핵심 트레이드오프<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>위 표에서 하나의 패턴이 보입니다. <strong>ASK는 대역폭은 좁지만 잡음에 약하고, FSK는 잡음에 강하지만 대역폭이 넓습니다.</strong> 이것은 통신 시스템 설계에서 항상 등장하는 <strong>트레이드오프(trade-off, 상충 관계)</strong>입니다.</p>
+<div class="mermaid">flowchart LR
+    A["ASK"] --- B["좁은 대역폭&lt;br/&gt;(효율적)"]
+    A --- C["약한 잡음 내성&lt;br/&gt;(취약)"]
+    D["FSK"] --- E["넓은 대역폭&lt;br/&gt;(비효율적)"]
+    D --- F["강한 잡음 내성&lt;br/&gt;(견고)"]</div>
+<p><em>ASK와 FSK는 대역폭 효율과 잡음 내성 사이에서 서로 반대의 특성을 가집니다.</em></p>
+<hr />
+<h2 id="ask-fsk_1">✍️ 비교 실습 — ASK와 FSK 파형 직접 그려보기<a class="headerlink" href="#ask-fsk_1" title="Permanent link">&para;</a></h2>
+<p>다음 5단계에 따라 ASK와 FSK 파형을 직접 스케치하고, 비교표를 완성하겠습니다.</p>
+<h3 id="_13">실습 조건<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>입력 비트열</strong>: 1 1 0 1 0 0 1</li>
+<li><strong>1비트 구간</strong>: 가로 2cm(또는 모눈 4칸)</li>
+<li><strong>반송파 주파수</strong>: ASK용 $f_c$ — 1비트 구간에 사인파 4주기</li>
+<li><strong>FSK용 주파수</strong>: $f_1$ — 1비트 구간에 사인파 6주기, $f_2$ — 1비트 구간에 사인파 3주기</li>
+</ul>
+<h3 id="_14">📋 단계별 진행<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p><strong>1단계: 시간 축 그리기</strong></p>
+<p>종이에 가로로 긴 시간 축을 그립니다. 비트열이 7비트이므로, 7개의 동일한 구간으로 나누고 각 구간 위에 해당 비트(1 1 0 1 0 0 1)를 적습니다.</p>
+<p><strong>2단계: 디지털 원본 파형 그리기</strong></p>
+<p>각 구간에서 비트 '1'이면 높은 레벨, 비트 '0'이면 낮은 레벨로 사각파(디지털 파형)를 그립니다. 이것이 변조 전 디지털 데이터입니다.</p>
+<p><strong>3단계: ASK 파형 그리기</strong></p>
+<p>시간 축 아래에 새로운 줄을 만듭니다.
+- 비트 '1' 구간: 사인파를 4주기 그립니다 (반송파 출력)
+- 비트 '0' 구간: 아무것도 그리지 않습니다 (진폭 = 0)</p>
+<p><strong>4단계: FSK 파형 그리기</strong></p>
+<p>시간 축 아래에 또 다른 줄을 만듭니다.
+- 비트 '1' 구간: <strong>빽빽한</strong> 사인파 6주기를 그립니다 (높은 주파수 $f_1$)
+- 비트 '0' 구간: <strong>느슨한</strong> 사인파 3주기를 그립니다 (낮은 주파수 $f_2$)</p>
+<p>모든 구간에서 <strong>사인파의 높이(진폭)는 동일</strong>하게 유지합니다.</p>
+<p><strong>5단계: 비교 관찰 및 정리</strong></p>
+<p>두 파형을 나란히 놓고, 아래 질문에 답하며 비교표를 완성합니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">관찰 항목</th>
+<th style="text-align: left;">ASK 파형 특징</th>
+<th style="text-align: left;">FSK 파형 특징</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">비트 '0' 구간의 모습</td>
+<td style="text-align: left;">(직접 기입)</td>
+<td style="text-align: left;">(직접 기입)</td>
+</tr>
+<tr>
+<td style="text-align: left;">비트 전환 시 변화</td>
+<td style="text-align: left;">(직접 기입)</td>
+<td style="text-align: left;">(직접 기입)</td>
+</tr>
+<tr>
+<td style="text-align: left;">잡음이 진폭을 바꾸면?</td>
+<td style="text-align: left;">(직접 기입)</td>
+<td style="text-align: left;">(직접 기입)</td>
+</tr>
+</tbody>
+</table>
+<details><summary>✅ 실습 답안 예시</summary>
+
+| 관찰 항목 | ASK 파형 특징 | FSK 파형 특징 |
+|:---|:---|:---|
+| 비트 '0' 구간의 모습 | 신호가 완전히 사라짐 (평평한 직선) | 느슨한 사인파가 여전히 존재 |
+| 비트 전환 시 변화 | 파형이 나타나거나 사라짐 (진폭 변화) | 파형의 빽빽한 정도가 바뀜 (주파수 변화) |
+| 잡음이 진폭을 바꾸면? | '0'이 '1'로 오인될 수 있음 → 오류 위험 높음 | 주파수 판별에는 큰 영향 없음 → 오류 위험 낮음 |
+
+</details>
+
+<hr />
+<h2 id="_15">⚠️ 자주 하는 실수와 주의할 점<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<h3 id="1-ask-0-0">실수 1: "ASK에서 비트 '0'일 때 주파수가 0이 된다"<a class="headerlink" href="#1-ask-0-0" title="Permanent link">&para;</a></h3>
+<p>주파수가 0이 되는 것이 아닙니다. <strong>진폭이 0</strong>이 되어 신호 자체가 출력되지 않는 것입니다. 주파수와 진폭을 혼동하지 않도록 주의하겠습니다.</p>
+<h3 id="2-fsk">실수 2: "FSK는 진폭이 변하지 않으므로 항상 일정한 전력을 소비한다"<a class="headerlink" href="#2-fsk" title="Permanent link">&para;</a></h3>
+<p>이 설명은 맞습니다. FSK는 비트 '0'일 때도 비트 '1'일 때도 항상 반송파를 출력하므로, <strong>평균 전력이 ASK보다 높습니다.</strong> 이것은 FSK의 단점 중 하나입니다. 시험에서 "FSK의 단점"을 묻는다면 대역폭뿐 아니라 전력 소비도 고려해야 합니다.</p>
+<h3 id="3-ask-r_b">실수 3: "ASK의 대역폭 = $R_b$이다"<a class="headerlink" href="#3-ask-r_b" title="Permanent link">&para;</a></h3>
+<p>ASK의 대역폭은 $R_b$가 아니라 $2R_b$입니다. 변조 과정에서 스펙트럼이 반송파 주파수 양쪽으로 펼쳐지기 때문입니다.</p>
+<h3 id="4-fsk-delta-f">실수 4: "FSK의 대역폭 공식에서 $\Delta F$를 빠뜨린다"<a class="headerlink" href="#4-fsk-delta-f" title="Permanent link">&para;</a></h3>
+<p>FSK의 대역폭은 $2R_b$가 아니라 $\Delta F + 2R_b$입니다. 두 주파수 사이의 간격인 $\Delta F$를 반드시 포함해야 합니다. 이 때문에 FSK의 대역폭이 ASK보다 넓어집니다.</p>
+<hr />
+<h2 id="_16">📐 심화 — 대역폭 효율 비교와 시험 출제 포인트<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<h3 id="bandwidth-efficiency">대역폭 효율(Bandwidth Efficiency)<a class="headerlink" href="#bandwidth-efficiency" title="Permanent link">&para;</a></h3>
+<p><strong>대역폭 효율</strong>이란 주어진 대역폭 1 Hz당 전송할 수 있는 비트 수를 말합니다. 단위는 <strong>bps/Hz</strong>입니다.</p>
+<p>$$
+\eta = \frac{R_b}{BW} \quad \text{(단위: bps/Hz)}
+$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">변조 방식</th>
+<th style="text-align: center;">대역폭</th>
+<th style="text-align: center;">대역폭 효율</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">ASK</td>
+<td style="text-align: center;">$2R_b$</td>
+<td style="text-align: center;">$R_b / 2R_b = 0.5$ bps/Hz</td>
+</tr>
+<tr>
+<td style="text-align: center;">FSK</td>
+<td style="text-align: center;">$\Delta F + 2R_b$</td>
+<td style="text-align: center;">$R_b / (\Delta F + 2R_b)$ &lt; 0.5 bps/Hz</td>
+</tr>
+</tbody>
+</table>
+<p>ASK의 대역폭 효율이 FSK보다 높습니다. 같은 대역폭에서 ASK가 더 많은 비트를 전송할 수 있다는 의미입니다. 하지만 잡음 내성이 낮으므로, 실제로는 오류율과 대역폭 효율을 함께 고려해야 합니다.</p>
+<h3 id="_17">시험 빈출 포인트 정리<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>통신이론 시험에서 ASK와 FSK 관련 문제는 다음과 같은 패턴으로 자주 출제됩니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">출제 유형</th>
+<th style="text-align: left;">핵심 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">잡음 내성 비교</td>
+<td style="text-align: left;">ASK &lt; FSK &lt; PSK (다음 차시에서 PSK 학습)</td>
+</tr>
+<tr>
+<td style="text-align: left;">대역폭 계산</td>
+<td style="text-align: left;">ASK: $2R_b$, FSK: $\Delta F + 2R_b$</td>
+</tr>
+<tr>
+<td style="text-align: left;">대역폭 효율 비교</td>
+<td style="text-align: left;">ASK &gt; FSK (ASK가 대역폭 효율 높음)</td>
+</tr>
+<tr>
+<td style="text-align: left;">적용 사례</td>
+<td style="text-align: left;">ASK → 광통신, RFID / FSK → 모뎀, 무선 호출기</td>
+</tr>
+<tr>
+<td style="text-align: left;">OOK과 ASK 관계</td>
+<td style="text-align: left;">OOK은 ASK의 특수한 경우 (비트 '0'일 때 진폭 = 0)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_18">📊 디지털 변조 방식의 전체 지도 미리보기<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<p>이번 차시에서 배운 ASK와 FSK의 위치를 전체 디지털 변조 체계에서 확인하겠습니다.</p>
+<div class="mermaid">flowchart TD
+    A["디지털 변조"] --&gt; B["ASK&lt;br/&gt;(진폭 편이)"]
+    A --&gt; C["FSK&lt;br/&gt;(주파수 편이)"]
+    A --&gt; D["PSK&lt;br/&gt;(위상 편이)"]
+    A --&gt; E["QAM&lt;br/&gt;(진폭 + 위상)"]
+    B --&gt; B1["OOK"]
+    C --&gt; C1["BFSK"]
+    C --&gt; C2["GFSK"]
+    D --&gt; D1["BPSK"]
+    D --&gt; D2["QPSK"]
+    E --&gt; E1["16-QAM"]
+    E --&gt; E2["64-QAM"]
+    style B fill:#ff9800,color:#fff
+    style C fill:#ff9800,color:#fff
+    style D fill:#e0e0e0
+    style E fill:#e0e0e0</div>
+<p><em>이번 차시에서 학습한 ASK·FSK는 주황색으로, 다음 차시에서 배울 PSK·QAM은 회색으로 표시되어 있습니다.</em></p>
+<hr />
+<div class="assessment">
+<h2 id="_19">📝 형성 평가<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<p><strong>객관식 1.</strong> ASK(진폭 편이 변조)에서 비트 '0'을 전송할 때 출력 신호의 특성으로 올바른 것은 무엇입니까?</p>
+<p>① 반송파의 주파수가 0이 된다
+② 반송파의 진폭이 0이 되어 신호가 출력되지 않는다
+③ 반송파의 위상이 180도 반전된다
+④ 반송파의 주파수가 절반으로 줄어든다</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ②**
+
+ASK에서 비트 '0'은 반송파의 **진폭을 0**으로 만들어 신호를 출력하지 않는 것입니다(OOK 방식). 주파수가 0이 되는 것이 아닙니다. ①은 잘못된 설명이고, ③은 PSK(위상 편이 변조)의 특성, ④는 어떤 변조 방식에도 해당하지 않습니다.
+
+</details>
+<hr />
+<p><strong>객관식 2.</strong> 비트 전송률 $R_b = 2{,}000$ bps인 FSK 시스템에서 $f_1 = 10{,}000$ Hz, $f_2 = 8{,}000$ Hz일 때, FSK 신호의 대역폭은 얼마입니까?</p>
+<p>① 2,000 Hz
+② 4,000 Hz
+③ 6,000 Hz
+④ 8,000 Hz</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ③**
+
+FSK의 대역폭 공식은 $BW_{FSK} = \Delta F + 2R_b$입니다.
+
+- $\Delta F = f_1 - f_2 = 10{,}000 - 8{,}000 = 2{,}000$ Hz
+- $2R_b = 2 \times 2{,}000 = 4{,}000$ Hz
+- $BW_{FSK} = 2{,}000 + 4{,}000 = 6{,}000$ Hz
+
+</details>
+<hr />
+<p><strong>객관식 3.</strong> ASK가 FSK보다 잡음에 취약한 근본적인 이유로 가장 적절한 것은 무엇입니까?</p>
+<p>① ASK는 주파수가 변하기 때문이다
+② ASK는 진폭으로 정보를 구분하는데, 잡음이 진폭을 직접 변화시키기 때문이다
+③ ASK의 대역폭이 FSK보다 넓기 때문이다
+④ ASK는 위상이 불안정하기 때문이다</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ②**
+
+ASK는 반송파의 **진폭**에 정보를 실습니다. 채널 잡음은 신호의 진폭을 직접적으로 변화시키므로, 수신기가 원래 데이터와 잡음을 구분하기 어려워집니다. 반면 FSK는 **주파수**로 정보를 구분하므로, 진폭 잡음의 영향을 덜 받습니다. ③은 사실과 반대입니다(ASK의 대역폭이 더 좁습니다).
+
+</details>
+<hr />
+<p><strong>서술형 1.</strong> 다음 조건에서 ASK와 FSK의 대역폭을 각각 계산하고, 어떤 방식이 대역폭을 더 효율적으로 사용하는지 근거와 함께 서술하십시오.</p>
+<blockquote>
+<ul>
+<li>비트 전송률: $R_b = 4{,}800$ bps</li>
+<li>FSK 주파수: $f_1 = 12{,}400$ Hz, $f_2 = 11{,}600$ Hz</li>
+</ul>
+</blockquote>
+<details>
+<summary>정답 확인</summary>
+
+**ASK 대역폭:**
+$$BW_{ASK} = 2R_b = 2 \times 4{,}800 = 9{,}600 \text{ Hz}$$
+
+**FSK 대역폭:**
+$$\Delta F = f_1 - f_2 = 12{,}400 - 11{,}600 = 800 \text{ Hz}$$
+$$BW_{FSK} = \Delta F + 2R_b = 800 + 9{,}600 = 10{,}400 \text{ Hz}$$
+
+**비교:**
+ASK의 대역폭(9,600 Hz)이 FSK의 대역폭(10,400 Hz)보다 좁습니다. 같은 비트 전송률을 전송하는 데 ASK가 더 적은 대역폭을 사용하므로, **ASK가 대역폭을 더 효율적으로 사용**합니다.
+
+대역폭 효율을 수치로 비교하면:
+- ASK: $4{,}800 / 9{,}600 = 0.5$ bps/Hz
+- FSK: $4{,}800 / 10{,}400 ≈ 0.46$ bps/Hz
+
+따라서 ASK의 대역폭 효율이 더 높습니다. 다만, ASK는 잡음에 취약하므로 잡음이 많은 채널에서는 FSK가 더 적합합니다.
+
+</details>
+<hr />
+<h3 id="_20">✅ 자기점검 체크리스트<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> ASK의 원리를 "전구의 켜짐/꺼짐" 비유 없이 자신의 말로 설명할 수 있다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> ASK가 잡음에 취약한 이유를 논리적으로 설명할 수 있다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> FSK의 원리를 ASK와 구분하여 설명할 수 있다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> ASK의 대역폭 공식($2R_b$)과 FSK의 대역폭 공식($\Delta F + 2R_b$)을 적용하여 계산할 수 있다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> ASK와 FSK의 대역폭 효율과 잡음 내성의 트레이드오프를 설명할 수 있다.</li>
+</ul>
+</div>
+<hr />
+<h2 id="_21">💭 성찰 &amp; 다음 차시 미리보기<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<h3 id="_22">이번 차시를 돌아보며<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p>이번 차시에서는 디지털 변조의 가장 기본적인 두 방식인 <strong>ASK</strong>와 <strong>FSK</strong>를 학습했습니다. 두 방식 모두 0과 1이라는 디지털 데이터를 반송파에 싣는다는 공통점이 있지만, <strong>어떤 파라미터를 변화시키느냐</strong>에 따라 잡음 내성과 대역폭 특성이 크게 달라진다는 사실을 확인했습니다.</p>
+<p>핵심을 한 문장으로 요약하면 다음과 같습니다.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../chapter11/" class="md-footer__link md-footer__link--prev" aria-label="이전: 11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter13/" class="md-footer__link md-footer__link--next" aria-label="다음: 13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 노용철TV | <a href='https://eduflow-greatsong.fly.dev/'>EduFlow</a>로 제작
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+        <script src="../javascripts/mermaid-config.js"></script>
+      
+        <script src="../javascripts/scroll-progress.js"></script>
+      
+        <script src="../javascripts/eduflow-nav.js"></script>
+      
+        <script src="../javascripts/lightbox.js"></script>
+      
+    
+  </body>
+</html>

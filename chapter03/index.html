@@ -1,0 +1,3490 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="한전 KDN 등 공공기관 채용시험 통신이론 과목을 혼자서 완주할 수 있도록 설계된 독학용 수험 교재로, 비전공자도 기초부터 핵심 변조 이론까지 체계적으로 학습할 수 있다.">
+      
+      
+        <meta name="author" content="노용철TV (EduFlow)">
+      
+      
+      
+        <link rel="prev" href="../chapter02/">
+      
+      
+        <link rel="next" href="../chapter04/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>3차시: 대역폭과 스펙트럼 — 정보가 차지하는 공간 - 통신이론 핵심정리 — 공공기관 채용시험 완전 대비</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-header__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3차시: 대역폭과 스펙트럼 — 정보가 차지하는 공간
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter01/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter05/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter10/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter16/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" class="md-nav__button md-logo" aria-label="통신이론 핵심정리 — 공공기관 채용시험 완전 대비" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    통신이론 핵심정리 — 공공기관 채용시험 완전 대비
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1차시: 통신이란 무엇인가 — 정보가 이동하는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2차시: 신호의 언어 — 주파수, 진폭, 위상 이해하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3차시: 대역폭과 스펙트럼 — 정보가 차지하는 공간
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3차시: 대역폭과 스펙트럼 — 정보가 차지하는 공간
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        학습 목표
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 핵심 주제 카드
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 핵심 주제 카드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 대역폭과 스펙트럼
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 섀넌의 채널 용량
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔢 계산 실습
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💬 스펙트럼 분류 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계: 도입 — 왜 속도가 다를까? (5분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계: 핵심 개념 ① — 대역폭이란 무엇인가 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계: 핵심 개념 ② — 섀넌의 채널 용량 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4단계: 계산 실습 — 직접 구해보기 (10분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5단계: 정리 및 형성 평가 (5분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-bandwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ① — 대역폭(Bandwidth)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ① — 대역폭(Bandwidth)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚗 비유로 이해하기: 도로의 폭
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        대역폭의 두 가지 의미
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        대역폭과 정보 전달의 관계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실생활에서 확인하는 대역폭
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 주파수 스펙트럼 — 전파 자원의 지도
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 주파수 스펙트럼 — 전파 자원의 지도">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗺️ 비유로 이해하기: 전파의 부동산 지도
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주파수 대역 분류표
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주파수가 높아지면 무엇이 달라지는가?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💬 활동: 일상 서비스의 주파수 대역 분류
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ② — 채널 용량과 섀넌의 법칙
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ② — 채널 용량과 섀넌의 법칙">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ 비유로 이해하기: 도로의 한계 처리량
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 섀넌의 채널 용량 공식
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SNR(신호 대 잡음비)이란?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        섀넌 공식이 말해주는 것
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        나이퀴스트 정리 — 잡음이 없는 이상적 채널
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        섀넌 공식 vs 나이퀴스트 공식 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔢 계산 실습 — 직접 구해보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔢 계산 실습 — 직접 구해보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 1: 섀넌 공식 적용
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 2: 나이퀴스트 공식 적용
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 3: 두 공식의 결합
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 자주 하는 실수와 주의할 점
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수와 주의할 점">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-snr-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 1: SNR의 dB 값을 그대로 공식에 대입
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 2: 나이퀴스트와 섀넌 공식의 혼동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-log2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 3: log₂ 계산 오류
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 핵심 개념 통합 정리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 핵심 개념 통합 정리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3차시 핵심 공식 요약
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 형성 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💭 성찰 &amp; 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💭 성찰 &amp; 다음 차시 미리보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        이번 차시를 돌아보며
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        스스로 점검하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔜 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4차시: 실습 체험 — 신호 읽기와 기초 개념 확인 문제 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - Part 2 — 아날로그 변조의 핵심: AM과 FM 완전 정복
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5차시: 변조란 무엇인가 — 반송파에 정보를 싣는 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6차시: AM 변조 — 진폭으로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7차시: AM 변형 방식 — DSB, SSB, VSB 비교 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8차시: FM 변조 — 주파수로 정보를 담는 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9차시: AM vs FM 실전 비교 — 기출 문제 집중 풀이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - Part 3 — 디지털 통신의 핵심: 부호화부터 디지털 변조까지
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10차시: 디지털 통신의 시작 — 표본화와 양자화 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11차시: 디지털 부호화 — 오류 없이 정보를 전달하는 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12차시: 디지털 변조 입문 — ASK와 FSK의 원리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13차시: PSK와 QAM — 효율적인 디지털 변조의 핵심
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14차시: 디지털 변조 비교 실습 — 성상도와 오답 함정 집중 공략
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15차시: Part 2·3 통합 복습 — 아날로그·디지털 변조 완전 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 - Part 4 — 다중화와 이동통신: 실전 적용과 최신 기술
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16차시: 다중화란 무엇인가 — 하나의 채널로 여러 신호 보내기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17차시: CDM과 OFDM — 현대 통신이 선택한 다중화 기술
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18차시: 이동통신의 진화 — 1G부터 5G까지의 핵심 개념
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19차시: 통신 시스템 실생활 연결 — 와이파이, 블루투스, 위성통신
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20차시: 전체 통합 모의고사 — 실전 시험 완전 대비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        학습 목표
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 핵심 주제 카드
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 핵심 주제 카드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 대역폭과 스펙트럼
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 섀넌의 채널 용량
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔢 계산 실습
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💬 스펙트럼 분류 활동
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 수업 흐름
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 수업 흐름">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1단계: 도입 — 왜 속도가 다를까? (5분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-1-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2단계: 핵심 개념 ① — 대역폭이란 무엇인가 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-2-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3단계: 핵심 개념 ② — 섀넌의 채널 용량 (15분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4단계: 계산 실습 — 직접 구해보기 (10분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5단계: 정리 및 형성 평가 (5분)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-bandwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ① — 대역폭(Bandwidth)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ① — 대역폭(Bandwidth)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚗 비유로 이해하기: 도로의 폭
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        대역폭의 두 가지 의미
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        대역폭과 정보 전달의 관계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실생활에서 확인하는 대역폭
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 주파수 스펙트럼 — 전파 자원의 지도
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 주파수 스펙트럼 — 전파 자원의 지도">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗺️ 비유로 이해하기: 전파의 부동산 지도
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주파수 대역 분류표
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주파수가 높아지면 무엇이 달라지는가?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💬 활동: 일상 서비스의 주파수 대역 분류
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념 ② — 채널 용량과 섀넌의 법칙
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념 ② — 채널 용량과 섀넌의 법칙">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ 비유로 이해하기: 도로의 한계 처리량
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 섀넌의 채널 용량 공식
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SNR(신호 대 잡음비)이란?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        섀넌 공식이 말해주는 것
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        나이퀴스트 정리 — 잡음이 없는 이상적 채널
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        섀넌 공식 vs 나이퀴스트 공식 비교
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔢 계산 실습 — 직접 구해보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔢 계산 실습 — 직접 구해보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 1: 섀넌 공식 적용
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 2: 나이퀴스트 공식 적용
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실습 3: 두 공식의 결합
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 자주 하는 실수와 주의할 점
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수와 주의할 점">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-snr-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 1: SNR의 dB 값을 그대로 공식에 대입
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 2: 나이퀴스트와 섀넌 공식의 혼동
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-log2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 3: log₂ 계산 오류
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 핵심 개념 통합 정리
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 핵심 개념 통합 정리">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3차시 핵심 공식 요약
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 형성 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 형성 평가
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💭 성찰 &amp; 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💭 성찰 &amp; 다음 차시 미리보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        이번 차시를 돌아보며
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        스스로 점검하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔜 다음 차시 미리보기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="네비게이션" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../chapter01/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Part 1 - Part 1 — 통신의 세계로 들어가기: 기초 개념 완성
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="3">3차시: 대역폭과 스펙트럼 — 정보가 차지하는 공간<a class="headerlink" href="#3" title="Permanent link">&para;</a></h1>
+<div class="lesson-banner">
+<p><strong>⏰ 50분</strong> · 대역폭 · 주파수 스펙트럼 · 섀넌의 채널 용량 · <strong>난이도</strong> ●●○○○</p>
+<p><strong>학습목표</strong>: 대역폭의 정의를 설명하고, 주파수 스펙트럼의 대역별 활용을 분류하며, 섀넌의 법칙으로 채널 용량을 계산할 수 있다</p>
+<blockquote>
+<p><strong>오늘의 질문</strong>: "같은 인터넷 회선인데 왜 요금제에 따라 다운로드 속도가 다를까요?"</p>
+</blockquote>
+</div>
+<hr />
+<h2 id="_1">학습 목표<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 대역폭의 정의와 단위를 설명하고, 신호 전송 용량과의 관계를 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 주파수 스펙트럼의 구성과 대역별 활용 사례를 분류할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 채널 용량 개념(섀넌의 법칙)을 이해하고 대역폭과의 관련성을 설명할 수 있다</li>
+</ul>
+<hr />
+<h2 id="_2">🎯 핵심 주제 카드<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="cards-grid">
+<div class="card card-orange">
+<h3 id="_3">🧠 대역폭과 스펙트럼<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>신호가 차지하는 주파수 범위, 그리고 전체 주파수 자원의 지도</p>
+</div>
+<div class="card card-orange">
+<h3 id="_4">🧠 섀넌의 채널 용량<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>대역폭과 잡음이 정보 전송 한계를 결정하는 수학적 원리</p>
+</div>
+<div class="card card-blue">
+<h3 id="_5">🔢 계산 실습<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>채널 용량 공식을 직접 적용하여 전송 속도의 이론적 한계를 구하는 연습</p>
+</div>
+<div class="card card-green">
+<h3 id="_6">💬 스펙트럼 분류 활동<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>일상에서 사용하는 통신 서비스를 주파수 대역별로 정리하는 활동</p>
+</div>
+</div>
+<hr />
+<h2 id="_7">⏱️ 수업 흐름<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<div class="steps">
+<div class="step">
+<h4 id="1-5">1단계: 도입 — 왜 속도가 다를까? (5분)<a class="headerlink" href="#1-5" title="Permanent link">&para;</a></h4>
+<p>인터넷 요금제 비유를 통해 대역폭 개념의 필요성을 인식합니다. 2차시에서 학습한 주파수 개념을 복습하며 이번 차시와 연결합니다.</p>
+</div>
+<div class="step">
+<h4 id="2-1-15">2단계: 핵심 개념 ① — 대역폭이란 무엇인가 (15분)<a class="headerlink" href="#2-1-15" title="Permanent link">&para;</a></h4>
+<p>대역폭의 정의, 단위, 그리고 전송 용량과의 관계를 비유와 예시를 통해 학습합니다. 주파수 스펙트럼의 전체 구성과 대역별 활용 사례를 정리합니다.</p>
+</div>
+<div class="step">
+<h4 id="3-2-15">3단계: 핵심 개념 ② — 섀넌의 채널 용량 (15분)<a class="headerlink" href="#3-2-15" title="Permanent link">&para;</a></h4>
+<p>섀넌의 공식을 도입하여 대역폭, SNR, 채널 용량의 관계를 이해합니다. 공식의 각 요소가 실제 통신에서 무엇을 의미하는지 직관적으로 파악합니다.</p>
+</div>
+<div class="step">
+<h4 id="4-10">4단계: 계산 실습 — 직접 구해보기 (10분)<a class="headerlink" href="#4-10" title="Permanent link">&para;</a></h4>
+<p>섀넌의 공식과 나이퀴스트 공식을 활용하여 채널 용량을 직접 계산합니다. 단계별로 풀이 과정을 따라가며 공식 적용 능력을 키웁니다.</p>
+</div>
+<div class="step">
+<h4 id="5-5">5단계: 정리 및 형성 평가 (5분)<a class="headerlink" href="#5-5" title="Permanent link">&para;</a></h4>
+<p>핵심 개념을 요약하고, 형성 평가 문제를 풀며 이해도를 점검합니다. 다음 차시 미리보기로 학습 연속성을 확보합니다.</p>
+</div>
+</div>
+<hr />
+<h2 id="_8">📚 왜 이걸 배우나요?<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>2차시에서 우리는 <strong>주파수</strong>라는 개념을 학습했습니다. 신호가 1초에 몇 번 진동하는지를 나타내는 주파수는 통신의 가장 기본적인 척도였습니다.</p>
+<p>그런데 실제 통신에서는 하나의 주파수만 사용하지 않습니다. 여러분이 전화 통화를 할 때, 목소리는 약 300Hz부터 3,400Hz까지의 주파수 성분을 동시에 포함하고 있습니다. 음악 스트리밍은 20Hz부터 20,000Hz까지 훨씬 넓은 범위의 주파수를 사용합니다. 이처럼 <strong>신호가 차지하는 주파수의 범위</strong>가 곧 그 신호의 <strong>대역폭</strong>입니다.</p>
+<p>대역폭은 통신 시스템의 성능을 결정하는 핵심 자원입니다. 통신사가 주파수 대역을 확보하기 위해 수조 원을 투자하는 이유, 5G가 4G보다 빠른 이유, 그리고 공공기관 시험에서 대역폭 관련 문제가 자주 출제되는 이유가 모두 여기에 있습니다.</p>
+<p>이번 차시에서는 대역폭의 정확한 정의부터 주파수 스펙트럼의 구성, 그리고 <strong>섀넌의 채널 용량 공식</strong>까지 학습하겠습니다. 이 공식은 "주어진 대역폭에서 최대 얼마만큼의 정보를 보낼 수 있는가?"라는 질문에 대한 수학적 답을 제공합니다.</p>
+<hr />
+<h2 id="1-bandwidth">📚 핵심 개념 ① — 대역폭(Bandwidth)<a class="headerlink" href="#1-bandwidth" title="Permanent link">&para;</a></h2>
+<h3 id="_9">🚗 비유로 이해하기: 도로의 폭<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>고속도로를 떠올려 보겠습니다.</p>
+<ul>
+<li><strong>1차선 도로</strong>에서는 차 한 대씩만 지나갈 수 있습니다</li>
+<li><strong>4차선 도로</strong>에서는 동시에 4대의 차가 나란히 달릴 수 있습니다</li>
+<li><strong>8차선 도로</strong>에서는 더 많은 차가 동시에 통과합니다</li>
+</ul>
+<p>통신에서 <strong>대역폭</strong>은 이 도로의 <strong>차선 수(폭)</strong>에 해당합니다. 도로가 넓을수록 단위 시간당 더 많은 차(정보)가 지나갈 수 있는 것처럼, 대역폭이 넓을수록 더 많은 정보를 전송할 수 있습니다.</p>
+<h3 id="_10">📐 정확한 정의<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p><strong>대역폭(Bandwidth)</strong> 이란 신호가 사용하는 <strong>최고 주파수(f_H)와 최저 주파수(f_L)의 차이</strong>를 말합니다.</p>
+<p>$$BW = f_H - f_L$$</p>
+<ul>
+<li><strong>단위</strong>: Hz(헤르츠), kHz, MHz, GHz</li>
+<li><strong>의미</strong>: 신호가 주파수 축에서 차지하는 폭</li>
+</ul>
+<blockquote>
+<p><strong>예시</strong>: 음성 전화 신호가 300Hz ~ 3,400Hz를 사용한다면, 대역폭은 3,400 - 300 = <strong>3,100Hz(약 3.1kHz)</strong> 입니다.</p>
+</blockquote>
+<h3 id="_11">대역폭의 두 가지 의미<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>시험에서 대역폭이라는 용어가 나올 때, 문맥에 따라 두 가지 의미 중 하나로 사용됩니다. 이를 구분하는 것이 중요합니다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>아날로그 대역폭</th>
+<th>디지털 대역폭</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>정의</strong></td>
+<td>신호가 차지하는 주파수 범위</td>
+<td>단위 시간당 전송 가능한 데이터량</td>
+</tr>
+<tr>
+<td><strong>단위</strong></td>
+<td>Hz, kHz, MHz, GHz</td>
+<td>bps, kbps, Mbps, Gbps</td>
+</tr>
+<tr>
+<td><strong>비유</strong></td>
+<td>도로의 폭(차선 수)</td>
+<td>도로를 지나가는 차의 수/시간</td>
+</tr>
+<tr>
+<td><strong>예시</strong></td>
+<td>FM 라디오 한 채널 = 200kHz</td>
+<td>인터넷 100Mbps 요금제</td>
+</tr>
+</tbody>
+</table>
+<p>이번 차시에서는 주로 <strong>아날로그 대역폭</strong>(주파수 범위)을 중심으로 학습합니다. 디지털 대역폭(전송률)은 아날로그 대역폭이 클수록 함께 커지는 관계에 있습니다.</p>
+<h3 id="_12">대역폭과 정보 전달의 관계<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>대역폭이 넓으면 왜 더 많은 정보를 보낼 수 있는 것일까요?</p>
+<p>핵심은 <strong>다양한 주파수 성분을 동시에 실어 보낼 수 있기 때문</strong>입니다. 아래 다이어그램은 대역폭의 크기에 따라 전달할 수 있는 정보의 양이 달라지는 관계를 보여줍니다.</p>
+<div class="mermaid">flowchart LR
+    A["좁은 대역폭&lt;br/&gt;(예: 3.1kHz)"] --&gt; B["적은 주파수 성분&lt;br/&gt;전달 가능"]
+    B --&gt; C["음성 통화 수준"]
+    D["중간 대역폭&lt;br/&gt;(예: 200kHz)"] --&gt; E["더 많은 주파수 성분&lt;br/&gt;전달 가능"]
+    E --&gt; F["FM 라디오 음질"]
+    G["넓은 대역폭&lt;br/&gt;(예: 20MHz)"] --&gt; H["풍부한 주파수 성분&lt;br/&gt;전달 가능"]
+    H --&gt; I["HD 영상 전송"]</div>
+<blockquote>
+<p>대역폭이 넓을수록 더 많은 주파수 성분을 담을 수 있으므로, 더 복잡하고 풍부한 정보를 전송할 수 있습니다.</p>
+</blockquote>
+<h3 id="_13">실생활에서 확인하는 대역폭<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>여러분이 일상에서 접하는 서비스들의 대역폭을 비교하면 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th>서비스</th>
+<th>사용 주파수 범위</th>
+<th>대역폭</th>
+<th>전달 정보</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>유선 전화</td>
+<td>300Hz ~ 3,400Hz</td>
+<td>3.1kHz</td>
+<td>음성</td>
+</tr>
+<tr>
+<td>AM 라디오</td>
+<td>한 채널당 약 10kHz</td>
+<td>10kHz</td>
+<td>저음질 음성+음악</td>
+</tr>
+<tr>
+<td>FM 라디오</td>
+<td>한 채널당 약 200kHz</td>
+<td>200kHz</td>
+<td>고음질 스테레오 음악</td>
+</tr>
+<tr>
+<td>지상파 TV(아날로그)</td>
+<td>한 채널당 약 6MHz</td>
+<td>6MHz</td>
+<td>영상+음성</td>
+</tr>
+<tr>
+<td>Wi-Fi(802.11n)</td>
+<td>채널당 20MHz 또는 40MHz</td>
+<td>20~40MHz</td>
+<td>고속 데이터</td>
+</tr>
+<tr>
+<td>5G(밀리미터파)</td>
+<td>채널당 100~400MHz</td>
+<td>100~400MHz</td>
+<td>초고속 데이터</td>
+</tr>
+</tbody>
+</table>
+<p>이 표에서 확인할 수 있듯이, 전달하는 정보가 복잡해질수록(음성 → 음악 → 영상 → 고속 데이터) 필요한 대역폭도 넓어집니다.</p>
+<p>AM 라디오가 FM 라디오보다 음질이 떨어지는 이유도 여기에 있습니다. AM은 한 채널에 약 10kHz의 대역폭만 사용하는 반면, FM은 200kHz를 사용하기 때문입니다. 더 넓은 대역폭이 더 풍부한 음향 정보를 담을 수 있게 하는 것입니다.</p>
+<hr />
+<h2 id="_14">📚 주파수 스펙트럼 — 전파 자원의 지도<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="_15">🗺️ 비유로 이해하기: 전파의 부동산 지도<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>주파수 스펙트럼은 <strong>전파라는 자원의 부동산 지도</strong>와 같습니다.</p>
+<p>토지에 주거지역, 상업지역, 공업지역이 구분되어 있듯이, 주파수도 용도에 따라 구역이 나뉘어 있습니다. 이 구역을 <strong>주파수 대역(frequency band)</strong> 이라 부르며, 각 대역은 국제전기통신연합(ITU)에 의해 용도가 지정되어 있습니다.</p>
+<h3 id="_16">📐 정확한 정의<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p><strong>주파수 스펙트럼(Frequency Spectrum)</strong> 이란 전자기파가 사용할 수 있는 <strong>전체 주파수 범위를 체계적으로 분류한 것</strong>입니다. 통신에서는 주로 3kHz ~ 300GHz 범위의 <strong>전파(Radio Wave)</strong> 스펙트럼을 다룹니다.</p>
+<h3 id="_17">주파수 대역 분류표<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>ITU에서는 전파를 아래와 같이 분류합니다. 시험에 자주 출제되는 대역을 중심으로 정리하겠습니다.</p>
+<table>
+<thead>
+<tr>
+<th>대역 명칭</th>
+<th>약어</th>
+<th>주파수 범위</th>
+<th>파장 범위</th>
+<th>주요 활용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>극저주파</td>
+<td>VLF</td>
+<td>3~30kHz</td>
+<td>100~10km</td>
+<td>잠수함 통신</td>
+</tr>
+<tr>
+<td>저주파</td>
+<td>LF</td>
+<td>30~300kHz</td>
+<td>10~1km</td>
+<td>항해용 비콘, 시보</td>
+</tr>
+<tr>
+<td>중파</td>
+<td>MF</td>
+<td>300kHz~3MHz</td>
+<td>1km~100m</td>
+<td><strong>AM 라디오</strong></td>
+</tr>
+<tr>
+<td>단파</td>
+<td>HF</td>
+<td>3~30MHz</td>
+<td>100~10m</td>
+<td>국제 라디오, 아마추어 무선</td>
+</tr>
+<tr>
+<td>초단파</td>
+<td>VHF</td>
+<td>30~300MHz</td>
+<td>10~1m</td>
+<td><strong>FM 라디오</strong>, 지상파 TV</td>
+</tr>
+<tr>
+<td>극초단파</td>
+<td>UHF</td>
+<td>300MHz~3GHz</td>
+<td>1m~10cm</td>
+<td><strong>휴대폰(4G/5G)</strong>, Wi-Fi</td>
+</tr>
+<tr>
+<td>초극초단파</td>
+<td>SHF</td>
+<td>3~30GHz</td>
+<td>10~1cm</td>
+<td><strong>위성통신</strong>, 5G(밀리미터파)</td>
+</tr>
+<tr>
+<td>밀리미터파</td>
+<td>EHF</td>
+<td>30~300GHz</td>
+<td>10~1mm</td>
+<td>5G, 레이더, 전파 천문학</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>암기 팁</strong>: 대역 약어는 영어 접두사로 기억할 수 있습니다. V=Very, L=Low, M=Medium, H=High, U=Ultra, S=Super, E=Extremely. 따라서 VLF → Very Low Frequency, UHF → Ultra High Frequency입니다.</p>
+</blockquote>
+<h3 id="_18">주파수가 높아지면 무엇이 달라지는가?<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>주파수 대역의 특성은 아래와 같이 정리할 수 있습니다.</p>
+<div class="mermaid">flowchart TD
+    A["주파수가 높아지면"] --&gt; B["대역폭 확보 용이&lt;br/&gt;(넓은 주파수 공간)"]
+    A --&gt; C["직진성 강화&lt;br/&gt;(장애물 회절 어려움)"]
+    A --&gt; D["전파 도달 거리 감소&lt;br/&gt;(감쇠 증가)"]
+    B --&gt; E["대용량 데이터 전송 유리"]
+    C --&gt; F["건물 안 수신 어려움"]
+    D --&gt; G["기지국 간격 좁아짐"]</div>
+<blockquote>
+<p>주파수가 높아질수록 대역폭 확보는 쉬워지지만, 전파 도달 거리와 장애물 투과력은 줄어드는 트레이드오프 관계가 있습니다.</p>
+</blockquote>
+<p>이 트레이드오프를 표로 정리하면 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th>특성</th>
+<th>저주파 대역</th>
+<th>고주파 대역</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>사용 가능 대역폭</td>
+<td>좁음</td>
+<td>넓음</td>
+</tr>
+<tr>
+<td>전파 도달 거리</td>
+<td>김</td>
+<td>짧음</td>
+</tr>
+<tr>
+<td>장애물 회절(투과)</td>
+<td>잘됨</td>
+<td>어려움</td>
+</tr>
+<tr>
+<td>안테나 크기</td>
+<td>큼</td>
+<td>작음</td>
+</tr>
+<tr>
+<td>주요 용도</td>
+<td>방송, 해상 통신</td>
+<td>이동통신, 위성 통신, 고속 데이터</td>
+</tr>
+</tbody>
+</table>
+<p>5G가 기존 4G보다 훨씬 빠른 속도를 제공할 수 있는 이유는, 더 <strong>높은 주파수 대역</strong>(3.5GHz, 28GHz 등)을 사용하여 <strong>넓은 대역폭을 확보</strong>했기 때문입니다. 대신 전파 도달 거리가 짧아지므로 기지국을 더 촘촘하게 설치해야 합니다.</p>
+<h3 id="_19">💬 활동: 일상 서비스의 주파수 대역 분류<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>아래 통신 서비스들이 어떤 주파수 대역에 해당하는지 표를 채워 보겠습니다. 먼저 스스로 생각한 후 정답을 확인하시기 바랍니다.</p>
+<table>
+<thead>
+<tr>
+<th>통신 서비스</th>
+<th>주파수 대역(약어)</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AM 라디오 (535~1605kHz)</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>FM 라디오 (88~108MHz)</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>4G LTE (700MHz~2.6GHz)</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>Wi-Fi 5GHz (5.15~5.85GHz)</td>
+<td>?</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<details><summary>정답 확인</summary>
+
+| 통신 서비스 | 주파수 대역(약어) | 이유 |
+|------------|-----------------|------|
+| AM 라디오 (535~1605kHz) | **MF** (중파) | 300kHz~3MHz 범위에 해당 |
+| FM 라디오 (88~108MHz) | **VHF** (초단파) | 30~300MHz 범위에 해당 |
+| 4G LTE (700MHz~2.6GHz) | **UHF** (극초단파) | 300MHz~3GHz 범위에 해당 |
+| Wi-Fi 5GHz (5.15~5.85GHz) | **SHF** (초극초단파) | 3~30GHz 범위에 해당 |
+
+</details>
+
+<hr />
+<h2 id="2">📚 핵심 개념 ② — 채널 용량과 섀넌의 법칙<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="_20">🏗️ 비유로 이해하기: 도로의 한계 처리량<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p>앞서 대역폭을 도로의 폭에 비유했습니다. 그렇다면 도로의 폭만 넓히면 무한히 많은 차가 다닐 수 있을까요?</p>
+<p>현실에서는 그렇지 않습니다. 도로 위에 <strong>안개</strong>(잡음)가 끼면 운전자가 속도를 줄여야 하고, 안개가 짙을수록 더 느리게 달려야 합니다. 결국 도로를 통과할 수 있는 차의 최대 수는 <strong>도로의 폭</strong>과 <strong>안개의 정도</strong> 두 가지 요소에 의해 결정됩니다.</p>
+<p>통신에서도 마찬가지입니다. 채널을 통해 전송할 수 있는 정보의 최대량은 <strong>대역폭</strong>과 <strong>잡음</strong>에 의해 결정됩니다. 이 관계를 수학적으로 정립한 것이 <strong>섀넌의 채널 용량 공식(Shannon's Channel Capacity Formula)</strong> 입니다.</p>
+<h3 id="_21">📐 섀넌의 채널 용량 공식<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>1948년 클로드 섀넌(Claude Shannon)이 발표한 이 공식은 다음과 같습니다.</p>
+<p>$$C = BW \times \log_2(1 + SNR)$$</p>
+<p>각 기호의 의미는 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th>기호</th>
+<th>의미</th>
+<th>단위</th>
+<th>비유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>C</strong></td>
+<td>채널 용량 (최대 전송률)</td>
+<td>bps (bits per second)</td>
+<td>도로의 최대 처리량</td>
+</tr>
+<tr>
+<td><strong>BW</strong></td>
+<td>대역폭</td>
+<td>Hz</td>
+<td>도로의 폭</td>
+</tr>
+<tr>
+<td><strong>SNR</strong></td>
+<td>신호 대 잡음비 (Signal-to-Noise Ratio)</td>
+<td>무차원 (비율)</td>
+<td>안개의 맑은 정도</td>
+</tr>
+<tr>
+<td><strong>log₂</strong></td>
+<td>밑이 2인 로그</td>
+<td>—</td>
+<td>정보량 단위(bit) 변환</td>
+</tr>
+</tbody>
+</table>
+<h3 id="snr">SNR(신호 대 잡음비)이란?<a class="headerlink" href="#snr" title="Permanent link">&para;</a></h3>
+<p><strong>SNR</strong>은 수신된 신호에서 <strong>원하는 신호의 세기</strong>와 <strong>잡음의 세기</strong>의 비율입니다.</p>
+<p>$$SNR = \frac{S}{N} = \frac{\text{신호 전력}}{\text{잡음 전력}}$$</p>
+<p>SNR이 클수록 잡음에 비해 신호가 강하다는 뜻이므로 통신 품질이 좋습니다.</p>
+<p>SNR은 종종 <strong>데시벨(dB)</strong> 단위로 표현됩니다. 변환 공식은 다음과 같습니다.</p>
+<p>$$SNR_{dB} = 10 \times \log_{10}(SNR)$$</p>
+<blockquote>
+<p><strong>주의</strong>: 섀넌 공식에서 SNR은 <strong>비율 값(진수)</strong>으로 대입해야 합니다. 문제에서 dB 값이 주어지면 반드시 비율 값으로 변환한 후 공식에 넣어야 합니다.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>SNR(dB)</th>
+<th>SNR(비율)</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 dB</td>
+<td>1</td>
+<td>신호 = 잡음</td>
+</tr>
+<tr>
+<td>10 dB</td>
+<td>10</td>
+<td>신호가 잡음의 10배</td>
+</tr>
+<tr>
+<td>20 dB</td>
+<td>100</td>
+<td>신호가 잡음의 100배</td>
+</tr>
+<tr>
+<td>30 dB</td>
+<td>1,000</td>
+<td>신호가 잡음의 1,000배</td>
+</tr>
+</tbody>
+</table>
+<p>dB를 비율로 변환하는 공식은 다음과 같습니다.</p>
+<p>$$SNR = 10^{SNR_{dB}/10}$$</p>
+<h3 id="_22">섀넌 공식이 말해주는 것<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p>섀넌의 공식에서 두 가지 핵심 메시지를 읽을 수 있습니다.</p>
+<div class="mermaid">flowchart TD
+    A["채널 용량 C"] --&gt; B["대역폭 BW에&lt;br/&gt;비례"]
+    A --&gt; C["log₂ 1+SNR 에&lt;br/&gt;비례"]
+    B --&gt; D["대역폭을 2배로&lt;br/&gt;→ C도 2배"]
+    C --&gt; E["SNR을 2배로&lt;br/&gt;→ C는 2배보다 적게 증가&lt;br/&gt;(로그 관계)"]</div>
+<blockquote>
+<p>대역폭은 채널 용량에 <strong>선형적</strong>으로 기여하지만, SNR은 <strong>로그적</strong>으로 기여합니다. 따라서 전송 속도를 높이려면 SNR을 높이는 것보다 <strong>대역폭을 넓히는 것</strong>이 더 효율적입니다.</p>
+</blockquote>
+<p>이것이 바로 5G가 더 높은 주파수 대역(넓은 대역폭)으로 이동한 근본적인 이유입니다.</p>
+<h3 id="_23">나이퀴스트 정리 — 잡음이 없는 이상적 채널<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>섀넌 공식과 함께 자주 출제되는 것이 <strong>나이퀴스트(Nyquist) 정리</strong>입니다. 이 공식은 <strong>잡음이 없는 이상적인 채널</strong>에서의 최대 전송률을 구합니다.</p>
+<p>$$C = 2 \times BW \times \log_2(M)$$</p>
+<table>
+<thead>
+<tr>
+<th>기호</th>
+<th>의미</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>C</strong></td>
+<td>최대 전송률</td>
+<td>bps</td>
+</tr>
+<tr>
+<td><strong>BW</strong></td>
+<td>대역폭</td>
+<td>Hz</td>
+</tr>
+<tr>
+<td><strong>M</strong></td>
+<td>신호 레벨 수</td>
+<td>한 번에 구분할 수 있는 신호 상태의 수</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>예시</strong>: 대역폭 3,100Hz, 신호 레벨 수 2인 채널의 최대 전송률은<br />
+C = 2 × 3,100 × log₂(2) = 2 × 3,100 × 1 = <strong>6,200 bps</strong> 입니다.</p>
+</blockquote>
+<h3 id="vs">섀넌 공식 vs 나이퀴스트 공식 비교<a class="headerlink" href="#vs" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>나이퀴스트 공식</th>
+<th>섀넌 공식</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>전제 조건</strong></td>
+<td>잡음 없는 이상적 채널</td>
+<td>잡음 있는 실제 채널</td>
+</tr>
+<tr>
+<td><strong>핵심 변수</strong></td>
+<td>대역폭, 신호 레벨 수(M)</td>
+<td>대역폭, SNR</td>
+</tr>
+<tr>
+<td><strong>공식</strong></td>
+<td>C = 2·BW·log₂(M)</td>
+<td>C = BW·log₂(1+SNR)</td>
+</tr>
+<tr>
+<td><strong>의미</strong></td>
+<td>이론적 상한</td>
+<td>잡음 환경에서의 한계</td>
+</tr>
+<tr>
+<td><strong>활용</strong></td>
+<td>신호 설계 시 참고</td>
+<td>실제 시스템 성능 한계 산출</td>
+</tr>
+</tbody>
+</table>
+<p>실제 시스템에서는 <strong>두 공식 중 작은 값</strong>이 실질적인 채널 용량의 한계가 됩니다. 나이퀴스트 공식으로 구한 값이 섀넌 공식의 값을 초과할 수 없기 때문입니다.</p>
+<hr />
+<h2 id="_24">🔢 계산 실습 — 직접 구해보기<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h2>
+<h3 id="1">실습 1: 섀넌 공식 적용<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><strong>문제</strong>: 대역폭이 4kHz이고 SNR이 30dB인 전화 회선의 채널 용량은 얼마입니까?</p>
+<p><strong>풀이 과정</strong>:</p>
+<p><strong>Step 1</strong> — 주어진 값을 정리합니다.
+- BW = 4kHz = 4,000Hz
+- SNR = 30dB</p>
+<p><strong>Step 2</strong> — SNR을 dB에서 비율로 변환합니다.
+$$SNR = 10^{30/10} = 10^3 = 1{,}000$$</p>
+<p><strong>Step 3</strong> — 섀넌 공식에 대입합니다.
+$$C = 4{,}000 \times \log_2(1 + 1{,}000)$$
+$$C = 4{,}000 \times \log_2(1{,}001)$$</p>
+<p><strong>Step 4</strong> — log₂(1,001)을 계산합니다.
+$$\log_2(1{,}001) = \frac{\log_{10}(1{,}001)}{\log_{10}(2)} \approx \frac{3.0004}{0.3010} \approx 9.97$$</p>
+<blockquote>
+<p><strong>계산 팁</strong>: log₂(1,000) ≈ 10 (∵ 2¹⁰ = 1,024 ≈ 1,000) 으로 근사하면 시험에서 빠르게 풀 수 있습니다.</p>
+</blockquote>
+<p><strong>Step 5</strong> — 최종 계산합니다.
+$$C \approx 4{,}000 \times 9.97 \approx 39{,}880 \text{ bps} \approx \textbf{약 40 kbps}$$</p>
+<blockquote>
+<p>이것이 바로 기존 아날로그 전화 회선(PSTN)을 이용한 다이얼업 모뎀의 이론적 최대 속도가 약 33.6~56kbps 수준이었던 이유입니다.</p>
+</blockquote>
+<h3 id="2_1">실습 2: 나이퀴스트 공식 적용<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<p><strong>문제</strong>: 잡음이 없는 대역폭 4kHz 채널에서 16개의 신호 레벨을 사용한다면 최대 전송률은 얼마입니까?</p>
+<p><strong>풀이 과정</strong>:</p>
+<p><strong>Step 1</strong> — 주어진 값을 정리합니다.
+- BW = 4,000Hz
+- M = 16</p>
+<p><strong>Step 2</strong> — 나이퀴스트 공식에 대입합니다.
+$$C = 2 \times 4{,}000 \times \log_2(16)$$</p>
+<p><strong>Step 3</strong> — log₂(16)을 계산합니다.
+$$\log_2(16) = 4 \quad (\because 2^4 = 16)$$</p>
+<p><strong>Step 4</strong> — 최종 계산합니다.
+$$C = 2 \times 4{,}000 \times 4 = \textbf{32{,}000 bps = 32 kbps}$$</p>
+<h3 id="3_1">실습 3: 두 공식의 결합<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<p><strong>문제</strong>: 대역폭 4kHz, SNR 20dB인 채널에서 신호 레벨 수를 최대 몇 개까지 쓸 수 있습니까?</p>
+<p><strong>풀이 과정</strong>:</p>
+<p><strong>Step 1</strong> — 먼저 섀넌 공식으로 채널 용량의 절대 한계를 구합니다.
+- SNR = 10^(20/10) = 100
+- C = 4,000 × log₂(101) ≈ 4,000 × 6.66 ≈ <strong>26,640 bps</strong></p>
+<p><strong>Step 2</strong> — 나이퀴스트 공식에서 C ≤ 26,640 bps가 되도록 M을 구합니다.
+$$2 \times 4{,}000 \times \log_2(M) \leq 26{,}640$$
+$$\log_2(M) \leq \frac{26{,}640}{8{,}000} \approx 3.33$$
+$$M \leq 2^{3.33} \approx 10.08$$</p>
+<p><strong>결론</strong>: 신호 레벨 수 M은 정수여야 하므로, 최대 <strong>M = 8</strong> (또는 보수적으로 M = 10이지만, 실무에서는 2의 거듭제곱인 8을 사용)까지 가능합니다.</p>
+<blockquote>
+<p>이처럼 섀넌 공식은 나이퀴스트 공식에서 사용할 수 있는 <strong>신호 레벨 수의 상한</strong>을 결정합니다.</p>
+</blockquote>
+<hr />
+<h2 id="_25">⚠️ 자주 하는 실수와 주의할 점<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
+<h3 id="1-snr-db">실수 1: SNR의 dB 값을 그대로 공식에 대입<a class="headerlink" href="#1-snr-db" title="Permanent link">&para;</a></h3>
+<p>섀넌 공식의 SNR은 <strong>비율 값</strong>이어야 합니다. 문제에서 "SNR = 30dB"라고 주어졌을 때, 30을 그대로 대입하면 전혀 다른 결과가 나옵니다.</p>
+<table>
+<thead>
+<tr>
+<th>계산 방법</th>
+<th>SNR 값</th>
+<th>C 계산</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>❌ 잘못</td>
+<td>30(dB 그대로)</td>
+<td>4,000 × log₂(31)</td>
+<td>≈ 19,800 bps</td>
+</tr>
+<tr>
+<td>✅ 올바름</td>
+<td>1,000(비율 변환)</td>
+<td>4,000 × log₂(1,001)</td>
+<td>≈ 39,880 bps</td>
+</tr>
+</tbody>
+</table>
+<p>결과가 2배 가까이 차이가 납니다. <strong>반드시 단위를 확인</strong>하는 습관을 들이시기 바랍니다.</p>
+<h3 id="2_2">실수 2: 나이퀴스트와 섀넌 공식의 혼동<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>상황</th>
+<th>사용할 공식</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"잡음이 없는 채널"</td>
+<td>나이퀴스트</td>
+</tr>
+<tr>
+<td>"SNR이 주어진 채널"</td>
+<td>섀넌</td>
+</tr>
+<tr>
+<td>"둘 다 주어진 경우"</td>
+<td>양쪽 다 계산 후 <strong>작은 값</strong> 선택</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-log2">실수 3: log₂ 계산 오류<a class="headerlink" href="#3-log2" title="Permanent link">&para;</a></h3>
+<p>시험에서 자주 사용되는 log₂ 값을 미리 기억해 두면 유리합니다.</p>
+<table>
+<thead>
+<tr>
+<th>값</th>
+<th>log₂</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>8</td>
+<td>3</td>
+</tr>
+<tr>
+<td>16</td>
+<td>4</td>
+</tr>
+<tr>
+<td>32</td>
+<td>5</td>
+</tr>
+<tr>
+<td>64</td>
+<td>6</td>
+</tr>
+<tr>
+<td>128</td>
+<td>7</td>
+</tr>
+<tr>
+<td>256</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1,024</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>유용한 근사</strong>: log₂(x) ≈ 3.32 × log₁₀(x). 이 변환식 하나만 기억하면 어떤 값이든 빠르게 계산할 수 있습니다.</p>
+</blockquote>
+<hr />
+<h2 id="_26">📊 핵심 개념 통합 정리<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h2>
+<p>이번 차시에서 학습한 세 가지 핵심 개념의 관계를 하나의 다이어그램으로 정리하겠습니다.</p>
+<div class="mermaid">flowchart TD
+    A["주파수 스펙트럼&lt;br/&gt;(전체 주파수 자원의 지도)"] --&gt; B["특정 대역 할당&lt;br/&gt;(예: UHF 대역)"]
+    B --&gt; C["대역폭 BW 결정&lt;br/&gt;(할당된 주파수 범위)"]
+    C --&gt; D["채널 용량 C 결정"]
+    E["잡음 환경&lt;br/&gt;(SNR)"] --&gt; D
+    D --&gt; F["C = BW × log₂ 1+SNR&lt;br/&gt;(섀넌의 법칙)"]
+    F --&gt; G["실제 전송률은&lt;br/&gt;C 이하로 설계"]</div>
+<blockquote>
+<p>주파수 스펙트럼에서 대역이 할당되면 대역폭이 결정되고, 대역폭과 SNR이 함께 채널 용량의 이론적 한계를 결정합니다.</p>
+</blockquote>
+<h3 id="3_2">3차시 핵심 공식 요약<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>공식</th>
+<th>수식</th>
+<th>핵심 변수</th>
+<th>적용 상황</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>대역폭</strong></td>
+<td>BW = f_H - f_L</td>
+<td>최고·최저 주파수</td>
+<td>신호의 주파수 범위 산출</td>
+</tr>
+<tr>
+<td><strong>섀넌 공식</strong></td>
+<td>C = BW·log₂(1+SNR)</td>
+<td>대역폭, SNR</td>
+<td>잡음 있는 채널의 용량 한계</td>
+</tr>
+<tr>
+<td><strong>나이퀴스트 공식</strong></td>
+<td>C = 2·BW·log₂(M)</td>
+<td>대역폭, 신호 레벨 수</td>
+<td>잡음 없는 채널의 전송률</td>
+</tr>
+<tr>
+<td><strong>dB 변환</strong></td>
+<td>SNR_dB = 10·log₁₀(SNR)</td>
+<td>SNR 비율 값</td>
+<td>dB ↔ 비율 변환</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_27">📝 형성 평가<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h2>
+<div class="assessment">
+<h3 id="_28">📝 형성 평가<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<p><strong>객관식 1.</strong> 대역폭이 8kHz이고 SNR이 30dB인 채널의 섀넌 채널 용량은 약 얼마입니까?</p>
+<p>① 약 24,000 bps<br />
+② 약 40,000 bps<br />
+③ 약 60,000 bps<br />
+④ 약 80,000 bps</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ④**
+
+SNR = 10^(30/10) = 1,000  
+C = 8,000 × log₂(1,001) ≈ 8,000 × 9.97 ≈ **79,760 bps ≈ 약 80,000 bps**
+
+대역폭이 4kHz → 8kHz로 2배가 되면 채널 용량도 정확히 2배가 됩니다(실습 1에서 약 40kbps였으므로 2배 = 약 80kbps). 이것이 섀넌 공식에서 대역폭이 **선형적**으로 기여한다는 의미입니다.
+
+</details>
+<hr />
+<p><strong>객관식 2.</strong> FM 라디오 방송이 AM 라디오 방송보다 음질이 좋은 주된 이유로 가장 적절한 것은?</p>
+<p>① FM이 더 높은 전력으로 송신하기 때문이다<br />
+② FM이 AM보다 더 넓은 대역폭을 사용하기 때문이다<br />
+③ FM이 AM보다 더 낮은 주파수 대역을 사용하기 때문이다<br />
+④ FM이 디지털 변조를 사용하기 때문이다</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ②**
+
+AM 라디오는 한 채널당 약 10kHz의 대역폭을, FM 라디오는 약 200kHz의 대역폭을 사용합니다. 대역폭이 넓을수록 더 다양한 주파수 성분(고음, 저음, 스테레오 정보)을 포함할 수 있으므로 음질이 향상됩니다. FM은 MF가 아닌 VHF 대역(더 높은 주파수)을 사용하므로 ③은 틀립니다.
+
+</details>
+<hr />
+<p><strong>객관식 3.</strong> 나이퀴스트 정리에 따라, 잡음이 없는 대역폭 5kHz 채널에서 8개의 신호 레벨을 사용할 때 최대 데이터 전송률은?</p>
+<p>① 10,000 bps<br />
+② 20,000 bps<br />
+③ 30,000 bps<br />
+④ 40,000 bps</p>
+<details>
+<summary>정답 확인</summary>
+
+**정답: ③**
+
+C = 2 × BW × log₂(M) = 2 × 5,000 × log₂(8) = 10,000 × 3 = **30,000 bps**
+
+log₂(8) = 3 (∵ 2³ = 8)
+
+</details>
+<hr />
+<p><strong>서술형.</strong> 5G 이동통신이 기존 4G보다 빠른 전송 속도를 달성할 수 있는 이유를, 대역폭과 섀넌의 채널 용량 공식의 관점에서 설명하시오.</p>
+<details>
+<summary>모범 답안 확인</summary>
+
+섀넌의 채널 용량 공식 C = BW × log₂(1 + SNR)에서, 채널 용량 C는 대역폭 BW에 선형적으로 비례합니다.
+
+5G는 기존 4G(주로 700MHz~2.6GHz 대역)보다 더 높은 주파수 대역(3.5GHz, 28GHz 등)을 사용합니다. 고주파 대역에는 아직 할당되지 않은 넓은 주파수 공간이 있으므로, 5G는 4G보다 훨씬 넓은 대역폭(예: 100~400MHz vs 20MHz)을 확보할 수 있습니다.
+
+대역폭이 넓어지면 섀넌 공식에 의해 채널 용량이 비례하여 증가하므로, 5G는 4G보다 훨씬 높은 이론적 최대 전송 속도를 달성할 수 있습니다. 다만, 고주파 대역은 전파 도달 거리가 짧고 장애물 투과력이 약하므로 기지국을 더 조밀하게 설치해야 하는 트레이드오프가 존재합니다.
+
+</details>
+<hr />
+<p><strong>자기점검 체크리스트</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 대역폭의 정의(f_H - f_L)와 단위(Hz)를 설명할 수 있으며, 대역폭이 넓을수록 전송 용량이 커지는 이유를 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 주파수 스펙트럼의 주요 대역(VLF~EHF)을 구분하고, 각 대역의 활용 사례를 최소 2가지 이상 말할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 섀넌의 채널 용량 공식을 쓰고, 대역폭과 SNR이 채널 용량에 미치는 영향을 설명할 수 있다</li>
+</ul>
+</div>
+<hr />
+<h2 id="_29">💭 성찰 &amp; 다음 차시 미리보기<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h2>
+<h3 id="_30">이번 차시를 돌아보며<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<p>이번 차시에서는 통신의 핵심 자원인 <strong>대역폭</strong>의 개념을 학습했습니다. 주파수 스펙트럼이라는 전파 자원의 전체 지도를 살펴보았고, 섀넌의 채널 용량 공식을 통해 대역폭과 잡음이 정보 전송의 이론적 한계를 결정한다는 사실을 확인했습니다.</p>
+<p>핵심을 한 문장으로 정리하면 다음과 같습니다.</p>
+<blockquote>
+<p><strong>대역폭은 정보를 전달하는 도로의 폭이며, 섀넌의 공식은 그 도로에서 최대 몇 대의 차가 다닐 수 있는지를 알려주는 이정표입니다.</strong></p>
+</blockquote>
+<h3 id="_31">스스로 점검하기<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<p>아래 질문에 답할 수 있다면 이번 차시의 학습 목표를 달성한 것입니다.</p>
+<ol>
+<li>"대역폭이 4kHz"라는 말은 정확히 무엇을 의미합니까?</li>
+<li>5G가 고주파 대역을 사용하면서 얻는 이점과 잃는 것은 무엇입니까?</li>
+<li>섀넌 공식에서 SNR을 10배 높이는 것과 대역폭을 2배 넓히는 것 중, 채널 용량 증가에 더 효과적인 방법은 무엇입니까?</li>
+</ol>
+<h3 id="_32">🔜 다음 차시 미리보기<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
+<p><strong>4차시: 아날로그 변조 — AM, FM, PM의 원리</strong></p>
+<p>이번 차시에서 주파수 스펙트럼과 대역폭이라는 도구를 갖추었으므로, 다음 차시에서는 이 도구를 활용하여 <strong>실제로 정보를 전파에 실어 보내는 방법</strong>을 학습합니다. 진폭 변조(AM), 주파수 변조(FM), 위상 변조(PM)의 원리를 비교하고, 각 변조 방식이 대역폭을 어떻게 사용하는지 분석하겠습니다. AM 라디오와 FM 라디오가 왜 서로 다른 특성을 가지는지, 이번 차시의 대역폭 개념과 연결하여 이해할 수 있을 것입니다.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../chapter02/" class="md-footer__link md-footer__link--prev" aria-label="이전: 2차시: 신호의 언어 — 주파수, 진폭, 위상 이해하기">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                2차시: 신호의 언어 — 주파수, 진폭, 위상 이해하기
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter04/" class="md-footer__link md-footer__link--next" aria-label="다음: 4차시: 실습 체험 — 신호 읽기와 기초 개념 확인 문제 풀이">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                4차시: 실습 체험 — 신호 읽기와 기초 개념 확인 문제 풀이
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 노용철TV | <a href='https://eduflow-greatsong.fly.dev/'>EduFlow</a>로 제작
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+        <script src="../javascripts/mermaid-config.js"></script>
+      
+        <script src="../javascripts/scroll-progress.js"></script>
+      
+        <script src="../javascripts/eduflow-nav.js"></script>
+      
+        <script src="../javascripts/lightbox.js"></script>
+      
+    
+  </body>
+</html>
